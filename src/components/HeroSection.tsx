@@ -1,57 +1,59 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Zap } from "lucide-react";
+import { ArrowRight, Code, Zap, Palette, Database, Smartphone } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-white opacity-50"></div>
-      <div className="absolute inset-0 opacity-40" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316a34a' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-purple-50 opacity-50"></div>
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316a34a' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-green-100 p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-purple-100 to-orange-100 p-2 rounded-lg">
                 <Code className="h-6 w-6 text-green-600" />
               </div>
               <span className="text-green-600 font-semibold">Full-Stack Technology Partner</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Build & Design
-              <span className="text-green-600 block">Amazing Websites</span>
+              <span className="text-purple-600">Web</span><span className="text-orange-500">Szyk</span>
+              <span className="text-green-600 block text-3xl lg:text-4xl font-medium mt-2">Build & Design Amazing Digital Solutions</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Transform your ideas into powerful digital solutions. I help companies and solo entrepreneurs 
-              build stunning websites, mobile apps, and provide comprehensive technology support.
+              Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
+              build <span className="text-purple-600 font-semibold">stunning websites</span>, 
+              <span className="text-orange-500 font-semibold"> mobile apps</span>, and provide 
+              comprehensive technology support.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6">
+              <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-lg px-8 py-6 shadow-lg">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-green-200 hover:bg-green-50">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-green-200 hover:bg-green-50 hover:border-purple-300 transition-all">
                 View My Work
               </Button>
             </div>
             
             <div className="flex items-center space-x-8 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-green-600" />
+                <Zap className="h-4 w-4 text-orange-500" />
                 <span>Fast Delivery</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Code className="h-4 w-4 text-green-600" />
+                <Code className="h-4 w-4 text-purple-600" />
                 <span>Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-green-600 rounded-full"></div>
+                <div className="w-4 h-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full"></div>
                 <span>24/7 Support</span>
               </div>
             </div>
@@ -59,43 +61,54 @@ const HeroSection = () => {
           
           <div className="relative lg:pl-8 animate-fade-in">
             <div className="relative">
-              {/* Main Card */}
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Latest Project</h3>
-                    <p className="text-green-600 text-sm">E-commerce Platform</p>
-                  </div>
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Code className="h-6 w-6 text-green-600" />
+              {/* Diamond-shaped Core Strengths */}
+              <div className="relative w-80 h-80 mx-auto">
+                {/* Central Diamond */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rotate-45 rounded-lg shadow-2xl flex items-center justify-center">
+                  <div className="transform -rotate-45 text-white text-center">
+                    <Code className="h-8 w-8 mx-auto mb-1" />
+                    <span className="text-sm font-bold">WebSzyk</span>
                   </div>
                 </div>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Frontend</span>
-                    <span className="text-green-600 font-medium">React + TypeScript</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Backend</span>
-                    <span className="text-green-600 font-medium">Node.js + PostgreSQL</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Design</span>
-                    <span className="text-green-600 font-medium">Figma + Tailwind</span>
+                {/* Floating Strength Cards */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-purple-500">
+                    <Palette className="h-6 w-6 text-purple-600 mb-2" />
+                    <h3 className="font-semibold text-gray-900 text-sm">UI/UX Design</h3>
+                    <p className="text-xs text-gray-600">Beautiful Interfaces</p>
                   </div>
                 </div>
                 
-                <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-                  <div className="bg-green-600 h-2 rounded-full" style={{ width: "85%" }}></div>
+                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2">
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-orange-500">
+                    <Database className="h-6 w-6 text-orange-600 mb-2" />
+                    <h3 className="font-semibold text-gray-900 text-sm">Backend Dev</h3>
+                    <p className="text-xs text-gray-600">Robust Systems</p>
+                  </div>
                 </div>
                 
-                <p className="text-sm text-gray-500">85% Complete - Launching next week</p>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500">
+                    <Smartphone className="h-6 w-6 text-green-600 mb-2" />
+                    <h3 className="font-semibold text-gray-900 text-sm">Mobile Apps</h3>
+                    <p className="text-xs text-gray-600">Cross-Platform</p>
+                  </div>
+                </div>
+                
+                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2">
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-blue-500">
+                    <Code className="h-6 w-6 text-blue-600 mb-2" />
+                    <h3 className="font-semibold text-gray-900 text-sm">Frontend</h3>
+                    <p className="text-xs text-gray-600">React & Modern JS</p>
+                  </div>
+                </div>
               </div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-green-100 rounded-2xl opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-200 rounded-xl opacity-60 animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl opacity-80 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl opacity-60 animate-pulse delay-1000"></div>
+              <div className="absolute top-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-70 animate-pulse delay-500"></div>
             </div>
           </div>
         </div>
