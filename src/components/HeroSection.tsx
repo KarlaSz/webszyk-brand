@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Zap, Palette, Database, Smartphone } from "lucide-react";
+import { ArrowRight, Code, Zap, Palette, Database, Smartphone, TrendingUp } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -15,22 +15,22 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-gradient-to-r from-purple-100 to-orange-100 p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-green-100 to-purple-100 p-2 rounded-lg">
                 <Code className="h-6 w-6 text-green-600" />
               </div>
               <span className="text-green-600 font-semibold">Full-Stack Technology Partner</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="text-purple-600">Web</span><span className="text-orange-500">Szyk</span>
+              <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
               <span className="text-green-600 block text-3xl lg:text-4xl font-medium mt-2">Build & Design Amazing Digital Solutions</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
-              build <span className="text-purple-600 font-semibold">stunning websites</span>, 
-              <span className="text-orange-500 font-semibold"> mobile apps</span>, and provide 
-              comprehensive technology support.
+              build <span className="text-green-600 font-semibold">stunning websites</span>, 
+              <span className="text-purple-600 font-semibold"> mobile apps</span>, and provide 
+              comprehensive technology support with <span className="text-green-600 font-semibold">business-focused solutions</span>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -45,11 +45,11 @@ const HeroSection = () => {
             
             <div className="flex items-center space-x-8 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-orange-500" />
+                <Zap className="h-4 w-4 text-green-600" />
                 <span>Fast Delivery</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Code className="h-4 w-4 text-purple-600" />
+                <Code className="h-4 w-4 text-green-600" />
                 <span>Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
@@ -64,50 +64,59 @@ const HeroSection = () => {
               {/* Diamond-shaped Core Strengths */}
               <div className="relative w-80 h-80 mx-auto">
                 {/* Central Diamond */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rotate-45 rounded-lg shadow-2xl flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rotate-45 rounded-lg shadow-2xl flex items-center justify-center animate-pulse">
                   <div className="transform -rotate-45 text-white text-center">
                     <Code className="h-8 w-8 mx-auto mb-1" />
                     <span className="text-sm font-bold">WebSzyk</span>
                   </div>
                 </div>
                 
-                {/* Floating Strength Cards */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-purple-500">
-                    <Palette className="h-6 w-6 text-purple-600 mb-2" />
+                {/* Floating Strength Cards with animations */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                    <Palette className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">UI/UX Design</h3>
                     <p className="text-xs text-gray-600">Beautiful Interfaces</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2">
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-orange-500">
-                    <Database className="h-6 w-6 text-orange-600 mb-2" />
+                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                    <Database className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Backend Dev</h3>
                     <p className="text-xs text-gray-600">Robust Systems</p>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
                     <Smartphone className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Mobile Apps</h3>
                     <p className="text-xs text-gray-600">Cross-Platform</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2">
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-blue-500">
-                    <Code className="h-6 w-6 text-blue-600 mb-2" />
+                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                    <Code className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Frontend</h3>
                     <p className="text-xs text-gray-600">React & Modern JS</p>
+                  </div>
+                </div>
+
+                {/* New Business Thinking Card */}
+                <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-3 border-l-4 border-purple-500 hover:shadow-xl transition-shadow">
+                    <TrendingUp className="h-5 w-5 text-purple-600 mb-1" />
+                    <h3 className="font-semibold text-gray-900 text-xs">Business Focus</h3>
+                    <p className="text-xs text-gray-600">Good Practices</p>
                   </div>
                 </div>
               </div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl opacity-60 animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl opacity-80 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl opacity-60 animate-pulse delay-1000"></div>
               <div className="absolute top-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-70 animate-pulse delay-500"></div>
             </div>
           </div>
