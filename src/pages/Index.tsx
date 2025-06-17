@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import AboutMeSection from "@/components/AboutMeSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Services</a>
               <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">About</a>
+              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors">Projects</a>
               <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">Contact</a>
               <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
                 Get Started
@@ -36,9 +38,10 @@ const Index = () => {
 
       {/* Main Content */}
       <HeroSection />
-      <ServicesSection />
       <AboutMeSection />
+      <ServicesSection />
       <AboutSection />
+      <ProjectsSection />
       <ContactSection />
 
       {/* Footer */}

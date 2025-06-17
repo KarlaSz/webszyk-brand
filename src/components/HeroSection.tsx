@@ -63,50 +63,54 @@ const HeroSection = () => {
             <div className="relative">
               {/* Diamond-shaped Core Strengths */}
               <div className="relative w-80 h-80 mx-auto">
-                {/* Central Diamond */}
+                {/* Central Diamond with Profile Picture */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rotate-45 rounded-lg shadow-2xl flex items-center justify-center animate-pulse">
                   <div className="transform -rotate-45 text-white text-center">
-                    <Code className="h-8 w-8 mx-auto mb-1" />
-                    <span className="text-sm font-bold">WebSzyk</span>
+                    <div className="w-16 h-16 bg-white rounded-full mx-auto mb-1 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">WS</span>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold">WebSzyk</span>
                   </div>
                 </div>
                 
-                {/* Floating Strength Cards with animations */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                {/* Floating Strength Cards with better spacing and animations */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
                     <Palette className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">UI/UX Design</h3>
                     <p className="text-xs text-gray-600">Beautiful Interfaces</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
                     <Database className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Backend Dev</h3>
                     <p className="text-xs text-gray-600">Robust Systems</p>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
                     <Smartphone className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Mobile Apps</h3>
                     <p className="text-xs text-gray-600">Cross-Platform</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500 hover:shadow-xl transition-shadow">
+                <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
+                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
                     <Code className="h-6 w-6 text-green-600 mb-2" />
                     <h3 className="font-semibold text-gray-900 text-sm">Frontend</h3>
                     <p className="text-xs text-gray-600">React & Modern JS</p>
                   </div>
                 </div>
 
-                {/* New Business Thinking Card */}
+                {/* Business Thinking Card */}
                 <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-3 border-l-4 border-purple-500 hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-purple-500 hover:shadow-xl transition-shadow min-w-[120px]">
                     <TrendingUp className="h-5 w-5 text-purple-600 mb-1" />
                     <h3 className="font-semibold text-gray-900 text-xs">Business Focus</h3>
                     <p className="text-xs text-gray-600">Good Practices</p>

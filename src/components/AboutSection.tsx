@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Award, Users, Clock } from "lucide-react";
+import { CheckCircle, Award, Users, Clock, Building2 } from "lucide-react";
 
 const skills = [
   "React & TypeScript", "Node.js & Express", "Python & Django", "PostgreSQL & MongoDB",
@@ -14,6 +14,13 @@ const stats = [
   { icon: CheckCircle, label: "Projects Completed", value: "100+" },
   { icon: Clock, label: "Years Experience", value: "8+" },
   { icon: Award, label: "Technologies Mastered", value: "20+" }
+];
+
+const companies = [
+  { name: "TechCorp", role: "Senior Full-Stack Developer", period: "2022-2024" },
+  { name: "StartupXYZ", role: "Lead Developer", period: "2020-2022" },
+  { name: "Digital Agency", role: "Frontend Developer", period: "2018-2020" },
+  { name: "Freelance", role: "Independent Consultant", period: "2016-2018" }
 ];
 
 const AboutSection = () => {
@@ -62,6 +69,27 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
+
+            {/* Companies Section */}
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-white mb-8">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                  <Building2 className="h-5 w-5 text-green-600 mr-2" />
+                  Professional Experience
+                </h3>
+                <div className="space-y-3">
+                  {companies.map((company, index) => (
+                    <div key={index} className="flex justify-between items-center py-2 border-b border-green-100 last:border-b-0">
+                      <div>
+                        <div className="font-medium text-gray-900">{company.name}</div>
+                        <div className="text-sm text-gray-600">{company.role}</div>
+                      </div>
+                      <div className="text-sm text-green-600 font-medium">{company.period}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
           <div className="space-y-8">
