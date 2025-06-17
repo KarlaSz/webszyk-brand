@@ -16,7 +16,7 @@
 import { createRoot } from 'react-dom/client';
 import './index.css';
 
-const MAINTENANCE_MODE = false;
+const MAINTENANCE_MODE = true;
 
 if (MAINTENANCE_MODE) {
   const Maintenance = () => (
