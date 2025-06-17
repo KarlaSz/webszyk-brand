@@ -16,13 +16,10 @@ const Index = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Code className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold">
-                <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
-              </span>
-            </div>
+          <div className="flex justify-between items-center h-32">
+             <a href="/" className="flex items-center space-x-2">
+                <img src="/logo-transparent-web.png" alt="WebSzyk logo" className="h-16 w-auto" />
+              </a>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Usługi</a>
               <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">O mnie</a>
@@ -49,12 +46,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Code className="h-8 w-8 text-green-600" />
-                <span className="text-xl font-bold">
-                  <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
-                </span>
-              </div>
+              <a href="/" className="flex items-center space-x-2">
+                <img src="/logo-short-transparent-web.png" alt="WebSzyk logo" className="h-16 w-auto" />
+              </a>
               <p className="text-gray-600 mb-4">
                 Twój zaufany partner technologiczny w zakresie full-stack developmentu, projektowania i transformacji cyfrowej.
               </p>

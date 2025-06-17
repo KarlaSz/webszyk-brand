@@ -21,7 +21,7 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
+              <span className="text-green-600">webszyk </span><span className="text-purple-600">studio</span>
               <span className="text-green-600 block text-3xl lg:text-4xl font-medium mt-2">Tworzenie i projektowanie rozwiązań cyfrowych</span>
             </h1>
 
