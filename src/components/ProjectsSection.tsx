@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,31 +5,31 @@ import { ExternalLink, Github, Code, Smartphone, Globe } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include payment integration, inventory management, and admin dashboard.",
+    title: "Platforma e-commerce",
+    description: "Rozwiązanie e-commerce full-stack zbudowane z użyciem React, Node.js i PostgreSQL. Funkcje obejmują integrację płatności, zarządzanie magazynem i panel administratora.",
     image: "/placeholder.svg",
     tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
-    category: "Web Application",
+    category: "Aplikacja webowa",
     icon: Globe,
-    status: "Live"
+    status: "Online"
   },
   {
-    title: "Healthcare Mobile App",
-    description: "Cross-platform mobile app for patient management and telemedicine. Built with React Native and integrated with medical APIs.",
+    title: "Aplikacja zdrowotna",
+    description: "Wieloplatformowa aplikacja mobilna do zarządzania pacjentami i telemedycyny. Stworzona w React Native i zintegrowana z medycznymi API.",
     image: "/placeholder.svg",
-    tech: ["React Native", "Firebase", "REST APIs", "Redux"],
-    category: "Mobile App",
+    tech: ["React Native", "Firebase", "REST API", "Redux"],
+    category: "Aplikacja mobilna",
     icon: Smartphone,
-    status: "In Development"
+    status: "W trakcie"
   },
   {
-    title: "SaaS Dashboard",
-    description: "Analytics dashboard for business intelligence with real-time data visualization and reporting features.",
+    title: "Dashboard SaaS",
+    description: "Dashboard analityczny dla biznesu z wizualizacją danych w czasie rzeczywistym i funkcjami raportowania.",
     image: "/placeholder.svg",
     tech: ["React", "D3.js", "Python", "Django", "AWS"],
-    category: "SaaS Platform",
+    category: "Platforma SaaS",
     icon: Code,
-    status: "Live"
+    status: "Online"
   }
 ];
 
@@ -44,27 +43,29 @@ const ProjectsSection = () => {
             <span className="text-green-600 font-semibold">Portfolio</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Featured Projects
+            Wybrane projekty
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Showcase of recent projects that demonstrate my expertise in full-stack development, 
-            design, and business problem-solving.
+            Przegląd ostatnich projektów pokazujących moje umiejętności w zakresie programowania full-stack, projektowania i rozwiązywania problemów biznesowych.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white hover:-translate-y-2 overflow-hidden">
-              {/* Project Image */}
+              {/* Obrazek projektu (placeholder lub ikona) */}
               <div className="relative h-48 bg-gradient-to-br from-green-50 to-purple-50 flex items-center justify-center">
                 <project.icon className="h-16 w-16 text-green-600 opacity-80" />
                 <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className={`${project.status === 'Live' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'}`}>
+                  <Badge
+                    variant="secondary"
+                    className={`${project.status === 'Online' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'}`}
+                  >
                     {project.status}
                   </Badge>
                 </div>
               </div>
-              
+
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">
                   <Badge variant="outline" className="text-xs">
@@ -78,7 +79,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
@@ -87,11 +88,11 @@ const ProjectsSection = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <div className="flex space-x-2">
                   <Button variant="outline" size="sm" className="flex-1 border-green-200 hover:bg-green-50">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
+                    Zobacz demo
                   </Button>
                   <Button variant="ghost" size="sm" className="hover:bg-gray-50">
                     <Github className="h-4 w-4" />
@@ -101,10 +102,10 @@ const ProjectsSection = () => {
             </Card>
           ))}
         </div>
-        
+
         <div className="text-center">
           <Button size="lg" variant="outline" className="border-green-200 hover:bg-green-50">
-            View All Projects
+            Zobacz wszystkie projekty
           </Button>
         </div>
       </div>

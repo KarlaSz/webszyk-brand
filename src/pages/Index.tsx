@@ -24,12 +24,12 @@ const Index = () => {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Services</a>
-              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">About</a>
-              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">Contact</a>
+              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Usługi</a>
+              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">O mnie</a>
+              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors">Projekty</a>
+              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">Kontakt</a>
               <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
-                Get Started
+                Zacznij teraz
               </Button>
             </div>
           </div>
@@ -56,39 +56,39 @@ const Index = () => {
                 </span>
               </div>
               <p className="text-gray-600 mb-4">
-                Your trusted technology partner for full-stack development, design, and digital transformation.
+                Twój zaufany partner technologiczny w zakresie full-stack developmentu, projektowania i transformacji cyfrowej.
               </p>
               <div className="flex space-x-4">
                 <Badge variant="secondary" className="bg-green-100 text-green-800">Full-Stack Development</Badge>
-                <Badge variant="secondary" className="bg-purple-100 text-purple-800">Web Design</Badge>
-                <Badge variant="secondary" className="bg-green-100 text-green-800">Tech Support</Badge>
+                <Badge variant="secondary" className="bg-purple-100 text-purple-800">Projektowanie stron</Badge>
+                <Badge variant="secondary" className="bg-green-100 text-green-800">Wsparcie techniczne</Badge>
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Services</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">Usługi</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>Web Development</li>
-                <li>Mobile Apps</li>
+                <li>Tworzenie stron</li>
+                <li>Aplikacje mobilne</li>
                 <li>UI/UX Design</li>
-                <li>Tech Consulting</li>
+                <li>Konsultacje technologiczne</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">Kontakt</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>hello@webszyk.com</span>
+                  <span>webszyk@gmail.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+48 726-486-987</span>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-            <p>&copy; 2025 WebSzyk. All rights reserved.</p>
+            <p>&copy; 2025 WebSzyk -Karolina Szymaszkiewicz. Wszelkie prawa zastrzeżone.</p>
           </div>
         </div>
       </footer>
