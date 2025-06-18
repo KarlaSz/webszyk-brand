@@ -12,7 +12,7 @@ const HeroSection = () => {
       }}></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
               <div className="bg-gradient-to-r from-green-100 to-purple-100 p-2 rounded-lg">
@@ -21,12 +21,14 @@ const HeroSection = () => {
               <span className="text-green-600 font-semibold">Full-Stack Technology Partner</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
-              <span className="text-green-600 block text-3xl lg:text-4xl font-medium mt-2">Build & Design Amazing Digital Solutions</span>
+              <span className="text-green-600 block text-3xl lg:text-5xl font-bold mt-4">
+                Build & Design Amazing Digital Solutions
+              </span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
               Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
               build <span className="text-green-600 font-semibold">stunning websites</span>, 
               <span className="text-purple-600 font-semibold"> mobile apps</span>, and provide 
@@ -61,67 +63,67 @@ const HeroSection = () => {
           
           <div className="relative lg:pl-8 animate-fade-in">
             <div className="relative">
-              {/* Diamond-shaped Core Strengths */}
-              <div className="relative w-80 h-80 mx-auto">
-                {/* Central Diamond with Profile Picture */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rotate-45 rounded-lg shadow-2xl flex items-center justify-center animate-pulse">
-                  <div className="transform -rotate-45 text-white text-center">
-                    <div className="w-16 h-16 bg-white rounded-full mx-auto mb-1 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">WS</span>
+              {/* Improved Animated Skills Section */}
+              <div className="relative w-[500px] h-[500px] mx-auto">
+                {/* Central Profile Element */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-2xl flex items-center justify-center animate-pulse">
+                  <div className="text-white text-center">
+                    <div className="w-20 h-20 bg-white rounded-xl mx-auto mb-2 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">WS</span>
                       </div>
                     </div>
-                    <span className="text-xs font-bold">WebSzyk</span>
+                    <span className="text-sm font-bold">WebSzyk</span>
                   </div>
                 </div>
                 
-                {/* Floating Strength Cards with better spacing and animations */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
-                    <Palette className="h-6 w-6 text-green-600 mb-2" />
-                    <h3 className="font-semibold text-gray-900 text-sm">UI/UX Design</h3>
-                    <p className="text-xs text-gray-600">Beautiful Interfaces</p>
+                {/* Better Spaced Floating Skill Cards */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '0s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                    <Palette className="h-8 w-8 text-green-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 text-base mb-1">UI/UX Design</h3>
+                    <p className="text-sm text-gray-600">Beautiful Interfaces</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
-                    <Database className="h-6 w-6 text-green-600 mb-2" />
-                    <h3 className="font-semibold text-gray-900 text-sm">Backend Dev</h3>
-                    <p className="text-xs text-gray-600">Robust Systems</p>
+                <div className="absolute top-1/2 right-8 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                    <Database className="h-8 w-8 text-purple-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 text-base mb-1">Backend Dev</h3>
+                    <p className="text-sm text-gray-600">Robust Systems</p>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
-                    <Smartphone className="h-6 w-6 text-green-600 mb-2" />
-                    <h3 className="font-semibold text-gray-900 text-sm">Mobile Apps</h3>
-                    <p className="text-xs text-gray-600">Cross-Platform</p>
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                    <Smartphone className="h-8 w-8 text-green-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 text-base mb-1">Mobile Apps</h3>
+                    <p className="text-sm text-gray-600">Cross-Platform</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-5 border-l-4 border-green-500 hover:shadow-xl transition-shadow min-w-[140px]">
-                    <Code className="h-6 w-6 text-green-600 mb-2" />
-                    <h3 className="font-semibold text-gray-900 text-sm">Frontend</h3>
-                    <p className="text-xs text-gray-600">React & Modern JS</p>
+                <div className="absolute top-1/2 left-8 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                    <Code className="h-8 w-8 text-green-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 text-base mb-1">Frontend</h3>
+                    <p className="text-sm text-gray-600">React & Modern JS</p>
                   </div>
                 </div>
 
-                {/* Business Thinking Card */}
-                <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
-                  <div className="bg-white rounded-xl shadow-lg p-4 border-l-4 border-purple-500 hover:shadow-xl transition-shadow min-w-[120px]">
-                    <TrendingUp className="h-5 w-5 text-purple-600 mb-1" />
-                    <h3 className="font-semibold text-gray-900 text-xs">Business Focus</h3>
-                    <p className="text-xs text-gray-600">Good Practices</p>
+                {/* Business Focus Card - Top Right */}
+                <div className="absolute top-20 right-20 animate-bounce" style={{ animationDelay: '4s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-5 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[140px]">
+                    <TrendingUp className="h-7 w-7 text-purple-600 mb-2" />
+                    <h3 className="font-bold text-gray-900 text-sm mb-1">Business Focus</h3>
+                    <p className="text-xs text-gray-600">Growth Oriented</p>
                   </div>
                 </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl opacity-60 animate-pulse delay-1000"></div>
-              <div className="absolute top-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-70 animate-pulse delay-500"></div>
+              {/* Subtle Background Elements */}
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-3xl opacity-60 animate-pulse"></div>
+              <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl opacity-50 animate-pulse delay-1000"></div>
+              <div className="absolute top-1/4 -right-12 w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-40 animate-pulse delay-500"></div>
             </div>
           </div>
         </div>

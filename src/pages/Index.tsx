@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Smartphone, Globe, Zap, Users, CheckCircle, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import { Code, Smartphone, Globe, Zap, Users, CheckCircle, ArrowRight, Mail, Phone, MapPin, Menu } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -16,20 +16,42 @@ const Index = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Code className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold">
-                <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
-              </span>
-            </div>
+          <div className="flex justify-between items-center h-20">
+            {/* Left Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Services</a>
-              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">About</a>
-              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">Contact</a>
-              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
+              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Services</a>
+              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors font-medium">About</a>
+            </div>
+            
+            {/* Centered Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Code className="h-6 w-6 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-500 rounded-full animate-pulse"></div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">
+                  <span className="text-green-600">Web</span><span className="text-purple-600">Szyk</span>
+                </div>
+                <div className="text-xs text-gray-500 font-medium">Full-Stack Developer</div>
+              </div>
+            </div>
+            
+            {/* Right Menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Projects</a>
+              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Contact</a>
+              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-lg">
                 Get Started
+              </Button>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button variant="ghost" size="sm">
+                <Menu className="h-5 w-5" />
               </Button>
             </div>
           </div>
