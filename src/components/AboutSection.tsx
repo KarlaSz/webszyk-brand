@@ -16,18 +16,20 @@ const stats = [
   { icon: Award, label: "Technologies Mastered", value: "20+" }
 ];
 
-const companies = [
-  { name: "TechCorp", role: "Senior Full-Stack Developer", period: "2022-2024" },
-  { name: "StartupXYZ", role: "Lead Developer", period: "2020-2022" },
-  { name: "Digital Agency", role: "Frontend Developer", period: "2018-2020" },
-  { name: "Freelance", role: "Independent Consultant", period: "2016-2018" }
+const brands = [
+  { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
+  { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
+  { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+  { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+  { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
+  { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" }
 ];
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-2 h-2 bg-green-600 rounded-full"></div>
@@ -35,28 +37,18 @@ const AboutSection = () => {
             </div>
             
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Your Trusted Technology Partner
+              Trusted Technology Partner
             </h2>
             
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
               <p>
                 With over 8 years of experience in full-stack development, I've helped dozens of 
-                companies and entrepreneurs transform their ideas into successful digital products. 
-                From startups to established businesses, I provide the technical expertise needed 
-                to build, scale, and maintain modern web applications.
+                companies and entrepreneurs transform their ideas into successful digital products.
               </p>
               
               <p>
                 My approach combines technical excellence with business understanding. I don't just 
-                write code – I partner with you to understand your goals, solve real problems, and 
-                deliver solutions that drive results. Whether you need a complete web application, 
-                a mobile app, or ongoing technical support, I'm here to help you succeed.
-              </p>
-              
-              <p>
-                I believe in clean, maintainable code, modern development practices, and creating 
-                user experiences that delight. Every project is an opportunity to build something 
-                amazing together.
+                write code – I partner with you to understand your goals and deliver solutions that drive results.
               </p>
             </div>
             
@@ -69,27 +61,6 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-
-            {/* Companies Section */}
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-white mb-8">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                  <Building2 className="h-5 w-5 text-green-600 mr-2" />
-                  Professional Experience
-                </h3>
-                <div className="space-y-3">
-                  {companies.map((company, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-green-100 last:border-b-0">
-                      <div>
-                        <div className="font-medium text-gray-900">{company.name}</div>
-                        <div className="text-sm text-gray-600">{company.role}</div>
-                      </div>
-                      <div className="text-sm text-green-600 font-medium">{company.period}</div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
           
           <div className="space-y-8">
@@ -108,6 +79,28 @@ const AboutSection = () => {
                     >
                       {skill}
                     </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Professional Experience with Brand Logos */}
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Building2 className="h-6 w-6 text-green-600 mr-2" />
+                  Professional Experience
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Trusted by leading companies and innovative startups worldwide
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                  {brands.map((brand, index) => (
+                    <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                      <div className="w-20 h-8 flex items-center justify-center">
+                        <span className="text-lg font-bold text-gray-700">{brand.name}</span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </CardContent>
@@ -136,7 +129,7 @@ const AboutSection = () => {
                     I work closely with you throughout the entire process, ensuring transparency and alignment.
                   </p>
                 </CardContent>
-              </Card>
+              </div>
             </div>
           </div>
         </div>

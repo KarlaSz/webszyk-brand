@@ -63,8 +63,8 @@ const HeroSection = () => {
           
           <div className="relative lg:pl-8 animate-fade-in">
             <div className="relative">
-              {/* Improved Animated Skills Section */}
-              <div className="relative w-[500px] h-[500px] mx-auto">
+              {/* Better Spaced Animated Skills Section */}
+              <div className="relative w-[600px] h-[600px] mx-auto">
                 {/* Central Profile Element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-2xl flex items-center justify-center animate-pulse">
                   <div className="text-white text-center">
@@ -77,45 +77,54 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                {/* Better Spaced Floating Skill Cards */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '0s', animationDuration: '4s' }}>
-                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                {/* Much Better Spaced Floating Skill Cards */}
+                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '0s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[180px]">
                     <Palette className="h-8 w-8 text-green-600 mb-3" />
                     <h3 className="font-bold text-gray-900 text-base mb-1">UI/UX Design</h3>
                     <p className="text-sm text-gray-600">Beautiful Interfaces</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 right-8 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}>
-                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                <div className="absolute top-1/2 right-12 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[180px]">
                     <Database className="h-8 w-8 text-purple-600 mb-3" />
                     <h3 className="font-bold text-gray-900 text-base mb-1">Backend Dev</h3>
                     <p className="text-sm text-gray-600">Robust Systems</p>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '4s' }}>
-                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ animationDelay: '2s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[180px]">
                     <Smartphone className="h-8 w-8 text-green-600 mb-3" />
                     <h3 className="font-bold text-gray-900 text-base mb-1">Mobile Apps</h3>
                     <p className="text-sm text-gray-600">Cross-Platform</p>
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 left-8 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}>
-                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                <div className="absolute top-1/2 left-12 transform -translate-y-1/2 animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[180px]">
                     <Code className="h-8 w-8 text-green-600 mb-3" />
                     <h3 className="font-bold text-gray-900 text-base mb-1">Frontend</h3>
                     <p className="text-sm text-gray-600">React & Modern JS</p>
                   </div>
                 </div>
 
-                {/* Business Focus Card - Top Right */}
-                <div className="absolute top-20 right-20 animate-bounce" style={{ animationDelay: '4s', animationDuration: '4s' }}>
-                  <div className="bg-white rounded-2xl shadow-xl p-5 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[140px]">
+                {/* Business Focus Card - Top Right with more space */}
+                <div className="absolute top-24 right-32 animate-bounce" style={{ animationDelay: '4s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-5 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
                     <TrendingUp className="h-7 w-7 text-purple-600 mb-2" />
                     <h3 className="font-bold text-gray-900 text-sm mb-1">Business Focus</h3>
                     <p className="text-xs text-gray-600">Growth Oriented</p>
+                  </div>
+                </div>
+
+                {/* Additional Card - Bottom Left with more space */}
+                <div className="absolute bottom-24 left-32 animate-bounce" style={{ animationDelay: '5s', animationDuration: '4s' }}>
+                  <div className="bg-white rounded-2xl shadow-xl p-5 border-l-4 border-green-500 hover:shadow-2xl transition-all duration-300 min-w-[160px]">
+                    <Zap className="h-7 w-7 text-green-600 mb-2" />
+                    <h3 className="font-bold text-gray-900 text-sm mb-1">Fast Delivery</h3>
+                    <p className="text-xs text-gray-600">Quick Turnaround</p>
                   </div>
                 </div>
               </div>

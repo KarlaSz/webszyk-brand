@@ -17,14 +17,16 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Left Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Services</a>
-              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors font-medium">About</a>
+            {/* Left - Grouped Navigation Links */}
+            <div className="hidden md:flex items-center space-x-1">
+              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-green-50">Services</a>
+              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-green-50">About</a>
+              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-green-50">Projects</a>
+              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-green-50">Contact</a>
             </div>
             
             {/* Centered Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-3">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Code className="h-6 w-6 text-white" />
@@ -39,10 +41,8 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Projects</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Contact</a>
+            {/* Right - CTA Button */}
+            <div className="hidden md:flex items-center">
               <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-lg">
                 Get Started
               </Button>
