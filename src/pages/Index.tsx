@@ -16,17 +16,34 @@ const Index = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-32">
-             <a href="/" className="flex items-center space-x-2">
-                <img src="/logo-transparent-web.png" alt="WebSzyk logo" className="h-16 w-auto" />
-              </a>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors">Usługi</a>
-              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors">O mnie</a>
-              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors">Projekty</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">Kontakt</a>
-              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
+          <div className="flex justify-between items-center h-20">
+            {/* Left menu items - hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#services" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Usługi</a>
+              <a href="#about" className="text-gray-600 hover:text-green-600 transition-colors font-medium">O mnie</a>
+            </div>
+            
+            {/* Centered logo */}
+            <a href="/" className="flex items-center justify-center">
+              <img src="/logo-transparent-web.png" alt="WebSzyk logo" className="h-12 w-auto" />
+            </a>
+            
+            {/* Right menu items */}
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Projekty</a>
+              <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Kontakt</a>
+              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 ml-4">
                 Zacznij teraz
+              </Button>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <Button variant="ghost" size="sm">
+                <span className="sr-only">Menu</span>
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
               </Button>
             </div>
           </div>
