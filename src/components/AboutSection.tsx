@@ -37,7 +37,7 @@ const AboutSection = () => {
             </div>
             
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Trusted Technology Partner
+              Your Trusted Technology Partner
             </h2>
             
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
@@ -84,7 +84,6 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            {/* Professional Experience with Brand Logos */}
             <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-white">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
@@ -129,7 +128,7 @@ const AboutSection = () => {
                     I work closely with you throughout the entire process, ensuring transparency and alignment.
                   </p>
                 </CardContent>
-              </div>
+              </Card>
             </div>
           </div>
         </div>
