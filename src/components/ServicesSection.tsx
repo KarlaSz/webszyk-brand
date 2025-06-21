@@ -73,8 +73,8 @@ const ServicesSection = () => {
               <div className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
                 <div className="font-mono text-sm space-y-2 mb-6">
                   <div className="text-purple-400">import <span className="text-blue-400">React</span> from <span className="text-green-400">'react'</span>;</div>
-                  <div className="text-purple-400">import <span className="text-blue-400">{{ Services }}</span> from <span className="text-green-400">'./components'</span>;</div>
-                  <div className="mt-4 text-blue-400">const <span className="text-yellow-400">ServicesSection</span> = () => {{</div>
+                  <div className="text-purple-400">import <span className="text-blue-400">{`{ Services }`}</span> from <span className="text-green-400">'./components'</span>;</div>
+                  <div className="mt-4 text-blue-400">const <span className="text-yellow-400">ServicesSection</span> = () =&gt; {`{`}</div>
                 </div>
                 
                 <div className="text-center">
@@ -97,7 +97,7 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="font-mono text-sm text-blue-400 mt-6">
-                  <div>}}</div>
+                  <div>{`}`}</div>
                   <div className="text-purple-400">export default <span className="text-yellow-400">ServicesSection</span>;</div>
                 </div>
               </div>
