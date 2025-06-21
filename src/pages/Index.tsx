@@ -29,11 +29,11 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-[#04e6a5] to-[#04e6a5] rounded-xl flex items-center justify-center shadow-lg">
                   <Code className="h-6 w-6 text-white" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gray-400 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#04e6a5] rounded-full animate-pulse"></div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold">
-                  <span className="text-[#04e6a5]">Web</span><span className="text-gray-400">Szyk</span>
+                  <span className="text-[#04e6a5]">Web</span><span className="text-gray-600">Szyk</span>
                 </div>
                 <div className="text-xs text-gray-500 font-medium">Full-Stack Developer</div>
               </div>
@@ -41,7 +41,7 @@ const Index = () => {
             
             {/* Right - CTA Button */}
             <div className="hidden md:flex items-center">
-              <Button className="bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] hover:from-[#04e6a5] hover:to-[#04e6a5] shadow-lg">
+              <Button className="bg-[#04e6a5] hover:bg-[#04e6a5]/90 text-white shadow-lg">
                 Get Started
               </Button>
             </div>
@@ -71,16 +71,16 @@ const Index = () => {
               <div className="flex items-center space-x-2 mb-4">
                 <Code className="h-8 w-8 text-[#04e6a5]" />
                 <span className="text-xl font-bold">
-                  <span className="text-[#04e6a5]">Web</span><span className="text-gray-400">Szyk</span>
+                  <span className="text-[#04e6a5]">Web</span><span className="text-gray-600">Szyk</span>
                 </span>
               </div>
               <p className="text-gray-600 mb-4">
                 Your trusted technology partner for full-stack development, design, and digital transformation.
               </p>
               <div className="flex space-x-4">
-                <Badge variant="secondary" className="bg-[#04e6a5]/10 text-[#04e6a5]">Full-Stack Development</Badge>
+                <Badge variant="secondary" className="bg-[#04e6a5]/10 text-[#04e6a5] border-[#04e6a5]/20">Full-Stack Development</Badge>
                 <Badge variant="secondary" className="bg-gray-200 text-gray-600">Web Design</Badge>
-                <Badge variant="secondary" className="bg-[#04e6a5]/10 text-[#04e6a5]">Tech Support</Badge>
+                <Badge variant="secondary" className="bg-[#04e6a5]/10 text-[#04e6a5] border-[#04e6a5]/20">Tech Support</Badge>
               </div>
             </div>
             <div>
@@ -96,11 +96,11 @@ const Index = () => {
               <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4 text-[#04e6a5]" />
                   <span>hello@webszyk.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4 text-[#04e6a5]" />
                   <span>+1 (555) 123-4567</span>
                 </li>
               </ul>
