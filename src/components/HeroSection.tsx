@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 opacity-50"></div>
       <div className="absolute inset-0 opacity-30" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316a34a' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2304e6a5' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,25 +34,25 @@ const HeroSection = () => {
               <div className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
                 <div className="font-mono text-sm space-y-2 mb-6">
                   <div className="text-purple-400">import <span className="text-blue-400">React</span> from <span className="text-green-400">'react'</span>;</div>
-                  <div className="text-purple-400">import <span className="text-blue-400">{`{ Services }`}</span> from <span className="text-green-400">'./components'</span>;</div>
+                  <div className="text-purple-400">import <span className="text-blue-400">{`{ WebSzyk }`}</span> from <span className="text-green-400">'./components'</span>;</div>
                   <div className="mt-4 text-blue-400">const <span className="text-yellow-400">HeroSection</span> = () =&gt; {`{`}</div>
                 </div>
                 
                 <div className="text-center">
                   <div className="inline-flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#04e6a5] to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#04e6a5] to-[#04e6a5] rounded-xl flex items-center justify-center shadow-lg">
                       <Code className="h-6 w-6 text-white" />
                     </div>
                     <div className="text-left">
                       <h1 className="text-3xl lg:text-4xl font-bold text-white">
-                        Comprehensive Technology Services
+                        Full-Stack Development Excellence
                       </h1>
-                      <div className="text-[#04e6a5] font-mono text-sm">// Full-stack solutions</div>
+                      <div className="text-[#04e6a5] font-mono text-sm">// Modern web solutions</div>
                     </div>
                   </div>
                   
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Transform your ideas into powerful digital experiences with modern technology solutions.
+                    Crafting exceptional digital experiences with cutting-edge technology and elegant design.
                   </p>
                 </div>
                 
@@ -89,7 +89,7 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-[#04e6a5] to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-lg px-8 py-6 shadow-lg">
+              <Button size="lg" className="bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] hover:from-[#04e6a5] hover:to-[#04e6a5] text-lg px-8 py-6 shadow-lg">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 <span>Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-[#04e6a5] to-emerald-600 rounded-full"></div>
+                <div className="w-4 h-4 bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] rounded-full"></div>
                 <span>24/7 Support</span>
               </div>
             </div>
