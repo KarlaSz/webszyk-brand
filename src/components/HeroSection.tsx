@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 
@@ -9,52 +8,52 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
-                <Zap className="h-6 w-6 text-[#64D69F]" />
+              <div className="bg-black/30 backdrop-blur-sm p-2 rounded-lg border border-white/20">
+                <Zap className="h-6 w-6 text-[#4CAF50]" />
               </div>
-              <span className="text-[#64D69F] font-semibold bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">Full-Stack Technology Partner</span>
+              <span className="text-[#4CAF50] font-semibold bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-[#4CAF50]/20">Full-Stack Technology Partner</span>
             </div>
             
-            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mb-6 border border-white/10">
+            <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-8 mb-6 border border-white/20 shadow-2xl">
               <h2 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span className="text-[#64D69F] drop-shadow-lg">Web</span>
-                <span className="text-white drop-shadow-lg">Szyk</span>
-                <span className="text-[#64D69F] block text-3xl lg:text-5xl font-bold mt-4 drop-shadow-lg">
+                <span className="text-[#4CAF50] drop-shadow-2xl">Web</span>
+                <span className="text-white drop-shadow-2xl">Szyk</span>
+                <span className="text-[#4CAF50] block text-3xl lg:text-5xl font-bold mt-4 drop-shadow-2xl">
                   Build & Design Amazing Digital Solutions
                 </span>
               </h2>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
-              <p className="text-xl text-white leading-relaxed max-w-2xl drop-shadow-md">
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/30 shadow-xl">
+              <p className="text-xl text-white leading-relaxed max-w-2xl drop-shadow-lg">
                 Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
-                build <span className="text-[#64D69F] font-semibold bg-black/20 px-2 py-1 rounded">stunning websites</span>, 
+                build <span className="text-[#4CAF50] font-semibold bg-black/30 px-2 py-1 rounded border border-[#4CAF50]/20">stunning websites</span>, 
                 <span className="text-white font-semibold"> mobile apps</span>, and provide 
-                comprehensive technology support with <span className="text-[#64D69F] font-semibold bg-black/20 px-2 py-1 rounded">business-focused solutions</span>.
+                comprehensive technology support with <span className="text-[#4CAF50] font-semibold bg-black/30 px-2 py-1 rounded border border-[#4CAF50]/20">business-focused solutions</span>.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-[#64D69F] hover:bg-[#64D69F]/90 text-white text-lg px-8 py-6 shadow-xl border border-[#64D69F]/50">
+              <Button size="lg" className="bg-[#4CAF50] hover:bg-[#4CAF50]/90 text-white text-lg px-8 py-6 shadow-xl border border-[#4CAF50]/50">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/50 hover:bg-white/20 backdrop-blur-sm text-white hover:text-white transition-all shadow-lg bg-white/10">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/50 hover:bg-white/20 backdrop-blur-sm text-white hover:text-white transition-all shadow-lg bg-black/20">
                 View My Work
               </Button>
             </div>
             
-            <div className="flex items-center space-x-8 text-sm bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+            <div className="flex items-center space-x-8 text-sm bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20 shadow-lg">
               <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-[#64D69F]" />
+                <Zap className="h-4 w-4 text-[#4CAF50]" />
                 <span className="text-white font-medium">Fast Delivery</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-[#64D69F] rounded-full"></div>
+                <div className="w-4 h-4 bg-[#4CAF50] rounded-full"></div>
                 <span className="text-white font-medium">Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-[#64D69F] rounded-full animate-pulse"></div>
+                <div className="w-4 h-4 bg-[#4CAF50] rounded-full animate-pulse"></div>
                 <span className="text-white font-medium">24/7 Support</span>
               </div>
             </div>
@@ -64,16 +63,16 @@ const HeroSection = () => {
           <div className="relative lg:pl-8 animate-fade-in">
             <div className="relative w-full max-w-2xl mx-auto">
               {/* Browser Window */}
-              <div className="relative bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
+              <div className="relative bg-black/30 backdrop-blur-md rounded-2xl shadow-2xl border border-white/30 overflow-hidden">
                 {/* Browser Header */}
-                <div className="flex items-center justify-between px-6 py-4 bg-white/5 border-b border-white/10">
+                <div className="flex items-center justify-between px-6 py-4 bg-black/20 border-b border-white/20">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
                   <div className="flex-1 mx-4">
-                    <div className="bg-white/10 rounded-lg px-4 py-2 text-center text-white/60 text-sm">
+                    <div className="bg-black/20 rounded-lg px-4 py-2 text-center text-white/80 text-sm border border-white/20">
                       www.yourwebsite.com
                     </div>
                   </div>
@@ -81,13 +80,13 @@ const HeroSection = () => {
                 </div>
                 
                 {/* Browser Content */}
-                <div className="p-8 h-80 flex items-center justify-center bg-gradient-to-br from-white/5 to-white/10">
+                <div className="p-8 h-80 flex items-center justify-center bg-gradient-to-br from-black/10 to-black/20">
                   <div className="text-center">
-                    <h3 className="text-4xl font-bold text-white mb-4">Your Website</h3>
-                    <div className="w-32 h-4 bg-white/20 rounded mx-auto mb-3"></div>
-                    <div className="w-48 h-4 bg-white/20 rounded mx-auto mb-3"></div>
-                    <div className="w-40 h-4 bg-white/20 rounded mx-auto mb-6"></div>
-                    <div className="w-24 h-8 bg-[#04e6a5]/50 rounded mx-auto"></div>
+                    <h3 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">Your Website</h3>
+                    <div className="w-32 h-4 bg-white/30 rounded mx-auto mb-3"></div>
+                    <div className="w-48 h-4 bg-white/30 rounded mx-auto mb-3"></div>
+                    <div className="w-40 h-4 bg-white/30 rounded mx-auto mb-6"></div>
+                    <div className="w-24 h-8 bg-[#4CAF50]/70 rounded mx-auto shadow-lg"></div>
                   </div>
                 </div>
               </div>

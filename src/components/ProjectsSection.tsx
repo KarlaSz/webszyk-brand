@@ -40,8 +40,8 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-2 h-2 bg-[#64D69F] rounded-full animate-pulse"></div>
-            <span className="text-[#64D69F] font-semibold">Portfolio</span>
+            <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
+            <span className="text-[#4CAF50] font-semibold">Portfolio</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Featured Projects
@@ -54,12 +54,12 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/10 backdrop-blur-md hover:-translate-y-2 overflow-hidden border border-white/20">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-black/20 backdrop-blur-md hover:-translate-y-2 overflow-hidden border border-white/20">
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center border-b border-white/10">
-                <project.icon className="h-16 w-16 text-[#64D69F] opacity-80" />
+              <div className="relative h-48 bg-gradient-to-br from-black/10 to-black/20 flex items-center justify-center border-b border-white/10">
+                <project.icon className="h-16 w-16 text-[#4CAF50] opacity-80" />
                 <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className={`${project.status === 'Live' ? 'bg-[#64D69F]/20 text-[#64D69F] border-[#64D69F]/30' : 'bg-orange-500/20 text-orange-300 border-orange-500/30'} backdrop-blur-sm`}>
+                  <Badge variant="secondary" className={`${project.status === 'Live' ? 'bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/30' : 'bg-orange-500/20 text-orange-300 border-orange-500/30'} backdrop-blur-sm`}>
                     {project.status}
                   </Badge>
                 </div>
@@ -67,11 +67,11 @@ const ProjectsSection = () => {
               
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs border-white/30 text-white/80 bg-white/5 backdrop-blur-sm">
+                  <Badge variant="outline" className="text-xs border-white/30 text-white/80 bg-black/10 backdrop-blur-sm">
                     {project.category}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl font-bold text-white group-hover:text-[#64D69F] transition-colors">
+                <CardTitle className="text-xl font-bold text-white group-hover:text-[#4CAF50] transition-colors">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="text-white/70 leading-relaxed">
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm" className="flex-1 border-[#64D69F]/30 text-[#64D69F] hover:bg-[#64D69F]/10 backdrop-blur-sm">
+                  <Button variant="outline" size="sm" className="flex-1 border-[#4CAF50]/30 text-[#4CAF50] hover:bg-[#4CAF50]/10 backdrop-blur-sm">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
         </div>
         
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-[#64D69F]/30 text-[#64D69F] hover:bg-[#64D69F]/10 backdrop-blur-sm">
+          <Button size="lg" variant="outline" className="border-[#4CAF50]/30 text-[#4CAF50] hover:bg-[#4CAF50]/10 backdrop-blur-sm">
             View All Projects
           </Button>
         </div>
