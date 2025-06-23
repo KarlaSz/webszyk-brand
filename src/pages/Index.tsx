@@ -51,7 +51,7 @@ const Index = () => {
               
               {/* Right - CTA Button */}
               <div className="hidden md:flex items-center">
-                <Button className="bg-[#4CAF50] hover:bg-[#4CAF50]/90 text-white shadow-lg backdrop-blur-sm">
+                <Button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-white shadow-lg transition-all duration-300">
                   Get Started
                 </Button>
               </div>

@@ -1,8 +1,13 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
+import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('#about-me');
+    nextSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,11 +36,19 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-[#4CAF50] hover:bg-[#4CAF50]/90 text-white text-lg px-8 py-6 shadow-xl">
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button 
+                size="lg" 
+                onClick={scrollToNext}
+                className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-white text-lg px-8 py-6 shadow-xl transition-all duration-300"
+              >
+                Discover More
+                <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all shadow-lg">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6 border-white/30 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all shadow-lg"
+              >
                 View My Work
               </Button>
             </div>
