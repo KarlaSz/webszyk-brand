@@ -10,47 +10,52 @@ const HeroSection = () => {
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
               <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
-                <Zap className="h-6 w-6 text-[#04e6a5]" />
+                <Zap className="h-6 w-6 text-[#64D69F]" />
               </div>
-              <span className="text-[#04e6a5] font-semibold">Full-Stack Technology Partner</span>
+              <span className="text-[#64D69F] font-semibold bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">Full-Stack Technology Partner</span>
             </div>
             
-            <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-[#04e6a5]">Web</span><span className="text-white">Szyk</span>
-              <span className="text-[#04e6a5] block text-3xl lg:text-5xl font-bold mt-4">
-                Build & Design Amazing Digital Solutions
-              </span>
-            </h2>
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mb-6 border border-white/10">
+              <h2 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-[#64D69F] drop-shadow-lg">Web</span>
+                <span className="text-white drop-shadow-lg">Szyk</span>
+                <span className="text-[#64D69F] block text-3xl lg:text-5xl font-bold mt-4 drop-shadow-lg">
+                  Build & Design Amazing Digital Solutions
+                </span>
+              </h2>
+            </div>
             
-            <p className="text-xl text-white/80 mb-8 leading-relaxed max-w-2xl">
-              Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
-              build <span className="text-[#04e6a5] font-semibold">stunning websites</span>, 
-              <span className="text-white font-semibold"> mobile apps</span>, and provide 
-              comprehensive technology support with <span className="text-[#04e6a5] font-semibold">business-focused solutions</span>.
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
+              <p className="text-xl text-white leading-relaxed max-w-2xl drop-shadow-md">
+                Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
+                build <span className="text-[#64D69F] font-semibold bg-black/20 px-2 py-1 rounded">stunning websites</span>, 
+                <span className="text-white font-semibold"> mobile apps</span>, and provide 
+                comprehensive technology support with <span className="text-[#64D69F] font-semibold bg-black/20 px-2 py-1 rounded">business-focused solutions</span>.
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] hover:from-[#04e6a5] hover:to-[#04e6a5] text-lg px-8 py-6 shadow-lg backdrop-blur-sm">
+              <Button size="lg" className="bg-[#64D69F] hover:bg-[#64D69F]/90 text-white text-lg px-8 py-6 shadow-xl border border-[#64D69F]/50">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 hover:bg-white/10 backdrop-blur-sm text-white hover:text-white transition-all">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/50 hover:bg-white/20 backdrop-blur-sm text-white hover:text-white transition-all shadow-lg bg-white/10">
                 View My Work
               </Button>
             </div>
             
-            <div className="flex items-center space-x-8 text-sm text-white/70">
+            <div className="flex items-center space-x-8 text-sm bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/10">
               <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-[#04e6a5]" />
-                <span>Fast Delivery</span>
+                <Zap className="h-4 w-4 text-[#64D69F]" />
+                <span className="text-white font-medium">Fast Delivery</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] rounded-full"></div>
-                <span>Clean Code</span>
+                <div className="w-4 h-4 bg-[#64D69F] rounded-full"></div>
+                <span className="text-white font-medium">Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-[#04e6a5] to-[#04e6a5] rounded-full animate-pulse"></div>
-                <span>24/7 Support</span>
+                <div className="w-4 h-4 bg-[#64D69F] rounded-full animate-pulse"></div>
+                <span className="text-white font-medium">24/7 Support</span>
               </div>
             </div>
           </div>
