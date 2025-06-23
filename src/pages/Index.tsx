@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Darker Glassmorphism Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-gray-900 to-black"></div>
-      <div className="fixed inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-[#4CAF50]/5 to-emerald-600/10"></div>
+      {/* Lighter Glassmorphism Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900"></div>
+      <div className="fixed inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-[#4CAF50]/8 to-emerald-500/12"></div>
       
       {/* Animated Background Elements */}
-      <div className="fixed top-10 left-10 w-72 h-72 bg-[#4CAF50]/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="fixed top-1/2 right-10 w-96 h-96 bg-[#4CAF50]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      <div className="fixed top-10 left-10 w-72 h-72 bg-[#4CAF50]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="fixed top-1/2 right-10 w-96 h-96 bg-[#4CAF50]/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/20">
+        <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               {/* Left - Grouped Navigation Links */}
@@ -51,7 +51,7 @@ const Index = () => {
               
               {/* Right - CTA Button */}
               <div className="hidden md:flex items-center">
-                <Button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-white shadow-lg transition-all duration-300">
+                <Button className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-white shadow-lg transition-all duration-300">
                   Get Started
                 </Button>
               </div>
@@ -74,7 +74,7 @@ const Index = () => {
         <ContactSection />
 
         {/* Footer */}
-        <footer className="backdrop-blur-md bg-black/20 border-t border-white/20">
+        <footer className="backdrop-blur-md bg-black/30 border-t border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
