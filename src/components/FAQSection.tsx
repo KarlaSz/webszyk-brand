@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, MessageCircleQuestion } from "lucide-react";
 import { useState } from "react";
 
@@ -79,12 +80,9 @@ const FAQSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Still have questions?</p>
-          <a 
-            href="#contact" 
-            className="inline-flex items-center px-6 py-3 bg-[#4CAF50] text-white font-semibold rounded-lg hover:bg-[#45a049] transition-colors"
-          >
+          <Button>
             Get in Touch
-          </a>
+          </Button>
         </div>
       </div>
     </section>
