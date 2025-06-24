@@ -17,8 +17,8 @@ const MyOfferSection = () => {
       <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#4CAF50]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
           <Badge variant="secondary" className="bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/30 backdrop-blur-sm mb-4">
             My Services
           </Badge>
@@ -30,158 +30,172 @@ const MyOfferSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8 mb-20">
-          {/* Website & Landing Pages - Enhanced Glassmorphism Card */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
+        <div className="space-y-6 mb-16">
+          {/* Website & Landing Pages - Compact Version */}
+          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             {/* Popular Badge */}
-            <div className="absolute top-6 right-6">
-              <Badge className="bg-[#4CAF50] text-white font-semibold">
+            <div className="absolute top-4 right-4">
+              <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold">
                 Most Popular
               </Badge>
             </div>
             
-            <CardHeader className="text-center pb-8">
-              <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Globe className="h-8 w-8 text-[#4CAF50]" />
-              </div>
-              <CardTitle className="text-white text-2xl mb-2">Websites & Landing Pages</CardTitle>
-              <p className="text-white/80">Modern, responsive web solutions</p>
-              <div className="mt-6">
-                <div className="text-4xl font-bold text-white mb-2">Starting at $999</div>
-                <p className="text-white/70 text-sm">Complete website solution</p>
+            <CardHeader className="pb-4">
+              <div className="flex items-center space-x-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-orange-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-orange-400" />
+                </div>
+                <div className="flex-1">
+                  <CardTitle className="text-white text-xl mb-1">Websites & Landing Pages</CardTitle>
+                  <p className="text-white/80 text-sm">Modern, responsive web solutions</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-white">$999+</div>
+                  <p className="text-white/70 text-xs">Complete solution</p>
+                </div>
               </div>
             </CardHeader>
             
-            <CardContent className="space-y-6">
-              <div className="space-y-4">
-                <h4 className="text-white font-semibold text-lg mb-4">What You Can Achieve:</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Increase online presence and reach more customers</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Convert visitors into customers with optimized landing pages</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Build trust and credibility with professional design</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Improve SEO rankings and search visibility</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Scale your business with modern web technologies</span>
-                  </li>
-                </ul>
+            <CardContent className="pt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Increase online presence</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Convert visitors to customers</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Build trust & credibility</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Improve SEO rankings</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Scale with modern tech</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Mobile-first design</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="border-t border-white/20 pt-6">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">React</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Next.js</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">TypeScript</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
-                </div>
-                
-                <Button variant="solid" className="w-full py-3 text-lg group">
-                  Get Started Today
-                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">React</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Next.js</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">TypeScript</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
               </div>
+              
+              <Button className="w-full py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+                Get Started Today
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </CardContent>
           </Card>
 
-          {/* IT Services - Enhanced Glassmorphism Card */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
-            <CardHeader className="text-center pb-8">
-              <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Wrench className="h-8 w-8 text-[#4CAF50]" />
-              </div>
-              <CardTitle className="text-white text-2xl mb-2">IT Services & Support</CardTitle>
-              <p className="text-white/80">Comprehensive tech solutions</p>
-              <div className="mt-6">
-                <div className="text-4xl font-bold text-white mb-2">Starting at $149</div>
-                <p className="text-white/70 text-sm">Per month support package</p>
+          {/* IT Services - Compact Version */}
+          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+            <CardHeader className="pb-4">
+              <div className="flex items-center space-x-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-orange-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Wrench className="h-6 w-6 text-orange-400" />
+                </div>
+                <div className="flex-1">
+                  <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
+                  <p className="text-white/80 text-sm">Comprehensive tech solutions</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-white">$149+</div>
+                  <p className="text-white/70 text-xs">Per month</p>
+                </div>
               </div>
             </CardHeader>
             
-            <CardContent className="space-y-6">
-              <div className="space-y-4">
-                <h4 className="text-white font-semibold text-lg mb-4">How I Can Help:</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <Shield className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Secure your systems and protect against threats</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Cloud className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Migrate to cloud solutions for better performance</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Zap className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Optimize existing systems for better efficiency</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <HeadphonesIcon className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Provide ongoing support and maintenance</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Code className="h-5 w-5 text-[#4CAF50] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/90">Custom software development and integrations</span>
-                  </li>
-                </ul>
+            <CardContent className="pt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Shield className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Secure your systems</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Cloud className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Cloud migration</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Zap className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Performance optimization</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <HeadphonesIcon className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">24/7 support</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Code className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Custom development</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Users className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <span className="text-white/90 text-sm">Team collaboration</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="border-t border-white/20 pt-6">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">24/7 Support</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Cloud Migration</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Security</Badge>
-                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
-                </div>
-                
-                <Button variant="solid" className="w-full py-3 text-lg group">
-                  Learn More
-                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">24/7 Support</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Cloud Migration</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Security</Badge>
+                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
               </div>
+              
+              <Button className="w-full py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </CardContent>
           </Card>
         </div>
 
-        {/* Ready to Transform Section - Now integrated */}
+        {/* Ready to Transform Section */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-12 text-center shadow-2xl">
-            <div className="flex items-center justify-center space-x-2 mb-6">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 text-center shadow-2xl">
+            <div className="flex items-center justify-center space-x-2 mb-4">
               <span className="text-white font-semibold text-lg">Ready to Transform?</span>
             </div>
             
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
               Let's Build Something Amazing Together
             </h3>
             
-            <p className="text-white/80 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
               Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button size="lg" className="px-12 py-4 text-lg group">
-                <MessageCircle className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="px-8 py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+                <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>
               
-              <div className="flex items-center space-x-6 text-white/80">
+              <div className="flex items-center space-x-4 text-white/80">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                  <span className="font-medium">Free Consultation</span>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                  <span className="font-medium text-sm">Free Consultation</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse delay-500"></div>
-                  <span className="font-medium">Quick Response</span>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse delay-500"></div>
+                  <span className="font-medium text-sm">Quick Response</span>
                 </div>
               </div>
             </div>
