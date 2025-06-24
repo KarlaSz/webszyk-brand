@@ -113,7 +113,7 @@ const ProblemSolutionSection = () => {
             </h3>
             <div className="space-y-6">
               {challenges.map((challenge, index) => (
-                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-red-50/80 hover:backdrop-blur-md hover:border-red-200">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 border border-gray-200">
@@ -148,7 +148,7 @@ const ProblemSolutionSection = () => {
             </h3>
             <div className="space-y-6">
               {solutions.map((solution, index) => (
-                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-green-50/80 hover:backdrop-blur-md hover:border-green-200">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#4CAF50]/20">
