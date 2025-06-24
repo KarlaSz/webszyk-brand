@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -100,12 +101,12 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm" className="flex-1 border-gray-300 text-gray-700 hover:border-[#4CAF50] hover:text-[#4CAF50] hover:bg-[#4CAF50]/10 transition-all duration-200 bg-white">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
+                  <Button variant="outline" size="lg" className="flex-1 border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all bg-white flex items-center space-x-2">
+                    <ExternalLink className="h-4 w-4" />
+                    <span>Live Demo</span>
                   </Button>
-                  <Button variant="outline" size="sm" className="border-gray-300 text-gray-700 hover:border-[#4CAF50] hover:text-[#4CAF50] hover:bg-[#4CAF50]/10 transition-all duration-200 bg-white">
-                    View Code
+                  <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all bg-white">
+                    <Code className="h-4 w-4" />
                   </Button>
                 </div>
               </CardContent>
