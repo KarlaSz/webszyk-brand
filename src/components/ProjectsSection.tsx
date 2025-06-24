@@ -89,7 +89,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech, techIndex) => (
                     <HoverCard key={techIndex}>
                       <HoverCardTrigger asChild>
-                        <Badge variant="secondary" className="bg-white/30 text-gray-800 text-xs border border-white/30 backdrop-blur-sm cursor-pointer hover:bg-white/40 transition-colors">
+                        <Badge variant="secondary" className="bg-[#4CAF50]/80 text-white text-sm font-semibold border-none backdrop-blur-sm cursor-pointer hover:bg-[#4CAF50] transition-colors px-3 py-1 shadow-md">
                           {tech}
                         </Badge>
                       </HoverCardTrigger>
