@@ -28,10 +28,10 @@ const Index = () => {
       <div className="relative z-10">
         {/* Navigation */}
         <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-white/15 relative overflow-hidden">
-          {/* Darker gradient background for navigation */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#4CAF50]/8 via-transparent to-emerald-400/6"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-gray-900/20 via-transparent to-slate-800/30"></div>
+          {/* Same gradient as hero/contact sections */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-gray-700 to-slate-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-transparent to-emerald-400/8"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/3 via-[#4CAF50]/6 to-slate-700/12"></div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
@@ -87,10 +87,10 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="backdrop-blur-md border-t border-white/15 relative overflow-hidden">
-          {/* Darker gradient background for footer */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#4CAF50]/8 via-transparent to-emerald-400/6"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-gray-900/30 via-transparent to-slate-800/40"></div>
+          {/* Same gradient as hero/contact sections */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-gray-700 to-slate-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-transparent to-emerald-400/8"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/3 via-[#4CAF50]/6 to-slate-700/12"></div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
