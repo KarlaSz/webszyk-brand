@@ -55,14 +55,14 @@ const ProcessSection = () => {
           {/* Process Steps Section */}
           <div className="space-y-6">
             {processSteps.map((step, index) => (
-              <Card key={index} className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow bg-white group hover:border-[#4CAF50]/30">
+              <Card key={index} className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     {/* Step Number and Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-[#4CAF50]/10 rounded-xl flex items-center justify-center mb-2 group-hover:bg-[#4CAF50]/20 transition-colors relative">
+                      <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-[#4CAF50]/30 transition-all duration-300 relative border border-[#4CAF50]/20">
                         <step.icon className="h-7 w-7 text-[#4CAF50]" />
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#4CAF50] rounded-full flex items-center justify-center">
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#4CAF50] rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm border border-white/20">
                           <span className="text-white text-xs font-bold">{step.step}</span>
                         </div>
                       </div>
