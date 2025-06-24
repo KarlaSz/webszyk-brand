@@ -157,48 +157,52 @@ const ProblemSolutionSection = () => {
           </div>
         </div>
 
-        {/* Enhanced CTA Section */}
-        <div className="relative overflow-hidden">
-          {/* Background with gradient and pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#4CAF50] to-[#45a049]"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/80 via-transparent to-[#4CAF50]/60"></div>
+        {/* Enhanced CTA Section with Glassmorphism */}
+        <div className="relative overflow-hidden rounded-2xl">
+          {/* Glassmorphism background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent backdrop-blur-xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/30 via-[#4CAF50]/10 to-emerald-400/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-gray-100/30 via-transparent to-[#4CAF50]/15"></div>
           
-          {/* Decorative elements */}
-          <div className="absolute top-4 left-4 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-4 right-4 w-20 h-20 bg-white/15 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+          {/* Glass overlay */}
+          <div className="absolute inset-0 backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl"></div>
           
-          <div className="relative rounded-2xl p-8 lg:p-12 text-center">
+          {/* Subtle animated elements */}
+          <div className="absolute top-4 left-4 w-16 h-16 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-4 right-4 w-20 h-20 bg-[#4CAF50]/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+          
+          <div className="relative p-8 lg:p-12 text-center">
             <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-center space-x-2 mb-4">
-                <Rocket className="h-6 w-6 text-white" />
-                <span className="text-white/90 font-medium">Ready to Transform?</span>
+                <Rocket className="h-6 w-6 text-[#4CAF50]" />
+                <span className="text-gray-700 font-medium">Ready to Transform?</span>
               </div>
               
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                 Let's Build Something Amazing Together
               </h3>
               
-              <p className="text-white/90 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-700 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
                 Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
                   size="lg" 
-                  className="bg-white text-[#4CAF50] hover:bg-white/90 font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-[#4CAF50] text-white hover:bg-[#45a049] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group backdrop-blur-sm"
                 >
                   <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                   Start Your Project Today
                 </Button>
                 
-                <div className="flex items-center space-x-4 text-white/90">
+                <div className="flex items-center space-x-4 text-gray-600">
                   <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
                     <span className="text-sm">Free Consultation</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-500"></div>
+                    <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse delay-500"></div>
                     <span className="text-sm">Quick Response</span>
                   </div>
                 </div>
