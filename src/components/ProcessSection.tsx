@@ -1,23 +1,22 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Search, Code, Rocket } from "lucide-react";
 
 const ProcessSection = () => {
   const processSteps = [
     {
-      icon: Search,
+      image: "photo-1649972904349-6e44c42644a7",
       step: "01",
       title: "Discovery",
       description: "Understanding your goals, challenges, and requirements through detailed consultation and analysis."
     },
     {
-      icon: Code,
-      step: "02", 
+      image: "photo-1488590528505-98d2b5aba04b", 
+      step: "02",
       title: "Development",
       description: "Building with modern technologies, following best practices, and keeping you updated throughout the process."
     },
     {
-      icon: Rocket,
+      image: "photo-1486312338219-ce68d2c6f44d",
       step: "03",
       title: "Launch",
       description: "Testing, deployment, and ongoing support to ensure your solution performs flawlessly."
@@ -58,10 +57,14 @@ const ProcessSection = () => {
               <Card key={index} className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    {/* Step Number and Icon */}
+                    {/* Step Image and Number */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-[#4CAF50]/30 transition-all duration-300 relative border border-[#4CAF50]/20">
-                        <step.icon className="h-7 w-7 text-[#4CAF50]" />
+                      <div className="relative w-16 h-16 rounded-xl overflow-hidden mb-2 group-hover:scale-105 transition-all duration-300 border-2 border-[#4CAF50]/20 group-hover:border-[#4CAF50]/40">
+                        <img 
+                          src={`https://images.unsplash.com/${step.image}?w=64&h=64&fit=crop`}
+                          alt={step.title}
+                          className="w-full h-full object-cover"
+                        />
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#4CAF50] rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm border border-white/20">
                           <span className="text-white text-xs font-bold">{step.step}</span>
                         </div>
