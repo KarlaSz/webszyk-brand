@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ const MyOfferSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="max-w-4xl mx-auto space-y-8 mb-20">
           {/* Website & Landing Pages - Enhanced Glassmorphism Card */}
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
             {/* Popular Badge */}
