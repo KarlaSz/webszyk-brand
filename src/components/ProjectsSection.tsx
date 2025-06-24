@@ -101,11 +101,11 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="ghost" size="sm" className="flex-1 hover:bg-white/10 hover:text-white text-white/80">
+                  <Button variant="ghost" size="sm" className="flex-1 hover:bg-[#4CAF50]/10 hover:text-[#4CAF50] text-gray-700 border border-gray-300/50">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
-                  <Button variant="ghost" size="sm" className="hover:bg-white/10 hover:text-white text-white/80">
+                  <Button variant="ghost" size="sm" className="hover:bg-[#4CAF50]/10 hover:text-[#4CAF50] text-gray-700 border border-gray-300/50">
                     <Github className="h-4 w-4" />
                   </Button>
                 </div>
