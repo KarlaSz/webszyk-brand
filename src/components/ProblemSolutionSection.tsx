@@ -125,11 +125,16 @@ const ProblemSolutionSection = () => {
             </div>
           </div>
 
-          {/* VS Section */}
+          {/* VS Section - Hero Style */}
           <div className="lg:col-span-2 flex justify-center items-center">
             <div className="relative">
-              <div className="w-20 h-20 bg-gradient-to-br from-gray-500 to-gray-700 rounded-full flex items-center justify-center shadow-xl border-4 border-white backdrop-blur-md">
-                <span className="text-white font-bold text-lg">VS</span>
+              <div className="w-20 h-20 bg-white/15 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl border border-white/30 relative overflow-hidden">
+                {/* Hero-style gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
+                
+                <span className="text-white font-bold text-lg relative z-10">VS</span>
               </div>
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full"></div>
               <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#4CAF50] rounded-full"></div>
