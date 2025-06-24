@@ -167,20 +167,12 @@ const ProblemSolutionSection = () => {
         </div>
 
         {/* Animated Arrow Below */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center">
           <div className="flex flex-col items-center space-y-4">
             <div className="w-1 h-16 bg-gradient-to-b from-[#4CAF50] to-transparent rounded-full"></div>
             <ArrowDown className="h-8 w-8 text-[#4CAF50] animate-bounce" />
             <div className="w-1 h-16 bg-gradient-to-t from-[#4CAF50] to-transparent rounded-full"></div>
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
       </div>
     </section>
