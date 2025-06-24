@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -181,7 +180,7 @@ const MyOfferSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="px-8 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-white/20 hover:border-white/50 text-white backdrop-blur-md transition-all duration-300">
+              <Button size="lg" className="px-8 py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl">
                 <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>
