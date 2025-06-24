@@ -31,7 +31,7 @@ const MyOfferSection = () => {
         </div>
 
         <div className="space-y-6 mb-16">
-          {/* Website & Landing Pages - Monochromatic Version */}
+          {/* Website & Landing Pages */}
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
@@ -100,7 +100,7 @@ const MyOfferSection = () => {
             </CardContent>
           </Card>
 
-          {/* IT Services - Monochromatic Version */}
+          {/* IT Services */}
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
@@ -181,18 +181,18 @@ const MyOfferSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="px-8 py-3 text-lg group bg-white/20 border border-white/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
+              <Button size="lg" className="px-8 py-3 text-lg group bg-gray-400/20 border border-gray-300/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
                 <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>
               
               <div className="flex items-center space-x-4 text-white/80">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
                   <span className="font-medium text-sm">Free Consultation</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-500"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse delay-500"></div>
                   <span className="font-medium text-sm">Quick Response</span>
                 </div>
               </div>
