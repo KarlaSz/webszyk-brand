@@ -25,9 +25,78 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Philosophy Section - Matching Development Process Style */}
+        {/* Philosophy Section - Switched Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Content Section - Plain text like Development Process */}
+          {/* Core Values Section - Now on the LEFT with images */}
+          <div className="space-y-6">
+            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                      <img 
+                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center" 
+                        alt="Clean Code" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Clean Code</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Writing maintainable, scalable code that stands the test of time and grows with your business.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                      <img 
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=64&h=64&fit=crop&crop=center" 
+                        alt="User-Centered" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">User-Centered</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Every decision is made with the end user in mind, ensuring intuitive and delightful experiences.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                      <img 
+                        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=64&h=64&fit=crop&crop=center" 
+                        alt="Innovation" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Staying ahead of the curve with modern technologies while ensuring reliability and performance.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Content Section - Now on the RIGHT */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
@@ -51,63 +120,6 @@ const AboutSection = () => {
                 maintainability, and user experience are at the core of everything I build.
               </p>
             </div>
-          </div>
-
-          {/* Core Values Section - Glassmorphism cards like Process steps */}
-          <div className="space-y-6">
-            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-blue-100/80 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-blue-200/80 transition-all duration-300 relative border border-blue-200/40">
-                      <Code className="h-7 w-7 text-blue-600" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Clean Code</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Writing maintainable, scalable code that stands the test of time and grows with your business.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-purple-100/80 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-purple-200/80 transition-all duration-300 relative border border-purple-200/40">
-                      <Heart className="h-7 w-7 text-purple-600" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">User-Centered</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Every decision is made with the end user in mind, ensuring intuitive and delightful experiences.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-amber-100/80 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-amber-200/80 transition-all duration-300 relative border border-amber-200/40">
-                      <Lightbulb className="h-7 w-7 text-amber-600" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Staying ahead of the curve with modern technologies while ensuring reliability and performance.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
