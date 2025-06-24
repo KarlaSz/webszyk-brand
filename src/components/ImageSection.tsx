@@ -24,7 +24,7 @@ const ImageSection = () => {
         </div>
 
         {/* Main Image Section */}
-        <div className="relative overflow-hidden rounded-2xl bg-gray-100 mb-12">
+        <div className="relative overflow-hidden rounded-2xl bg-gray-100">
           <div className="aspect-[16/9] relative">
             {/* Placeholder for main image */}
             <img 
@@ -44,26 +44,6 @@ const ImageSection = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Stats section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-[#4CAF50] mb-2">100+</div>
-            <div className="text-gray-600 font-medium">Projects Completed</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#4CAF50] mb-2">8+</div>
-            <div className="text-gray-600 font-medium">Years Experience</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#4CAF50] mb-2">50+</div>
-            <div className="text-gray-600 font-medium">Happy Clients</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#4CAF50] mb-2">99%</div>
-            <div className="text-gray-600 font-medium">Success Rate</div>
           </div>
         </div>
       </div>
