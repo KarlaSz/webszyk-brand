@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +9,6 @@ import AboutMeSection from "@/components/AboutMeSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import ProcessSection from "@/components/ProcessSection";
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 
@@ -82,7 +82,6 @@ const Index = () => {
         <ExperienceSection />
         <AboutSection />
         <ProjectsSection />
-        <ProcessSection />
         <FAQSection />
         <ContactSection />
 
