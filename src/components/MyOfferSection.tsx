@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight } from "lucide-react";
+import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight, MessageCircle } from "lucide-react";
 
 const MyOfferSection = () => {
   return (
@@ -30,7 +30,7 @@ const MyOfferSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
           {/* Website & Landing Pages - Enhanced Glassmorphism Card */}
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
             {/* Popular Badge */}
@@ -151,6 +151,44 @@ const MyOfferSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Ready to Transform Section - Now integrated */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-12 text-center shadow-2xl">
+            <div className="flex items-center justify-center space-x-2 mb-6">
+              <span className="text-white font-semibold text-lg">Ready to Transform?</span>
+            </div>
+            
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Let's Build Something Amazing Together
+            </h3>
+            
+            <p className="text-white/80 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
+              Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="bg-[#4CAF50] text-white hover:bg-[#45a049] font-semibold px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group text-lg"
+              >
+                <MessageCircle className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
+                Start Your Project Today
+              </Button>
+              
+              <div className="flex items-center space-x-6 text-white/80">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                  <span className="font-medium">Free Consultation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse delay-500"></div>
+                  <span className="font-medium">Quick Response</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
