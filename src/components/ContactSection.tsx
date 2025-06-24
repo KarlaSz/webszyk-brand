@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -224,6 +224,16 @@ const ContactSection = () => {
                       <div className="flex items-center space-x-3">
                         <Phone className="h-4 w-4 text-[#4CAF50]" />
                         <span className="text-white/90 text-base">+1 (555) 123-4567</span>
+                      </div>
+                      <div className="flex items-center space-x-4 pt-2">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#4CAF50] transition-colors">
+                          <Github className="h-4 w-4" />
+                          <span className="text-base">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#4CAF50] transition-colors">
+                          <Linkedin className="h-4 w-4" />
+                          <span className="text-base">LinkedIn</span>
+                        </a>
                       </div>
                     </div>
                   </div>
