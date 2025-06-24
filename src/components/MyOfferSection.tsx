@@ -31,8 +31,8 @@ const MyOfferSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Website & Landing Pages - Pricing Card Style */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-white/10 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
+          {/* Website & Landing Pages - Enhanced Glassmorphism Card */}
+          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
             {/* Popular Badge */}
             <div className="absolute top-6 right-6">
               <Badge className="bg-[#4CAF50] text-white font-semibold">
@@ -95,8 +95,8 @@ const MyOfferSection = () => {
             </CardContent>
           </Card>
 
-          {/* IT Services - Pricing Card Style */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-white/10 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
+          {/* IT Services - Enhanced Glassmorphism Card */}
+          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300">
             <CardHeader className="text-center pb-8">
               <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Wrench className="h-8 w-8 text-[#4CAF50]" />
