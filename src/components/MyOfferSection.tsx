@@ -181,7 +181,7 @@ const MyOfferSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="px-8 py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 border border-orange-500 hover:bg-gradient-to-r hover:from-gray-400 hover:to-gray-500 hover:border-gray-400 text-white backdrop-blur-md transition-all duration-300">
+              <Button size="lg" className="px-8 py-3 text-lg group bg-gray-400/20 border border-gray-300/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
                 <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>
