@@ -97,7 +97,7 @@ const ProblemSolutionSection = () => {
         </div>
 
         {/* Compact 3-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Problems Column */}
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Common Problems</h3>
@@ -153,60 +153,6 @@ const ProblemSolutionSection = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Enhanced CTA Section with Glassmorphism */}
-        <div className="relative overflow-hidden rounded-2xl">
-          {/* Glassmorphism background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent backdrop-blur-xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/30 via-[#4CAF50]/10 to-emerald-400/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-bl from-gray-100/30 via-transparent to-[#4CAF50]/15"></div>
-          
-          {/* Glass overlay */}
-          <div className="absolute inset-0 backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl"></div>
-          
-          {/* Subtle animated elements */}
-          <div className="absolute top-4 left-4 w-16 h-16 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-4 right-4 w-20 h-20 bg-[#4CAF50]/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-          
-          <div className="relative p-8 lg:p-12 text-center">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <Rocket className="h-6 w-6 text-[#4CAF50]" />
-                <span className="text-gray-700 font-medium">Ready to Transform?</span>
-              </div>
-              
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Let's Build Something Amazing Together
-              </h3>
-              
-              <p className="text-gray-700 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
-                Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  size="lg" 
-                  className="bg-[#4CAF50] text-white hover:bg-[#45a049] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group backdrop-blur-sm"
-                >
-                  <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
-                  Start Your Project Today
-                </Button>
-                
-                <div className="flex items-center space-x-4 text-gray-600">
-                  <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                    <span className="text-sm">Free Consultation</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse delay-500"></div>
-                    <span className="text-sm">Quick Response</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
