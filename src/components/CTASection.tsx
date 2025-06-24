@@ -4,7 +4,7 @@ import { Rocket, MessageCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-16 overflow-hidden bg-white">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered content with border */}
         <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-12 text-center shadow-2xl">
