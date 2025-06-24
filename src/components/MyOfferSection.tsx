@@ -33,8 +33,8 @@ const MyOfferSection = () => {
         <div className="space-y-6 mb-16">
           {/* Website & Landing Pages - Compact Version */}
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
-            {/* Popular Badge */}
-            <div className="absolute top-4 right-4">
+            {/* Popular Badge - repositioned to avoid price overlap */}
+            <div className="absolute top-4 left-4">
               <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold">
                 Most Popular
               </Badge>
@@ -42,8 +42,8 @@ const MyOfferSection = () => {
             
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-orange-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-orange-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-blue-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-blue-400" />
                 </div>
                 <div className="flex-1">
                   <CardTitle className="text-white text-xl mb-1">Websites & Landing Pages</CardTitle>
@@ -60,29 +60,29 @@ const MyOfferSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Increase online presence</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Convert visitors to customers</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Build trust & credibility</span>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Improve SEO rankings</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Scale with modern tech</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Mobile-first design</span>
                   </div>
                 </div>
@@ -95,9 +95,9 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
               </div>
               
-              <Button className="w-full py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+              <Button className="w-full py-2 text-base group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
                 Get Started Today
-                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>
           </Card>
@@ -106,8 +106,8 @@ const MyOfferSection = () => {
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-orange-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                  <Wrench className="h-6 w-6 text-orange-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400/30 to-purple-600/30 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Wrench className="h-6 w-6 text-purple-400" />
                 </div>
                 <div className="flex-1">
                   <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
@@ -124,29 +124,29 @@ const MyOfferSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <Shield className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <Shield className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Secure your systems</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Cloud className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <Cloud className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Cloud migration</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Zap className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <Zap className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Performance optimization</span>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <HeadphonesIcon className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <HeadphonesIcon className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">24/7 support</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Code className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <Code className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Custom development</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Users className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                    <Users className="h-4 w-4 text-purple-400 flex-shrink-0" />
                     <span className="text-white/90 text-sm">Team collaboration</span>
                   </div>
                 </div>
@@ -159,9 +159,9 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
               </div>
               
-              <Button className="w-full py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+              <Button className="w-full py-2 text-base group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
                 Learn More
-                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>
           </Card>
@@ -183,8 +183,8 @@ const MyOfferSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="px-8 py-3 text-lg group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
-                <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
+              <Button size="lg" className="px-6 py-2 text-base group bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-0">
+                <MessageCircle className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>
               
