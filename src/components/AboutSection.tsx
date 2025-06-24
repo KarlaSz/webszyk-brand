@@ -25,43 +25,45 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Philosophy Section - Redesigned to match About Me style */}
+        {/* Philosophy Section - Redesigned with Glassmorphism */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Content Section */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-              <span className="text-green-600 font-semibold">My Philosophy</span>
-            </div>
-            
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Creating technology that <span className="text-green-600">serves people</span>
-            </h3>
-            
-            <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
-              <p>
-                I believe in creating technology that serves people, not the other way around. 
-                Every line of code should have purpose, every design decision should enhance user experience, 
-                and every project should solve real problems.
-              </p>
-              
-              <p>
-                My approach focuses on understanding your business goals first, then crafting solutions 
-                that not only meet your immediate needs but also scale with your growth. Quality, 
-                maintainability, and user experience are at the core of everything I build.
-              </p>
-            </div>
-
-            {/* Bottom Quote */}
-            <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-green-500">
-              <blockquote className="text-lg text-gray-700 italic">
-                "Great software isn't just about what it can do – it's about how effortlessly it helps people achieve their goals."
-              </blockquote>
-              <div className="mt-4">
-                <span className="text-green-600 font-semibold">— My Development Mantra</span>
+          {/* Content Section with Glassmorphism */}
+          <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
+            <CardContent className="p-8">
+              <div className="flex items-center space-x-2 mb-6">
+                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+                <span className="text-green-600 font-semibold">My Philosophy</span>
               </div>
-            </div>
-          </div>
+              
+              <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Creating technology that <span className="text-green-600">serves people</span>
+              </h3>
+              
+              <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
+                <p>
+                  I believe in creating technology that serves people, not the other way around. 
+                  Every line of code should have purpose, every design decision should enhance user experience, 
+                  and every project should solve real problems.
+                </p>
+                
+                <p>
+                  My approach focuses on understanding your business goals first, then crafting solutions 
+                  that not only meet your immediate needs but also scale with your growth. Quality, 
+                  maintainability, and user experience are at the core of everything I build.
+                </p>
+              </div>
+
+              {/* Bottom Quote with enhanced styling */}
+              <div className="p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-white/30 shadow-lg">
+                <blockquote className="text-lg text-gray-700 italic">
+                  "Great software isn't just about what it can do – it's about how effortlessly it helps people achieve their goals."
+                </blockquote>
+                <div className="mt-4">
+                  <span className="text-green-600 font-semibold">— My Development Mantra</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Core Values Section */}
           <div>
