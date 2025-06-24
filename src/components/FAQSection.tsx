@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, MessageCircleQuestion } from "lucide-react";
 import { useState } from "react";
 
 const FAQSection = () => {
@@ -38,7 +38,7 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <HelpCircle className="h-6 w-6 text-[#4CAF50]" />
+            <MessageCircleQuestion className="h-6 w-6 text-[#4CAF50]" />
             <span className="text-[#4CAF50] font-semibold text-sm uppercase tracking-wide">FAQ</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -57,7 +57,10 @@ const FAQSection = () => {
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
               >
                 <CardTitle className="flex items-center justify-between text-left">
-                  <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  <div className="flex items-center space-x-3">
+                    <MessageCircleQuestion className="h-5 w-5 text-[#4CAF50] flex-shrink-0" />
+                    <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  </div>
                   {openFAQ === index ? (
                     <ChevronUp className="h-5 w-5 text-[#4CAF50]" />
                   ) : (
@@ -67,7 +70,7 @@ const FAQSection = () => {
               </CardHeader>
               {openFAQ === index && (
                 <CardContent className="pt-0">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed ml-8">{faq.answer}</p>
                 </CardContent>
               )}
             </Card>
