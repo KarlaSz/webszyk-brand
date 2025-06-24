@@ -51,7 +51,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -82,7 +82,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -113,7 +113,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -144,7 +144,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -175,7 +175,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -206,7 +206,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               
-              <Button className="w-full group">
+              <Button variant="outline" size="lg" className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all group">
                 Learn More
                 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
