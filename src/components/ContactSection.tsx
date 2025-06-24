@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -216,42 +215,29 @@ const ContactSection = () => {
                     </div>
                     <p className="text-white/90 text-base">Response time: 2-4 hours</p>
                   </div>
-                  
-                  {/* Video Placeholder Section */}
-                  <div className="mt-8">
-                    <div className="relative bg-black/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden group cursor-pointer border border-white/30">
-                      {/* Video Placeholder */}
-                      <div className="aspect-video bg-gradient-to-br from-[#4CAF50]/20 to-purple-500/20 flex items-center justify-center relative">
-                        <div className="absolute inset-0 bg-black/20"></div>
-                        <div className="relative z-10 text-center">
-                          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform shadow-lg border border-white/30">
-                            <Play className="h-8 w-8 text-white ml-1" />
-                          </div>
-                          <h4 className="text-white font-semibold text-lg mb-2">Meet WebSzyk</h4>
-                          <p className="text-white/80 text-base">Watch my story & approach</p>
-                        </div>
-                        
-                        {/* Animated elements */}
-                        <div className="absolute top-4 right-4 w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                        <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500"></div>
-                      </div>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
           
-          {/* Bottom Row - Profile Image - More Compact */}
+          {/* Bottom Row - Meet WebSzyk Video Section */}
           <div className="flex justify-center">
-            <div className="text-center">
-              <div className="w-40 h-44 bg-black/30 backdrop-blur-md rounded-2xl border border-white/40 shadow-2xl flex items-center justify-center mx-auto mb-4">
-                <div className="text-center text-white">
-                  <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-full mx-auto mb-3 flex items-center justify-center">
-                    <span className="text-2xl">👨‍💻</span>
+            <div className="text-center max-w-2xl">
+              <div className="relative bg-black/30 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden group cursor-pointer border border-white/30 mb-6">
+                {/* Video Placeholder */}
+                <div className="aspect-video bg-gradient-to-br from-[#4CAF50]/20 to-purple-500/20 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg border border-white/30">
+                      <Play className="h-8 w-8 text-white ml-1" />
+                    </div>
+                    <h4 className="text-white font-semibold text-xl mb-2">Meet WebSzyk</h4>
+                    <p className="text-white/80 text-lg">Watch my story & approach</p>
                   </div>
-                  <p className="text-lg font-medium text-white">WebSzyk</p>
-                  <p className="text-base text-white/80">Your Tech Partner</p>
+                  
+                  {/* Animated elements */}
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500"></div>
                 </div>
               </div>
               <div className="text-white">
