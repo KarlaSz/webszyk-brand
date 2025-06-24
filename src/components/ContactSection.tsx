@@ -4,23 +4,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
-    company: '',
-    budget: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -31,7 +28,7 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+    if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
         description: "Please fill in all required fields",
@@ -53,11 +50,8 @@ const ContactSection = () => {
       
       // Reset form
       setFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
-        company: '',
-        budget: '',
         message: ''
       });
     } catch (error) {
@@ -83,10 +77,10 @@ const ContactSection = () => {
       <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#4CAF50]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
-      <div className="relative z-10 py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+      <div className="relative z-10 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
               Ready to Start Your Project?
             </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
@@ -95,39 +89,27 @@ const ContactSection = () => {
           </div>
           
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             {/* Left Column - Contact Form with Enhanced Glassmorphism */}
             <div>
               <Card className="border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-xl font-bold text-white">Get Your Free Quote</CardTitle>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg font-bold text-white">Get Your Free Quote</CardTitle>
                   <p className="text-white/90 text-sm">
                     Fill out the form and I'll get back to you within 24 hours
                   </p>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="space-y-1">
-                        <Label htmlFor="firstName" className="text-white font-medium text-sm">First Name *</Label>
-                        <Input 
-                          id="firstName" 
-                          placeholder="John" 
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-9" 
-                        />
-                      </div>
-                      <div className="space-y-1">
-                        <Label htmlFor="lastName" className="text-white font-medium text-sm">Last Name *</Label>
-                        <Input 
-                          id="lastName" 
-                          placeholder="Doe" 
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-9" 
-                        />
-                      </div>
+                <CardContent className="space-y-3">
+                  <form onSubmit={handleSubmit} className="space-y-3">
+                    <div className="space-y-1">
+                      <Label htmlFor="name" className="text-white font-medium text-sm">Full Name *</Label>
+                      <Input 
+                        id="name" 
+                        placeholder="John Doe" 
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-9" 
+                      />
                     </div>
                     
                     <div className="space-y-1">
@@ -143,33 +125,6 @@ const ContactSection = () => {
                     </div>
                     
                     <div className="space-y-1">
-                      <Label htmlFor="company" className="text-white font-medium text-sm">Company</Label>
-                      <Input 
-                        id="company" 
-                        placeholder="Your Company" 
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-9" 
-                      />
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <Label htmlFor="budget" className="text-white font-medium text-sm">Project Budget</Label>
-                      <select 
-                        id="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 h-9 border border-white/40 bg-black/20 backdrop-blur-sm text-white rounded-md focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 text-sm"
-                      >
-                        <option value="" className="bg-gray-800 text-white">Select budget range</option>
-                        <option value="5k-10k" className="bg-gray-800 text-white">$5,000 - $10,000</option>
-                        <option value="10k-25k" className="bg-gray-800 text-white">$10,000 - $25,000</option>
-                        <option value="25k-50k" className="bg-gray-800 text-white">$25,000 - $50,000</option>
-                        <option value="50k+" className="bg-gray-800 text-white">$50,000+</option>
-                      </select>
-                    </div>
-                    
-                    <div className="space-y-1">
                       <Label htmlFor="message" className="text-white font-medium text-sm">Project Details *</Label>
                       <Textarea 
                         id="message" 
@@ -181,10 +136,22 @@ const ContactSection = () => {
                       />
                     </div>
                     
+                    <div className="space-y-1">
+                      <Label className="text-white font-medium text-sm">Attach Files</Label>
+                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-4 bg-black/10 backdrop-blur-sm hover:border-orange-400 transition-colors cursor-pointer">
+                        <div className="text-center">
+                          <Paperclip className="h-6 w-6 text-white/70 mx-auto mb-2" />
+                          <p className="text-white/70 text-sm">Click to attach files or drag & drop</p>
+                          <p className="text-white/50 text-xs mt-1">PDF, DOC, Images up to 10MB</p>
+                        </div>
+                        <input type="file" multiple className="hidden" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
+                      </div>
+                    </div>
+                    
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-5 shadow-lg disabled:opacity-50 border-0"
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 shadow-lg disabled:opacity-50 border-0"
                     >
                       {isSubmitting ? 'Sending...' : 'Get Free Quote'}
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -197,54 +164,54 @@ const ContactSection = () => {
             {/* Right Column - Why Work With Me with Enhanced Glassmorphism */}
             <div>
               <Card className="border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl h-full">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Why Choose WebSzyk?</h3>
-                  <div className="space-y-4">
+                <CardContent className="p-4">
+                  <h3 className="text-lg font-bold text-white mb-3">Why Choose WebSzyk?</h3>
+                  <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Zap className="h-5 w-5 text-[#4CAF50]" />
+                      <div className="w-8 h-8 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="h-4 w-4 text-[#4CAF50]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-1 text-sm">8+ Years Experience</h4>
-                        <p className="text-white/90 text-sm">Proven track record with 100+ successful projects across various industries.</p>
+                        <p className="text-white/90 text-xs">Proven track record with 100+ successful projects across various industries.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Clock className="h-5 w-5 text-[#4CAF50]" />
+                      <div className="w-8 h-8 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-4 w-4 text-[#4CAF50]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-1 text-sm">Fast Response</h4>
-                        <p className="text-white/90 text-sm">Quick communication and rapid development cycles to meet your deadlines.</p>
+                        <p className="text-white/90 text-xs">Quick communication and rapid development cycles to meet your deadlines.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Shield className="h-5 w-5 text-[#4CAF50]" />
+                      <div className="w-8 h-8 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-4 w-4 text-[#4CAF50]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-1 text-sm">Ongoing Support</h4>
-                        <p className="text-white/90 text-sm">Comprehensive post-launch support and maintenance included in every project.</p>
+                        <p className="text-white/90 text-xs">Comprehensive post-launch support and maintenance included in every project.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="h-5 w-5 text-[#4CAF50]" />
+                      <div className="w-8 h-8 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-4 w-4 text-[#4CAF50]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-1 text-sm">Quality Guarantee</h4>
-                        <p className="text-white/90 text-sm">Modern, scalable solutions built with best practices and clean code.</p>
+                        <p className="text-white/90 text-xs">Modern, scalable solutions built with best practices and clean code.</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-6 p-4 bg-[#4CAF50]/10 backdrop-blur-sm rounded-lg border border-[#4CAF50]/30">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                      <span className="text-[#4CAF50] font-semibold text-sm">Available for new projects</span>
+                  <div className="mt-4 p-3 bg-[#4CAF50]/10 backdrop-blur-sm rounded-lg border border-[#4CAF50]/30">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                      <span className="text-[#4CAF50] font-semibold text-xs">Available for new projects</span>
                     </div>
                     <p className="text-white/90 text-xs">Response time: 2-4 hours</p>
                   </div>
@@ -256,10 +223,10 @@ const ContactSection = () => {
           {/* Bottom Row - Profile Image - More Compact */}
           <div className="flex justify-center">
             <div className="text-center">
-              <div className="w-36 h-44 bg-black/30 backdrop-blur-md rounded-2xl border border-white/40 shadow-2xl flex items-center justify-center mx-auto mb-3">
+              <div className="w-32 h-36 bg-black/30 backdrop-blur-md rounded-2xl border border-white/40 shadow-2xl flex items-center justify-center mx-auto mb-2">
                 <div className="text-center text-white">
-                  <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-full mx-auto mb-2 flex items-center justify-center">
-                    <span className="text-xl">👨‍💻</span>
+                  <div className="w-10 h-10 bg-[#4CAF50]/20 backdrop-blur-sm rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-lg">👨‍💻</span>
                   </div>
                   <p className="text-sm font-medium text-white">WebSzyk</p>
                   <p className="text-xs text-white/80">Your Tech Partner</p>
