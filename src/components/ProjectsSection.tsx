@@ -54,46 +54,50 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-gray-200 bg-white hover:-translate-y-2 overflow-hidden">
+            <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/30 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              {/* Glassmorphism Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/5 via-transparent to-emerald-400/5"></div>
+              
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-b border-gray-100">
+              <div className="relative h-48 bg-gradient-to-br from-gray-50/60 to-gray-100/60 backdrop-blur-sm flex items-center justify-center border-b border-white/20">
                 <project.icon className="h-16 w-16 text-[#4CAF50] opacity-80" />
                 <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className={`${project.status === 'Live' ? 'bg-[#4CAF50]/10 text-[#4CAF50] border-[#4CAF50]/30' : 'bg-orange-50 text-orange-600 border-orange-200'}`}>
+                  <Badge variant="secondary" className={`backdrop-blur-md ${project.status === 'Live' ? 'bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/40' : 'bg-orange-200/30 text-orange-700 border-orange-300/40'}`}>
                     {project.status}
                   </Badge>
                 </div>
               </div>
               
-              <CardHeader className="pb-4">
+              <CardHeader className="pb-4 relative z-10">
                 <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs border-gray-300 text-gray-600 bg-gray-50">
+                  <Badge variant="outline" className="text-xs border-white/30 text-gray-700 bg-white/20 backdrop-blur-sm">
                     {project.category}
                   </Badge>
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-[#4CAF50] transition-colors">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-gray-600 leading-relaxed">
+                <CardDescription className="text-gray-700 leading-relaxed">
                   {project.description}
                 </CardDescription>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="bg-gray-100 text-gray-700 text-xs border border-gray-200">
+                    <Badge key={techIndex} variant="secondary" className="bg-white/30 text-gray-800 text-xs border border-white/30 backdrop-blur-sm">
                       {tech}
                     </Badge>
                   ))}
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm" className="flex-1 border-[#4CAF50]/30 text-[#4CAF50] hover:bg-[#4CAF50]/10">
+                  <Button variant="outline" size="sm" className="flex-1 backdrop-blur-md bg-white/20 border-[#4CAF50]/40 text-[#4CAF50] hover:bg-[#4CAF50]/20 hover:border-[#4CAF50]/60 transition-all duration-300">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
-                  <Button variant="ghost" size="sm" className="hover:bg-gray-100 text-gray-600 hover:text-gray-900">
+                  <Button variant="ghost" size="sm" className="backdrop-blur-md bg-white/10 hover:bg-white/30 text-gray-700 hover:text-gray-900 border border-white/20 transition-all duration-300">
                     <Github className="h-4 w-4" />
                   </Button>
                 </div>
@@ -103,7 +107,7 @@ const ProjectsSection = () => {
         </div>
         
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-[#4CAF50]/30 text-[#4CAF50] hover:bg-[#4CAF50]/10">
+          <Button size="lg" variant="outline" className="backdrop-blur-md bg-white/20 border-[#4CAF50]/40 text-[#4CAF50] hover:bg-[#4CAF50]/20 hover:border-[#4CAF50]/60 transition-all duration-300 shadow-lg">
             View All Projects
           </Button>
         </div>
