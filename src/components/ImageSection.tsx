@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Camera, Play, ArrowRight } from "lucide-react";
+import { Play } from "lucide-react";
 
 const ImageSection = () => {
   return (
@@ -45,51 +45,6 @@ const ImageSection = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Grid of smaller images */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <Card className="group overflow-hidden border border-gray-200 hover:border-[#4CAF50]/30 transition-all duration-300 hover:shadow-lg">
-            <div className="aspect-[4/3] relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-                alt="Programming workspace"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <CardContent className="p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Problem Solving</h4>
-              <p className="text-gray-600 text-sm">Breaking down complex challenges into manageable solutions.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="group overflow-hidden border border-gray-200 hover:border-[#4CAF50]/30 transition-all duration-300 hover:shadow-lg">
-            <div className="aspect-[4/3] relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-                alt="Collaborative development"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <CardContent className="p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Collaboration</h4>
-              <p className="text-gray-600 text-sm">Working closely with clients to understand their vision.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="group overflow-hidden border border-gray-200 hover:border-[#4CAF50]/30 transition-all duration-300 hover:shadow-lg">
-            <div className="aspect-[4/3] relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80"
-                alt="Code development"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <CardContent className="p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h4>
-              <p className="text-gray-600 text-sm">Using cutting-edge technologies to deliver exceptional results.</p>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Stats section */}
