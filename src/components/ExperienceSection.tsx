@@ -72,7 +72,7 @@ const ExperienceSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
             <Card key={index} className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white overflow-hidden hover:-translate-y-1">
               <CardContent className="p-0">
@@ -101,25 +101,35 @@ const ExperienceSection = () => {
           ))}
         </div>
 
-        {/* Process Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <div className="text-center mb-12">
+        {/* Process Section - Moved above FAQ */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16 relative overflow-hidden">
+          {/* Storytelling Image */}
+          <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+            <div className="w-full h-full bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center">
+              <span className="text-4xl">🚀</span>
+            </div>
+          </div>
+          
+          <div className="text-center mb-12 relative z-10">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">My Development Process</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               A proven approach that ensures your project is delivered on time, within budget, and exceeds expectations.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
             {[
-              { step: "01", title: "Discovery", desc: "Understanding your goals and requirements" },
-              { step: "02", title: "Design", desc: "Creating wireframes and visual designs" },
-              { step: "03", title: "Development", desc: "Building with modern, scalable technologies" },
-              { step: "04", title: "Launch", desc: "Testing, deployment, and ongoing support" }
+              { step: "01", title: "Discovery", desc: "Understanding your goals and requirements", icon: "🔍" },
+              { step: "02", title: "Design", desc: "Creating wireframes and visual designs", icon: "🎨" },
+              { step: "03", title: "Development", desc: "Building with modern, scalable technologies", icon: "⚡" },
+              { step: "04", title: "Launch", desc: "Testing, deployment, and ongoing support", icon: "🎯" }
             ].map((phase, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg relative">
                   {phase.step}
+                  <div className="absolute -top-2 -right-2 text-2xl">
+                    {phase.icon}
+                  </div>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">{phase.title}</h4>
                 <p className="text-sm text-gray-600">{phase.desc}</p>
