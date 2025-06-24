@@ -1,9 +1,10 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -213,7 +214,18 @@ const ContactSection = () => {
                       <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
                       <span className="text-[#4CAF50] font-semibold text-base">Available for new projects</span>
                     </div>
-                    <p className="text-white/90 text-base">Response time: 2-4 hours</p>
+                    <p className="text-white/90 text-base mb-4">Response time: 2-4 hours</p>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Mail className="h-4 w-4 text-[#4CAF50]" />
+                        <span className="text-white/90 text-base">hello@webszyk.com</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Phone className="h-4 w-4 text-[#4CAF50]" />
+                        <span className="text-white/90 text-base">+1 (555) 123-4567</span>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
