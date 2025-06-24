@@ -11,6 +11,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSection from "@/components/ProcessSection";
+import ImageSection from "@/components/ImageSection";
 
 const Index = () => {
   return (
@@ -83,6 +84,7 @@ const Index = () => {
         <AboutSection />
         <ProjectsSection />
         <ProcessSection />
+        <ImageSection />
         <FAQSection />
         <ContactSection />
 
