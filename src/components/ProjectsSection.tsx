@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { ExternalLink, Github, Code, Smartphone, Globe } from "lucide-react";
 
 const projects = [
@@ -86,9 +87,16 @@ const ProjectsSection = () => {
               <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="bg-white/30 text-gray-800 text-xs border border-white/30 backdrop-blur-sm">
-                      {tech}
-                    </Badge>
+                    <HoverCard key={techIndex}>
+                      <HoverCardTrigger asChild>
+                        <Badge variant="secondary" className="bg-white/30 text-gray-800 text-xs border border-white/30 backdrop-blur-sm cursor-pointer hover:bg-white/40 transition-colors">
+                          {tech}
+                        </Badge>
+                      </HoverCardTrigger>
+                      <HoverCardContent className="w-auto p-2">
+                        <p className="text-sm font-medium">{tech}</p>
+                      </HoverCardContent>
+                    </HoverCard>
                   ))}
                 </div>
                 
