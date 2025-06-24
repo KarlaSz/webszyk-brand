@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -214,6 +213,27 @@ const ContactSection = () => {
                       <span className="text-[#4CAF50] font-semibold text-xs">Available for new projects</span>
                     </div>
                     <p className="text-white/90 text-xs">Response time: 2-4 hours</p>
+                  </div>
+                  
+                  {/* Video Placeholder Section */}
+                  <div className="mt-4">
+                    <div className="relative bg-black/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden group cursor-pointer border border-white/30">
+                      {/* Video Placeholder */}
+                      <div className="aspect-video bg-gradient-to-br from-[#4CAF50]/20 to-purple-500/20 flex items-center justify-center relative">
+                        <div className="absolute inset-0 bg-black/20"></div>
+                        <div className="relative z-10 text-center">
+                          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform shadow-lg border border-white/30">
+                            <Play className="h-6 w-6 text-white ml-1" />
+                          </div>
+                          <h4 className="text-white font-semibold text-sm mb-1">Meet WebSzyk</h4>
+                          <p className="text-white/80 text-xs">Watch my story & approach</p>
+                        </div>
+                        
+                        {/* Animated elements */}
+                        <div className="absolute top-3 right-3 w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                        <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
