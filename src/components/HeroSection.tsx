@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ChevronDown } from "lucide-react";
+import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ArrowBigDown } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToNext = () => {
@@ -46,16 +46,16 @@ const HeroSection = () => {
             </p>
             
             <div className="flex justify-center mb-12">
-              <Button 
-                size="lg" 
+              <button 
                 onClick={scrollToNext}
-                className="group bg-[#4CAF50] hover:bg-[#45a049] text-white text-lg px-12 py-8 shadow-xl transition-all duration-500 rounded-full hover:scale-110 transform border-2 border-[#4CAF50]/50"
+                className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
               >
-                <div className="flex flex-col items-center space-y-2">
-                  <ChevronDown className="h-8 w-8 group-hover:animate-bounce transition-all duration-300" />
-                  <span className="text-sm font-medium">Discover More</span>
-                </div>
-              </Button>
+                <ArrowBigDown className="h-10 w-10 text-[#4CAF50] group-hover:animate-bounce transition-all duration-300 group-hover:scale-110" />
+                
+                {/* Glassmorphic ring effect */}
+                <div className="absolute inset-0 rounded-full border-2 border-[#4CAF50]/30 animate-pulse"></div>
+                <div className="absolute inset-2 rounded-full border border-white/30"></div>
+              </button>
             </div>
             
             <div className="flex items-center space-x-8 text-sm">
