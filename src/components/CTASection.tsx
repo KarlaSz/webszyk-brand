@@ -7,17 +7,17 @@ const CTASection = () => {
     <section className="relative py-16 overflow-hidden bg-white">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered content with border */}
-        <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-12 text-center shadow-2xl">
+        <div className="bg-white/5 backdrop-blur-md border border-gray-200 rounded-3xl p-12 text-center shadow-2xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <Rocket className="h-8 w-8 text-[#4CAF50]" />
-            <span className="text-white/90 font-semibold text-lg">Ready to Transform?</span>
+            <span className="text-gray-700 font-semibold text-lg">Ready to Transform?</span>
           </div>
           
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Let's Build Something Amazing Together
           </h2>
           
-          <p className="text-white/80 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
             Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
           </p>
           
@@ -30,7 +30,7 @@ const CTASection = () => {
               Start Your Project Today
             </Button>
             
-            <div className="flex items-center space-x-6 text-white/70">
+            <div className="flex items-center space-x-6 text-gray-600">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
                 <span className="font-medium">Free Consultation</span>
