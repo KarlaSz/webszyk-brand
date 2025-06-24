@@ -29,8 +29,8 @@ const ExperienceSection = () => {
           {/* Web Development */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Code className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Code className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
               <p className="text-gray-600 mb-6">Full-stack solutions from concept to deployment</p>
@@ -55,8 +55,8 @@ const ExperienceSection = () => {
           {/* Mobile Solutions */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Smartphone className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile Solutions</h3>
               <p className="text-gray-600 mb-6">Responsive design and mobile optimization</p>
@@ -81,8 +81,8 @@ const ExperienceSection = () => {
           {/* UI/UX Design */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Palette className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Palette className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
               <p className="text-gray-600 mb-6">Beautiful interfaces that users love</p>
@@ -107,8 +107,8 @@ const ExperienceSection = () => {
           {/* Performance Optimization */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Zap className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Performance</h3>
               <p className="text-gray-600 mb-6">Speed optimization and SEO enhancement</p>
@@ -133,8 +133,8 @@ const ExperienceSection = () => {
           {/* Security & Support */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Shield className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Security & Support</h3>
               <p className="text-gray-600 mb-6">Ongoing maintenance and security updates</p>
@@ -159,8 +159,8 @@ const ExperienceSection = () => {
           {/* Consulting */}
           <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Lightbulb className="h-8 w-8 text-gray-600" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
+                <Lightbulb className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Consulting</h3>
               <p className="text-gray-600 mb-6">Strategic technology guidance and planning</p>
