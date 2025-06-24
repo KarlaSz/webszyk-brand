@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +9,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
@@ -76,6 +76,7 @@ const Index = () => {
         <ExperienceSection />
         <AboutSection />
         <ProjectsSection />
+        <FAQSection />
         <ContactSection />
 
         {/* Footer */}
