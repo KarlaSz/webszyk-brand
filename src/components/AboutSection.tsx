@@ -1,29 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Award, Users, Clock, Building2, Target, Zap } from "lucide-react";
-
-const skills = [
-  "React & TypeScript", "Node.js & Express", "Python & Django", "PostgreSQL & MongoDB",
-  "AWS & Docker", "Figma & Design Systems", "Mobile Development", "API Development",
-  "DevOps & CI/CD", "Performance Optimization", "Security Best Practices", "Agile Methodology"
-];
-
-const stats = [
-  { icon: Users, label: "Happy Clients", value: "50+" },
-  { icon: CheckCircle, label: "Projects Completed", value: "100+" },
-  { icon: Clock, label: "Years Experience", value: "8+" },
-  { icon: Award, label: "Technologies Mastered", value: "20+" }
-];
-
-const brands = [
-  { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-  { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-  { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-  { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-  { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
-  { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" }
-];
+import { Target, Award, Users, Code, Heart, Lightbulb } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -38,128 +16,86 @@ const AboutSection = () => {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Your Trusted Technology Partner
+            Crafting Digital Excellence
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            With over 8 years of experience in full-stack development, I've helped dozens of 
-            companies and entrepreneurs transform their ideas into successful digital products.
+            With over 8 years of experience in full-stack development, I transform ideas into 
+            powerful digital solutions that drive real business results.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:-translate-y-1">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-green-600" />
+        {/* Philosophy Section - Redesigned */}
+        <div className="max-w-5xl mx-auto">
+          <Card className="border-0 shadow-2xl bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+            <CardContent className="p-0">
+              {/* Header */}
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-8 text-white">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Target className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold">My Philosophy</h3>
+                    <p className="text-white/90 text-lg">Building with purpose and precision</p>
+                  </div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Philosophy Card */}
-          <Card className="lg:col-span-2 border-0 shadow-xl bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-            <CardContent className="p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                  <Target className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">My Philosophy</h3>
               </div>
-              
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p className="text-lg">
-                  My approach combines technical excellence with business understanding. I don't just 
-                  write code – I partner with you to understand your goals and deliver solutions that drive results.
+
+              {/* Content */}
+              <div className="p-8">
+                <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                  I believe in creating technology that serves people, not the other way around. 
+                  Every line of code should have purpose, every design decision should enhance user experience, 
+                  and every project should solve real problems.
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                  <div className="flex items-start space-x-3 p-4 bg-green-50 rounded-xl">
-                    <Award className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Quality First</h4>
-                      <p className="text-sm text-gray-600">Every line of code is written with maintainability, security, and performance in mind.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3 p-4 bg-blue-50 rounded-xl">
-                    <Users className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Collaborative</h4>
-                      <p className="text-sm text-gray-600">I work closely with you throughout the entire process, ensuring transparency and alignment.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
 
-          {/* Professional Experience */}
-          <Card className="border-0 shadow-xl bg-gradient-to-br from-white to-purple-50">
-            <CardContent className="p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Building2 className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Trusted By</h3>
-              </div>
-              
-              <p className="text-gray-600 mb-6 text-sm">
-                Leading companies and innovative startups worldwide
-              </p>
-              
-              <div className="space-y-3">
-                {brands.slice(0, 4).map((brand, index) => (
-                  <div key={index} className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-3">
-                      <div className="w-6 h-6 bg-gradient-to-br from-gray-400 to-gray-500 rounded"></div>
+                {/* Core Values Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center group">
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Code className="h-10 w-10 text-blue-600" />
                     </div>
-                    <span className="text-sm font-medium text-gray-700">{brand.name}</span>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Clean Code</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Writing maintainable, scalable code that stands the test of time and grows with your business.
+                    </p>
                   </div>
-                ))}
-                <div className="text-center pt-2">
-                  <span className="text-sm text-gray-500 font-medium">+15 more companies</span>
+
+                  <div className="text-center group">
+                    <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Heart className="h-10 w-10 text-purple-600" />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">User-Centered</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Every decision is made with the end user in mind, ensuring intuitive and delightful experiences.
+                    </p>
+                  </div>
+
+                  <div className="text-center group">
+                    <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Lightbulb className="h-10 w-10 text-amber-600" />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Staying ahead of the curve with modern technologies while ensuring reliability and performance.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom Quote */}
+                <div className="mt-8 p-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border-l-4 border-green-500">
+                  <blockquote className="text-lg text-gray-700 italic text-center">
+                    "Great software isn't just about what it can do – it's about how effortlessly it helps people achieve their goals."
+                  </blockquote>
+                  <div className="text-center mt-4">
+                    <span className="text-green-600 font-semibold">— My Development Mantra</span>
+                  </div>
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
-
-        {/* Technical Expertise */}
-        <Card className="border-0 shadow-xl bg-gradient-to-br from-green-50 via-white to-green-50">
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <div className="flex items-center justify-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                  <Zap className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Technical Expertise</h3>
-              </div>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Proficient in modern technologies and frameworks that power today's digital experiences
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap gap-3 justify-center">
-              {skills.map((skill, index) => (
-                <Badge 
-                  key={index} 
-                  variant="secondary" 
-                  className="bg-white text-gray-700 hover:bg-green-100 hover:text-green-800 transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
