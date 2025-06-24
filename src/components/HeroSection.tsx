@@ -82,13 +82,45 @@ const HeroSection = () => {
                 </div>
                 
                 {/* Browser Content */}
-                <div className="p-8 h-80 flex items-center justify-center bg-gradient-to-br from-white/10 to-white/5">
-                  <div className="text-center">
-                    <h3 className="text-4xl font-bold text-white mb-4">Your Website</h3>
-                    <div className="w-32 h-4 bg-white/30 rounded mx-auto mb-3"></div>
-                    <div className="w-48 h-4 bg-white/30 rounded mx-auto mb-3"></div>
-                    <div className="w-40 h-4 bg-white/30 rounded mx-auto mb-6"></div>
-                    <div className="w-24 h-8 bg-[#4CAF50]/90 rounded mx-auto shadow-lg"></div>
+                <div className="p-8 h-80 bg-gradient-to-br from-white/10 to-white/5">
+                  <div className="text-center mb-6">
+                    <h3 className="text-3xl font-bold text-white mb-3">Your Business Online</h3>
+                    <p className="text-white/80 text-sm mb-6">Professional website that converts visitors</p>
+                  </div>
+                  
+                  {/* Navigation Menu */}
+                  <div className="flex justify-center space-x-6 mb-8">
+                    <div className="w-16 h-2 bg-white/40 rounded"></div>
+                    <div className="w-20 h-2 bg-white/40 rounded"></div>
+                    <div className="w-18 h-2 bg-white/40 rounded"></div>
+                    <div className="w-14 h-2 bg-white/40 rounded"></div>
+                  </div>
+                  
+                  {/* Content Blocks */}
+                  <div className="space-y-4 mb-8">
+                    <div className="flex space-x-3">
+                      <div className="w-20 h-3 bg-white/30 rounded"></div>
+                      <div className="w-32 h-3 bg-white/30 rounded"></div>
+                      <div className="w-24 h-3 bg-white/30 rounded"></div>
+                    </div>
+                    <div className="flex space-x-3">
+                      <div className="w-28 h-3 bg-white/30 rounded"></div>
+                      <div className="w-20 h-3 bg-white/30 rounded"></div>
+                      <div className="w-36 h-3 bg-white/30 rounded"></div>
+                    </div>
+                  </div>
+                  
+                  {/* CTA Button */}
+                  <div className="flex justify-center">
+                    <div className="w-32 h-10 bg-[#4CAF50]/90 rounded-lg shadow-lg flex items-center justify-center">
+                      <span className="text-white text-xs font-semibold">Get Started</span>
+                    </div>
+                  </div>
+                  
+                  {/* Trust Indicators */}
+                  <div className="flex justify-center space-x-4 mt-6">
+                    <div className="w-3 h-3 bg-[#4CAF50] rounded-full"></div>
+                    <div className="text-white/70 text-xs">Trusted by 500+ businesses</div>
                   </div>
                 </div>
               </div>
