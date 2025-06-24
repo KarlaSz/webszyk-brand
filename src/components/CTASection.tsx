@@ -5,15 +5,6 @@ import { Rocket, MessageCircle } from "lucide-react";
 const CTASection = () => {
   return (
     <section className="relative py-16 overflow-hidden">
-      {/* Same background as MyOfferSection */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
-      
-      {/* Animated Background Elements - matching MyOfferSection */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#4CAF50]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered content with border */}
         <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-12 text-center shadow-2xl">
