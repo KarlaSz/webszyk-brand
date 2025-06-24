@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -108,7 +107,7 @@ const ContactSection = () => {
                         placeholder="John Doe" 
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-12 text-base" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] h-12 text-base" 
                       />
                     </div>
                     
@@ -120,7 +119,7 @@ const ContactSection = () => {
                         placeholder="john@example.com" 
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 h-12 text-base" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] h-12 text-base" 
                       />
                     </div>
                     
@@ -132,13 +131,13 @@ const ContactSection = () => {
                         rows={5}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400 text-base"
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] text-base"
                       />
                     </div>
                     
                     <div className="space-y-2">
                       <Label className="text-white font-medium text-base">Attach Files</Label>
-                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-orange-400 transition-colors cursor-pointer">
+                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-[#4CAF50] transition-colors cursor-pointer">
                         <div className="text-center">
                           <Paperclip className="h-8 w-8 text-white/70 mx-auto mb-3" />
                           <p className="text-white/70 text-base">Click to attach files or drag & drop</p>
@@ -151,8 +150,7 @@ const ContactSection = () => {
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
-                      variant="solid"
-                      className="w-full py-6 text-lg shadow-lg disabled:opacity-50"
+                      className="w-full py-6 text-lg shadow-lg disabled:opacity-50 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white border-none font-semibold transition-all duration-300 hover:shadow-xl transform hover:scale-[1.02]"
                     >
                       {isSubmitting ? 'Sending...' : 'Get Free Quote'}
                       <ArrowRight className="ml-2 h-5 w-5" />
