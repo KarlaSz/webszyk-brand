@@ -65,14 +65,14 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        {/* Services Grid - Clean Modern Design */}
+        {/* Services Grid - Glassmorphism Design */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="group border border-gray-200 hover:border-[#4CAF50]/30 transition-all duration-300 bg-white hover:shadow-lg hover:-translate-y-1 overflow-hidden">
+            <Card key={index} className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80 hover:-translate-y-1">
               <CardContent className="p-8">
                 {/* Icon and Title */}
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#4CAF50]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4CAF50]/20 transition-colors">
+                  <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4CAF50]/30 transition-all duration-300 border border-[#4CAF50]/20">
                     <service.icon className="h-8 w-8 text-[#4CAF50]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
           ))}
         </div>
 
-        {/* Technologies - Clean Badge Design */}
+        {/* Technologies - Glassmorphism Badge Design */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -104,7 +104,7 @@ const ExperienceSection = () => {
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="bg-white text-gray-700 hover:bg-[#4CAF50] hover:text-white transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md border border-gray-200 rounded-full"
+                className="bg-white/70 backdrop-blur-md border border-white/40 text-gray-700 hover:bg-[#4CAF50]/20 hover:text-[#4CAF50] hover:border-[#4CAF50]/40 transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-lg hover:shadow-xl rounded-full"
               >
                 {tech}
               </Badge>
