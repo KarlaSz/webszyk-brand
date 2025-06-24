@@ -1,9 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { ExternalLink, Github, Code, Smartphone, Globe } from "lucide-react";
+import { ExternalLink, Code, Smartphone, Globe } from "lucide-react";
 
 const projects = [
   {
@@ -101,12 +100,12 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="ghost" size="sm" className="flex-1 hover:bg-[#4CAF50]/10 hover:text-[#4CAF50] text-gray-700 border border-gray-300/50">
+                  <Button variant="outline" size="sm" className="flex-1 border-gray-300 text-gray-700 hover:border-[#4CAF50] hover:text-[#4CAF50] hover:bg-[#4CAF50]/10 transition-all duration-200 bg-white">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
-                  <Button variant="ghost" size="sm" className="hover:bg-[#4CAF50]/10 hover:text-[#4CAF50] text-gray-700 border border-gray-300/50">
-                    <Github className="h-4 w-4" />
+                  <Button variant="outline" size="sm" className="border-gray-300 text-gray-700 hover:border-[#4CAF50] hover:text-[#4CAF50] hover:bg-[#4CAF50]/10 transition-all duration-200 bg-white">
+                    View Code
                   </Button>
                 </div>
               </CardContent>
