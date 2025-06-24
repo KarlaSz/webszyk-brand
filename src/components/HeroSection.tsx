@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ArrowBigDown } from "lucide-react";
 
@@ -174,7 +175,13 @@ const HeroSection = () => {
             onClick={scrollToNext}
             className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
           >
-            <ArrowBigDown className="h-10 w-10 text-[#4CAF50] animate-bounce transition-all duration-300 group-hover:scale-110" />
+            <ArrowBigDown 
+              className="h-10 w-10 text-[#4CAF50] transition-all duration-300 group-hover:scale-110" 
+              style={{ 
+                animation: 'bounce 3s infinite ease-in-out',
+                animationDirection: 'alternate'
+              }} 
+            />
             
             {/* Glassmorphic ring effect */}
             <div className="absolute inset-0 rounded-full border-2 border-[#4CAF50]/30 animate-pulse"></div>
