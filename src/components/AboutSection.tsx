@@ -31,9 +31,9 @@ const AboutSection = () => {
           <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
             <CardContent className="p-6 text-center">
               <div className="mb-6">
-                <div className="w-24 h-24 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                <div className="w-36 h-36 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=96&h=96&fit=crop&crop=center" 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=144&h=144&fit=crop&crop=center" 
                     alt="Clean Code" 
                     className="w-full h-full object-cover"
                   />
@@ -50,9 +50,9 @@ const AboutSection = () => {
           <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
             <CardContent className="p-6 text-center">
               <div className="mb-6">
-                <div className="w-24 h-24 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                <div className="w-36 h-36 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=96&h=96&fit=crop&crop=center" 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=144&h=144&fit=crop&crop=center" 
                     alt="User-Centered" 
                     className="w-full h-full object-cover"
                   />
@@ -69,9 +69,9 @@ const AboutSection = () => {
           <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
             <CardContent className="p-6 text-center">
               <div className="mb-6">
-                <div className="w-24 h-24 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                <div className="w-36 h-36 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=96&h=96&fit=crop&crop=center" 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=144&h=144&fit=crop&crop=center" 
                     alt="Innovation" 
                     className="w-full h-full object-cover"
                   />
