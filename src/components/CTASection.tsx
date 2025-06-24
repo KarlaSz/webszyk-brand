@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Rocket, MessageCircle, Code, Monitor, Smartphone, Zap } from "lucide-react";
+import { Rocket, MessageCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -11,22 +11,6 @@ const CTASection = () => {
           <div className="flex items-center justify-center space-x-2 mb-6">
             <Rocket className="h-8 w-8 text-[#4CAF50]" />
             <span className="text-gray-700 font-semibold text-lg">Ready to Transform?</span>
-          </div>
-          
-          {/* Coding Icons Row */}
-          <div className="flex items-center justify-center space-x-8 mb-8">
-            <div className="flex items-center justify-center w-16 h-16 bg-[#4CAF50]/10 rounded-xl backdrop-blur-sm border border-[#4CAF50]/20">
-              <Code className="h-8 w-8 text-[#4CAF50]" />
-            </div>
-            <div className="flex items-center justify-center w-16 h-16 bg-[#4CAF50]/10 rounded-xl backdrop-blur-sm border border-[#4CAF50]/20">
-              <Monitor className="h-8 w-8 text-[#4CAF50]" />
-            </div>
-            <div className="flex items-center justify-center w-16 h-16 bg-[#4CAF50]/10 rounded-xl backdrop-blur-sm border border-[#4CAF50]/20">
-              <Smartphone className="h-8 w-8 text-[#4CAF50]" />
-            </div>
-            <div className="flex items-center justify-center w-16 h-16 bg-[#4CAF50]/10 rounded-xl backdrop-blur-sm border border-[#4CAF50]/20">
-              <Zap className="h-8 w-8 text-[#4CAF50]" />
-            </div>
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
