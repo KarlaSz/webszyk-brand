@@ -1,7 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartphone, CheckCircle, Zap, Target, Shield, Rocket, MessageCircle } from "lucide-react";
+import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartphone, CheckCircle, Zap, Target, Shield, Rocket, MessageCircle, ArrowDown } from "lucide-react";
 
 const challenges = [
   {
@@ -91,9 +90,17 @@ const ProblemSolutionSection = () => {
             Transforming Tech Challenges
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             Every challenge is an opportunity for innovation. Here's how I turn common tech problems into powerful digital solutions.
           </p>
+
+          {/* Engaging Arrow */}
+          <div className="flex justify-center">
+            <div className="group flex items-center space-x-3 bg-[#4CAF50]/10 backdrop-blur-sm border border-[#4CAF50]/20 rounded-full px-6 py-3 hover:bg-[#4CAF50]/20 transition-all duration-300 cursor-pointer">
+              <span className="text-[#4CAF50] font-semibold">Find Your Solution Below</span>
+              <ArrowDown className="h-5 w-5 text-[#4CAF50] group-hover:translate-y-1 transition-transform animate-bounce" />
+            </div>
+          </div>
         </div>
 
         {/* VS Comparison Layout */}
