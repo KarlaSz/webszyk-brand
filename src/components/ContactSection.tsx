@@ -96,12 +96,12 @@ const ContactSection = () => {
           
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Left Column - Contact Form with Glassmorphism */}
+            {/* Left Column - Contact Form with Enhanced Glassmorphism */}
             <div>
-              <Card className="border border-white/20 backdrop-blur-md bg-white/10 shadow-2xl">
+              <Card className="border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-white">Get Your Free Quote</CardTitle>
-                  <p className="text-white/80">
+                  <p className="text-white/90">
                     Fill out the form and I'll get back to you within 24 hours
                   </p>
                 </CardHeader>
@@ -109,57 +109,57 @@ const ContactSection = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName" className="text-white/90 font-medium">First Name *</Label>
+                        <Label htmlFor="firstName" className="text-white font-medium">First Name *</Label>
                         <Input 
                           id="firstName" 
                           placeholder="John" 
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                          className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400" 
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName" className="text-white/90 font-medium">Last Name *</Label>
+                        <Label htmlFor="lastName" className="text-white font-medium">Last Name *</Label>
                         <Input 
                           id="lastName" 
                           placeholder="Doe" 
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                          className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400" 
                         />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-white/90 font-medium">Email *</Label>
+                      <Label htmlFor="email" className="text-white font-medium">Email *</Label>
                       <Input 
                         id="email" 
                         type="email" 
                         placeholder="john@example.com" 
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400" 
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="company" className="text-white/90 font-medium">Company</Label>
+                      <Label htmlFor="company" className="text-white font-medium">Company</Label>
                       <Input 
                         id="company" 
                         placeholder="Your Company" 
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400" 
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="budget" className="text-white/90 font-medium">Project Budget</Label>
+                      <Label htmlFor="budget" className="text-white font-medium">Project Budget</Label>
                       <select 
                         id="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-white/30 bg-white/10 backdrop-blur-sm text-white rounded-md focus:outline-none focus:border-[#4CAF50] focus:ring-1 focus:ring-[#4CAF50]"
+                        className="w-full px-3 py-2 border border-white/40 bg-black/20 backdrop-blur-sm text-white rounded-md focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
                       >
                         <option value="" className="bg-gray-800 text-white">Select budget range</option>
                         <option value="5k-10k" className="bg-gray-800 text-white">$5,000 - $10,000</option>
@@ -170,21 +170,21 @@ const ContactSection = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-white/90 font-medium">Project Details *</Label>
+                      <Label htmlFor="message" className="text-white font-medium">Project Details *</Label>
                       <Textarea 
                         id="message" 
                         placeholder="Tell me about your project, goals, and timeline..."
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]"
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-orange-400 focus:ring-orange-400"
                       />
                     </div>
                     
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white text-lg py-6 shadow-lg disabled:opacity-50"
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg py-6 shadow-lg disabled:opacity-50 border-0"
                     >
                       {isSubmitting ? 'Sending...' : 'Get Free Quote'}
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -194,9 +194,9 @@ const ContactSection = () => {
               </Card>
             </div>
             
-            {/* Right Column - Why Work With Me with Glassmorphism */}
+            {/* Right Column - Why Work With Me with Enhanced Glassmorphism */}
             <div>
-              <Card className="border border-white/20 backdrop-blur-md bg-white/10 shadow-2xl h-full">
+              <Card className="border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl h-full">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose WebSzyk?</h3>
                   <div className="space-y-6">
@@ -206,7 +206,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">8+ Years Experience</h4>
-                        <p className="text-white/80">Proven track record with 100+ successful projects across various industries.</p>
+                        <p className="text-white/90">Proven track record with 100+ successful projects across various industries.</p>
                       </div>
                     </div>
                     
@@ -216,7 +216,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">Fast Response</h4>
-                        <p className="text-white/80">Quick communication and rapid development cycles to meet your deadlines.</p>
+                        <p className="text-white/90">Quick communication and rapid development cycles to meet your deadlines.</p>
                       </div>
                     </div>
                     
@@ -226,7 +226,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">Ongoing Support</h4>
-                        <p className="text-white/80">Comprehensive post-launch support and maintenance included in every project.</p>
+                        <p className="text-white/90">Comprehensive post-launch support and maintenance included in every project.</p>
                       </div>
                     </div>
                     
@@ -236,7 +236,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">Quality Guarantee</h4>
-                        <p className="text-white/80">Modern, scalable solutions built with best practices and clean code.</p>
+                        <p className="text-white/90">Modern, scalable solutions built with best practices and clean code.</p>
                       </div>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ const ContactSection = () => {
                       <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
                       <span className="text-[#4CAF50] font-semibold">Available for new projects</span>
                     </div>
-                    <p className="text-white/80 text-sm">Response time: 2-4 hours</p>
+                    <p className="text-white/90 text-sm">Response time: 2-4 hours</p>
                   </div>
                 </CardContent>
               </Card>
@@ -256,18 +256,18 @@ const ContactSection = () => {
           {/* Bottom Row - Profile Image */}
           <div className="flex justify-center">
             <div className="text-center">
-              <div className="w-48 h-60 bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 shadow-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-48 h-60 bg-black/30 backdrop-blur-md rounded-2xl border border-white/40 shadow-2xl flex items-center justify-center mx-auto mb-4">
                 <div className="text-center text-white">
                   <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-full mx-auto mb-3 flex items-center justify-center">
                     <span className="text-2xl">👨‍💻</span>
                   </div>
                   <p className="text-sm font-medium text-white">WebSzyk</p>
-                  <p className="text-xs text-white/70">Your Tech Partner</p>
+                  <p className="text-xs text-white/80">Your Tech Partner</p>
                 </div>
               </div>
-              <div className="text-white/90">
+              <div className="text-white">
                 <p className="font-medium">Ready to transform your ideas into reality?</p>
-                <p className="text-sm text-white/70">Let's build something amazing together!</p>
+                <p className="text-sm text-white/80">Let's build something amazing together!</p>
               </div>
             </div>
           </div>
