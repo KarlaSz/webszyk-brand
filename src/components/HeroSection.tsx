@@ -45,19 +45,6 @@ const HeroSection = () => {
               business-focused solutions.
             </p>
             
-            <div className="flex justify-center mb-12">
-              <button 
-                onClick={scrollToNext}
-                className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
-              >
-                <ArrowBigDown className="h-10 w-10 text-[#4CAF50] group-hover:animate-bounce transition-all duration-300 group-hover:scale-110" />
-                
-                {/* Glassmorphic ring effect */}
-                <div className="absolute inset-0 rounded-full border-2 border-[#4CAF50]/30 animate-pulse"></div>
-                <div className="absolute inset-2 rounded-full border border-white/30"></div>
-              </button>
-            </div>
-            
             <div className="flex items-center space-x-8 text-sm">
               <div className="flex items-center space-x-2">
                 <Zap className="h-4 w-4 text-[#4CAF50]" />
@@ -180,6 +167,20 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Centered Animated Arrow Button - Moved Below Everything */}
+        <div className="flex justify-center mt-16">
+          <button 
+            onClick={scrollToNext}
+            className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
+          >
+            <ArrowBigDown className="h-10 w-10 text-[#4CAF50] group-hover:animate-bounce transition-all duration-300 group-hover:scale-110" />
+            
+            {/* Glassmorphic ring effect */}
+            <div className="absolute inset-0 rounded-full border-2 border-[#4CAF50]/30 animate-pulse"></div>
+            <div className="absolute inset-2 rounded-full border border-white/30"></div>
+          </button>
         </div>
       </div>
     </section>
