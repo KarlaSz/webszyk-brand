@@ -93,41 +93,6 @@ const ExperienceSection = () => {
           ))}
         </div>
 
-        {/* Process Section - Clean Design */}
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 mb-16 relative overflow-hidden">
-          {/* Subtle background decoration */}
-          <div className="absolute top-0 right-0 w-40 h-40 bg-[#4CAF50]/5 rounded-full blur-3xl"></div>
-          
-          <div className="text-center mb-12 relative z-10">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">My Development Process</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              A proven approach that ensures your project is delivered on time, within budget, and exceeds expectations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-            {[
-              { step: "01", title: "Discovery", desc: "Understanding your goals and requirements" },
-              { step: "02", title: "Design", desc: "Creating wireframes and visual designs" },
-              { step: "03", title: "Development", desc: "Building with modern, scalable technologies" },
-              { step: "04", title: "Launch", desc: "Testing, deployment, and ongoing support" }
-            ].map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-[#4CAF50] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
-                  {phase.step}
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-lg">{phase.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{phase.desc}</p>
-                {index < 3 && (
-                  <div className="hidden md:flex justify-center mt-6">
-                    <ArrowRight className="h-5 w-5 text-gray-300" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Technologies - Clean Badge Design */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
