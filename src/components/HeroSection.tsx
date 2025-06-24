@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
+import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToNext = () => {
@@ -39,9 +39,12 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 onClick={scrollToNext}
-                className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-[#4CAF50]/90 hover:border-[#4CAF50] text-white text-lg px-8 py-6 shadow-xl transition-all duration-300 rounded-full"
+                className="group bg-white/20 backdrop-blur-md border border-white/30 hover:bg-[#4CAF50]/20 hover:border-[#4CAF50]/50 text-white text-lg px-12 py-8 shadow-xl transition-all duration-500 rounded-full hover:scale-110 transform"
               >
-                <ArrowDown className="h-6 w-6 animate-bounce" />
+                <div className="flex flex-col items-center space-y-2">
+                  <ChevronDown className="h-8 w-8 group-hover:animate-bounce transition-all duration-300" />
+                  <span className="text-sm font-medium">Discover More</span>
+                </div>
               </Button>
             </div>
             
@@ -93,9 +96,9 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Floating Problem Bubbles */}
+              {/* Floating Problem Bubbles - Updated with Orange Gradient */}
               <div className="absolute -top-8 -left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -107,7 +110,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -top-4 -right-12 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <Users className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -119,7 +122,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute top-1/2 -left-16 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <TrendingDown className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -131,7 +134,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute top-1/2 -right-16 animate-bounce" style={{ animationDelay: '3s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <DollarSign className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -143,7 +146,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-8 left-8 animate-bounce" style={{ animationDelay: '4s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <Clock className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -155,7 +158,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-8 -right-8 animate-bounce" style={{ animationDelay: '5s', animationDuration: '3s' }}>
-                <div className="bg-red-500/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
                   <div className="flex items-start space-x-2">
                     <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>

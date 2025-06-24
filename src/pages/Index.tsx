@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,18 +11,19 @@ import ContactSection from "@/components/ContactSection";
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Lighter Glassmorphism Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900"></div>
-      <div className="fixed inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-[#4CAF50]/8 to-emerald-500/12"></div>
+      {/* Lighter Green-Silver Glassmorphism Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
+      <div className="fixed inset-0 bg-gradient-to-tr from-[#4CAF50]/12 via-silver/8 to-emerald-400/10"></div>
+      <div className="fixed inset-0 bg-gradient-to-bl from-gray-300/5 via-[#4CAF50]/8 to-slate-600/15"></div>
       
-      {/* Animated Background Elements */}
-      <div className="fixed top-10 left-10 w-72 h-72 bg-[#4CAF50]/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="fixed top-1/2 right-10 w-96 h-96 bg-[#4CAF50]/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* Animated Background Elements - Lighter and More Subtle */}
+      <div className="fixed top-10 left-10 w-72 h-72 bg-gradient-to-br from-[#4CAF50]/15 to-gray-300/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="fixed top-1/2 right-10 w-96 h-96 bg-gradient-to-bl from-emerald-400/12 to-silver/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#4CAF50]/10 to-gray-200/12 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/20">
+        <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/15">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               {/* Left - Grouped Navigation Links */}
@@ -74,7 +74,7 @@ const Index = () => {
         <ContactSection />
 
         {/* Footer */}
-        <footer className="backdrop-blur-md bg-black/30 border-t border-white/20">
+        <footer className="backdrop-blur-md bg-black/20 border-t border-white/15">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
