@@ -5,8 +5,72 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle, Clock, Shield, Zap } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    budget: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Success!",
+        description: "Your message has been sent. I'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        budget: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative overflow-hidden">
       {/* Enhanced Gradient Background */}
@@ -32,136 +96,157 @@ const ContactSection = () => {
           
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Left Column - Contact Form */}
+            {/* Left Column - Contact Form with Glassmorphism */}
             <div>
-              <Card className="border border-white/20 shadow-2xl backdrop-blur-md bg-white/95">
+              <Card className="border border-white/20 backdrop-blur-md bg-white/10 shadow-2xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Get Your Free Quote</CardTitle>
-                  <p className="text-gray-600">
+                  <CardTitle className="text-2xl font-bold text-white">Get Your Free Quote</CardTitle>
+                  <p className="text-white/80">
                     Fill out the form and I'll get back to you within 24 hours
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstName" className="text-white/90 font-medium">First Name *</Label>
+                        <Input 
+                          id="firstName" 
+                          placeholder="John" 
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="lastName" className="text-white/90 font-medium">Last Name *</Label>
+                        <Input 
+                          id="lastName" 
+                          placeholder="Doe" 
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        />
+                      </div>
+                    </div>
+                    
                     <div className="space-y-2">
-                      <Label htmlFor="firstName" className="text-gray-700 font-medium">First Name *</Label>
+                      <Label htmlFor="email" className="text-white/90 font-medium">Email *</Label>
                       <Input 
-                        id="firstName" 
-                        placeholder="John" 
-                        className="border-gray-300 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        id="email" 
+                        type="email" 
+                        placeholder="john@example.com" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
                       />
                     </div>
+                    
                     <div className="space-y-2">
-                      <Label htmlFor="lastName" className="text-gray-700 font-medium">Last Name *</Label>
+                      <Label htmlFor="company" className="text-white/90 font-medium">Company</Label>
                       <Input 
-                        id="lastName" 
-                        placeholder="Doe" 
-                        className="border-gray-300 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
+                        id="company" 
+                        placeholder="Your Company" 
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
                       />
                     </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-gray-700 font-medium">Email *</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="john@example.com" 
-                      className="border-gray-300 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="company" className="text-gray-700 font-medium">Company</Label>
-                    <Input 
-                      id="company" 
-                      placeholder="Your Company" 
-                      className="border-gray-300 focus:border-[#4CAF50] focus:ring-[#4CAF50]" 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="budget" className="text-gray-700 font-medium">Project Budget</Label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#4CAF50] focus:ring-1 focus:ring-[#4CAF50]">
-                      <option value="">Select budget range</option>
-                      <option value="5k-10k">$5,000 - $10,000</option>
-                      <option value="10k-25k">$10,000 - $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="50k+">$50,000+</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-gray-700 font-medium">Project Details *</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell me about your project, goals, and timeline..."
-                      rows={4}
-                      className="border-gray-300 focus:border-[#4CAF50] focus:ring-[#4CAF50]"
-                    />
-                  </div>
-                  
-                  <Button className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white text-lg py-6 shadow-lg">
-                    Get Free Quote
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="budget" className="text-white/90 font-medium">Project Budget</Label>
+                      <select 
+                        id="budget"
+                        value={formData.budget}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border border-white/30 bg-white/10 backdrop-blur-sm text-white rounded-md focus:outline-none focus:border-[#4CAF50] focus:ring-1 focus:ring-[#4CAF50]"
+                      >
+                        <option value="" className="bg-gray-800 text-white">Select budget range</option>
+                        <option value="5k-10k" className="bg-gray-800 text-white">$5,000 - $10,000</option>
+                        <option value="10k-25k" className="bg-gray-800 text-white">$10,000 - $25,000</option>
+                        <option value="25k-50k" className="bg-gray-800 text-white">$25,000 - $50,000</option>
+                        <option value="50k+" className="bg-gray-800 text-white">$50,000+</option>
+                      </select>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="message" className="text-white/90 font-medium">Project Details *</Label>
+                      <Textarea 
+                        id="message" 
+                        placeholder="Tell me about your project, goals, and timeline..."
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        className="border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:border-[#4CAF50] focus:ring-[#4CAF50]"
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white text-lg py-6 shadow-lg disabled:opacity-50"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Get Free Quote'}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
             </div>
             
-            {/* Right Column - Why Work With Me */}
+            {/* Right Column - Why Work With Me with Glassmorphism */}
             <div>
-              <Card className="border border-white/20 shadow-2xl backdrop-blur-md bg-white/95 h-full">
+              <Card className="border border-white/20 backdrop-blur-md bg-white/10 shadow-2xl h-full">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose WebSzyk?</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Why Choose WebSzyk?</h3>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
                         <Zap className="h-6 w-6 text-[#4CAF50]" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">8+ Years Experience</h4>
-                        <p className="text-gray-600">Proven track record with 100+ successful projects across various industries.</p>
+                        <h4 className="font-semibold text-white mb-2">8+ Years Experience</h4>
+                        <p className="text-white/80">Proven track record with 100+ successful projects across various industries.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
                         <Clock className="h-6 w-6 text-[#4CAF50]" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Fast Response</h4>
-                        <p className="text-gray-600">Quick communication and rapid development cycles to meet your deadlines.</p>
+                        <h4 className="font-semibold text-white mb-2">Fast Response</h4>
+                        <p className="text-white/80">Quick communication and rapid development cycles to meet your deadlines.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
                         <Shield className="h-6 w-6 text-[#4CAF50]" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Ongoing Support</h4>
-                        <p className="text-gray-600">Comprehensive post-launch support and maintenance included in every project.</p>
+                        <h4 className="font-semibold text-white mb-2">Ongoing Support</h4>
+                        <p className="text-white/80">Comprehensive post-launch support and maintenance included in every project.</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="h-6 w-6 text-[#4CAF50]" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Quality Guarantee</h4>
-                        <p className="text-gray-600">Modern, scalable solutions built with best practices and clean code.</p>
+                        <h4 className="font-semibold text-white mb-2">Quality Guarantee</h4>
+                        <p className="text-white/80">Modern, scalable solutions built with best practices and clean code.</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-8 p-6 bg-[#4CAF50]/5 rounded-lg border border-[#4CAF50]/20 backdrop-blur-sm">
+                  <div className="mt-8 p-6 bg-[#4CAF50]/10 backdrop-blur-sm rounded-lg border border-[#4CAF50]/30">
                     <div className="flex items-center space-x-2 mb-3">
                       <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
                       <span className="text-[#4CAF50] font-semibold">Available for new projects</span>
                     </div>
-                    <p className="text-gray-600 text-sm">Response time: 2-4 hours</p>
+                    <p className="text-white/80 text-sm">Response time: 2-4 hours</p>
                   </div>
                 </CardContent>
               </Card>
@@ -171,13 +256,13 @@ const ContactSection = () => {
           {/* Bottom Row - Profile Image */}
           <div className="flex justify-center">
             <div className="text-center">
-              <div className="w-48 h-60 bg-gradient-to-br from-white/95 to-white/90 rounded-2xl border border-white/30 shadow-2xl backdrop-blur-md flex items-center justify-center mx-auto mb-4">
-                <div className="text-center text-gray-600">
-                  <div className="w-16 h-16 bg-[#4CAF50]/20 rounded-full mx-auto mb-3 flex items-center justify-center">
+              <div className="w-48 h-60 bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 shadow-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="text-center text-white">
+                  <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-full mx-auto mb-3 flex items-center justify-center">
                     <span className="text-2xl">👨‍💻</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-800">WebSzyk</p>
-                  <p className="text-xs text-gray-600">Your Tech Partner</p>
+                  <p className="text-sm font-medium text-white">WebSzyk</p>
+                  <p className="text-xs text-white/70">Your Tech Partner</p>
                 </div>
               </div>
               <div className="text-white/90">
