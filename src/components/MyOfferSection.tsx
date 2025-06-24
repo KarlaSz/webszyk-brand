@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -144,7 +143,7 @@ const MyOfferSection = () => {
                   <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
                 </div>
                 
-                <Button className="w-full py-3 text-lg group">
+                <Button variant="solid" className="w-full py-3 text-lg group">
                   Learn More
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
