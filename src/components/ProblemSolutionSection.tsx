@@ -96,74 +96,77 @@ const ProblemSolutionSection = () => {
           </p>
         </div>
 
-        {/* Challenges Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            Common Challenges I Help Solve
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {challenges.map((challenge, index) => (
-              <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/70 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-gray-50/30 via-transparent to-gray-100/20"></div>
-                
-                <CardContent className="p-6 relative z-10">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/40 backdrop-blur-sm shadow-md">
-                      <challenge.icon className={`h-6 w-6 ${challenge.color}`} />
+        {/* Two Column Comparison Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Challenges Column */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+              Common Challenges
+            </h3>
+            <div className="space-y-6">
+              {challenges.map((challenge, index) => (
+                <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/70 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-gray-50/30 via-transparent to-gray-100/20"></div>
+                  
+                  <CardContent className="p-6 relative z-10">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/40 backdrop-blur-sm shadow-md">
+                        <challenge.icon className={`h-6 w-6 ${challenge.color}`} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-gray-900 text-lg mb-2">{challenge.title}</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">{challenge.description}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-gray-900 text-lg mb-2">{challenge.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{challenge.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Solutions Column */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+              WebSzyk Solutions
+            </h3>
+            <div className="space-y-6">
+              {solutions.map((solution, index) => (
+                <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-gradient-to-br from-[#4CAF50]/5 via-white/80 to-emerald-50/50 border border-[#4CAF50]/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#4CAF50]/10 via-white/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-emerald-50/40 via-transparent to-[#4CAF50]/5"></div>
+                  
+                  <CardContent className="p-6 relative z-10">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-[#4CAF50]/20 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#4CAF50]/30 backdrop-blur-sm shadow-md">
+                        <solution.icon className="h-6 w-6 text-[#4CAF50]" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-gray-900 text-lg mb-2">{solution.title}</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Transformation Arrow */}
+        {/* Central VS Arrow */}
         <div className="flex justify-center mb-12">
           <div className="relative">
             <div className="w-20 h-20 bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white backdrop-blur-md">
               <ArrowRight className="h-8 w-8 text-white" />
             </div>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-[#4CAF50]/20 text-sm font-bold text-[#4CAF50] backdrop-blur-md">
-              WebSzyk Solutions
+              VS
             </div>
           </div>
         </div>
 
-        {/* Solutions Section */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            My Innovative Solutions
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((solution, index) => (
-              <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-gradient-to-br from-[#4CAF50]/5 via-white/80 to-emerald-50/50 border border-[#4CAF50]/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#4CAF50]/10 via-white/30 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-50/40 via-transparent to-[#4CAF50]/5"></div>
-                
-                <CardContent className="p-6 relative z-10">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#4CAF50]/20 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#4CAF50]/30 backdrop-blur-sm shadow-md">
-                      <solution.icon className="h-6 w-6 text-[#4CAF50]" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-gray-900 text-lg mb-2">{solution.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* CTA Section */}
-        <div className="text-center mt-12">
+        <div className="text-center">
           <Button variant="solid" size="lg" className="group">
             Let's Transform Your Challenges
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
