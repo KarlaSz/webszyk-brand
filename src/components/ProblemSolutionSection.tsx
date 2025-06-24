@@ -8,37 +8,37 @@ const challenges = [
     icon: Clock,
     title: "Slow Performance",
     description: "Users abandon after 3 seconds",
-    color: "text-orange-500"
+    color: "text-red-500"
   },
   {
     icon: DollarSign,
     title: "High Maintenance Costs", 
     description: "Expensive legacy systems",
-    color: "text-red-500"
+    color: "text-red-600"
   },
   {
     icon: AlertCircle,
     title: "Outdated Technology",
     description: "Security vulnerabilities",
-    color: "text-amber-500"
+    color: "text-red-500"
   },
   {
     icon: Users,
     title: "Poor User Experience",
     description: "Confusing interfaces",
-    color: "text-purple-500"
+    color: "text-red-600"
   },
   {
     icon: TrendingDown,
     title: "Low Conversions",
     description: "Missing opportunities",
-    color: "text-red-600"
+    color: "text-red-500"
   },
   {
     icon: Smartphone,
     title: "Mobile Issues",
     description: "Lost mobile traffic",
-    color: "text-blue-500"
+    color: "text-red-600"
   }
 ];
 
@@ -96,22 +96,22 @@ const ProblemSolutionSection = () => {
           </p>
         </div>
 
-        {/* Two Column Comparison Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Challenges Column */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-              Common Challenges
+        {/* VS Comparison Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
+          {/* Problems Column */}
+          <div className="lg:col-span-5">
+            <h3 className="text-2xl font-bold text-red-600 mb-8 text-center">
+              Common Problems
             </h3>
             <div className="space-y-6">
               {challenges.map((challenge, index) => (
-                <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/70 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-gradient-to-tr from-gray-50/30 via-transparent to-gray-100/20"></div>
+                <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-red-50/80 border border-red-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-100/60 via-red-50/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-red-200/30 via-transparent to-red-100/20"></div>
                   
                   <CardContent className="p-6 relative z-10">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/40 backdrop-blur-sm shadow-md">
+                      <div className="w-12 h-12 bg-red-100/80 rounded-xl flex items-center justify-center flex-shrink-0 border border-red-200/40 backdrop-blur-sm shadow-md">
                         <challenge.icon className={`h-6 w-6 ${challenge.color}`} />
                       </div>
                       <div className="flex-1">
@@ -125,9 +125,20 @@ const ProblemSolutionSection = () => {
             </div>
           </div>
 
+          {/* VS Section */}
+          <div className="lg:col-span-2 flex justify-center items-center">
+            <div className="relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-gray-500 to-gray-700 rounded-full flex items-center justify-center shadow-xl border-4 border-white backdrop-blur-md">
+                <span className="text-white font-bold text-lg">VS</span>
+              </div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#4CAF50] rounded-full"></div>
+            </div>
+          </div>
+
           {/* Solutions Column */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+          <div className="lg:col-span-5">
+            <h3 className="text-2xl font-bold text-[#4CAF50] mb-8 text-center">
               WebSzyk Solutions
             </h3>
             <div className="space-y-6">
@@ -149,18 +160,6 @@ const ProblemSolutionSection = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Central VS Arrow */}
-        <div className="flex justify-center mb-12">
-          <div className="relative">
-            <div className="w-20 h-20 bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white backdrop-blur-md">
-              <ArrowRight className="h-8 w-8 text-white" />
-            </div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-[#4CAF50]/20 text-sm font-bold text-[#4CAF50] backdrop-blur-md">
-              VS
             </div>
           </div>
         </div>
