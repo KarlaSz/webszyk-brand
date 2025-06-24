@@ -26,10 +26,7 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-[#4CAF50] text-white hover:bg-[#45a049] font-semibold px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group text-lg"
-            >
+            <Button size="lg" className="px-12 py-4 text-lg group">
               <MessageCircle className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
               Start Your Project Today
             </Button>

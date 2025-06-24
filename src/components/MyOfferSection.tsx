@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -86,7 +87,7 @@ const MyOfferSection = () => {
                   <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
                 </div>
                 
-                <Button className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white font-semibold py-3 text-lg group">
+                <Button variant="solid" className="w-full py-3 text-lg group">
                   Get Started Today
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -143,7 +144,7 @@ const MyOfferSection = () => {
                   <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
                 </div>
                 
-                <Button className="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-3 text-lg border border-white/30 group backdrop-blur-sm">
+                <Button className="w-full py-3 text-lg group">
                   Learn More
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -168,10 +169,7 @@ const MyOfferSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-white font-semibold px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group text-lg"
-              >
+              <Button size="lg" className="px-12 py-4 text-lg group">
                 <MessageCircle className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
                 Start Your Project Today
               </Button>

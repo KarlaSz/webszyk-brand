@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -150,7 +151,8 @@ const ContactSection = () => {
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 shadow-lg disabled:opacity-50 border-0"
+                      variant="solid"
+                      className="w-full py-4 shadow-lg disabled:opacity-50"
                     >
                       {isSubmitting ? 'Sending...' : 'Get Free Quote'}
                       <ArrowRight className="ml-2 h-4 w-4" />
