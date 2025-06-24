@@ -48,9 +48,11 @@ const Index = () => {
               {/* Centered Logo */}
               <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-3">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#4CAF50] to-[#4CAF50] rounded-xl flex items-center justify-center shadow-lg backdrop-blur-sm">
-                    <Code className="h-6 w-6 text-white" />
-                  </div>
+                  <img 
+                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=50&h=50&fit=crop&crop=face" 
+                    alt="Profile" 
+                    className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-[#4CAF50]/30"
+                  />
                   <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4CAF50] rounded-full animate-pulse"></div>
                 </div>
                 <div className="text-center">
