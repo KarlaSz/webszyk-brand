@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -93,7 +92,7 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/20 border border-white/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
+              <Button className="w-1/2 py-3 text-lg group bg-gray-400/20 border border-gray-300/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
                 Get Started Today
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -157,7 +156,7 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/20 border border-white/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
+              <Button className="w-1/2 py-3 text-lg group bg-gray-400/20 border border-gray-300/30 hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:border-orange-500 text-white backdrop-blur-md transition-all duration-300">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
