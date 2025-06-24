@@ -75,7 +75,7 @@ const AboutMeSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4 mb-8">
+            <div className="flex items-center space-x-4">
               <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all flex items-center space-x-2">
                 <Linkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
@@ -84,33 +84,6 @@ const AboutMeSection = () => {
                 <Github className="h-5 w-5" />
                 <span>GitHub</span>
               </Button>
-            </div>
-            
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <Card className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow bg-white">
-                <CardContent className="p-4 text-center">
-                  <Award className="h-6 w-6 text-[#4CAF50] mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-gray-900">50+</div>
-                  <div className="text-xs text-gray-600">Happy Clients</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow bg-white">
-                <CardContent className="p-4 text-center">
-                  <Coffee className="h-6 w-6 text-[#4CAF50] mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-gray-900">8+</div>
-                  <div className="text-xs text-gray-600">Years Experience</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow bg-white">
-                <CardContent className="p-4 text-center">
-                  <User className="h-6 w-6 text-[#4CAF50] mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-gray-900">100+</div>
-                  <div className="text-xs text-gray-600">Projects Done</div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
