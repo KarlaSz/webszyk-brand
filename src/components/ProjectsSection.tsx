@@ -52,7 +52,7 @@ const ProjectsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/30 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               {/* Glassmorphism Background */}
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm" className="flex-1 backdrop-blur-md bg-white/20 border-[#4CAF50]/40 text-[#4CAF50] hover:bg-[#4CAF50]/20 hover:border-[#4CAF50]/60 transition-all duration-300">
+                  <Button variant="ghost" size="sm" className="flex-1 backdrop-blur-md bg-white/10 hover:bg-white/30 text-gray-700 hover:text-gray-900 border border-white/20 transition-all duration-300">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
@@ -104,12 +104,6 @@ const ProjectsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center">
-          <Button size="lg" variant="outline" className="backdrop-blur-md bg-white/20 border-[#4CAF50]/40 text-[#4CAF50] hover:bg-[#4CAF50]/20 hover:border-[#4CAF50]/60 transition-all duration-300 shadow-lg">
-            View All Projects
-          </Button>
         </div>
       </div>
     </section>
