@@ -80,7 +80,7 @@ const FAQSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Still have questions?</p>
-          <Button>
+          <Button variant="solid" className="text-white font-semibold">
             Get in Touch
           </Button>
         </div>
