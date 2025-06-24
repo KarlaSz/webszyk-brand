@@ -9,43 +9,37 @@ const services = [
     icon: Code,
     title: "Full-Stack Development",
     description: "End-to-end web applications with modern technologies",
-    features: ["React & TypeScript", "Node.js Backend", "Database Design", "API Development"],
-    color: "from-blue-500 to-blue-600"
+    features: ["React & TypeScript", "Node.js Backend", "Database Design", "API Development"]
   },
   {
     icon: Smartphone,
     title: "Mobile-First Design",
     description: "Responsive designs that work perfectly on all devices",
-    features: ["Responsive Layout", "Touch Optimization", "Performance Focus", "Cross-Browser"],
-    color: "from-[#4CAF50] to-emerald-600"
+    features: ["Responsive Layout", "Touch Optimization", "Performance Focus", "Cross-Browser"]
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description: "Beautiful, intuitive interfaces that users love",
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-    color: "from-purple-500 to-purple-600"
+    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
   },
   {
     icon: Zap,
     title: "Performance Optimization",
     description: "Lightning-fast loading times and smooth interactions",
-    features: ["Speed Optimization", "SEO Enhancement", "Core Web Vitals", "Analytics Setup"],
-    color: "from-orange-500 to-orange-600"
+    features: ["Speed Optimization", "SEO Enhancement", "Core Web Vitals", "Analytics Setup"]
   },
   {
     icon: Shield,
     title: "Security & Maintenance",
     description: "Ongoing support and security updates",
-    features: ["Security Audits", "Regular Updates", "Backup Systems", "24/7 Monitoring"],
-    color: "from-red-500 to-red-600"
+    features: ["Security Audits", "Regular Updates", "Backup Systems", "24/7 Monitoring"]
   },
   {
     icon: Lightbulb,
     title: "Technology Consulting",
     description: "Strategic guidance for your digital transformation",
-    features: ["Tech Strategy", "Platform Selection", "Process Automation", "Team Training"],
-    color: "from-yellow-500 to-yellow-600"
+    features: ["Tech Strategy", "Platform Selection", "Process Automation", "Team Training"]
   }
 ];
 
@@ -71,44 +65,38 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Clean Modern Design */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white overflow-hidden hover:-translate-y-1">
-              <CardContent className="p-0">
-                {/* Header with gradient */}
-                <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-white" />
+            <Card key={index} className="group border border-gray-200 hover:border-[#4CAF50]/30 transition-all duration-300 bg-white hover:shadow-lg hover:-translate-y-1 overflow-hidden">
+              <CardContent className="p-8">
+                {/* Icon and Title */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#4CAF50]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4CAF50]/20 transition-colors">
+                    <service.icon className="h-8 w-8 text-[#4CAF50]" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-white/90 text-sm">{service.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </div>
                 
                 {/* Features list */}
-                <div className="p-6">
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-[#4CAF50] flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-[#4CAF50] rounded-full flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700 font-medium">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Process Section - Moved above FAQ */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16 relative overflow-hidden">
-          {/* Storytelling Image */}
-          <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
-            <div className="w-full h-full bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center">
-              <span className="text-4xl">🚀</span>
-            </div>
-          </div>
+        {/* Process Section - Clean Design */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 mb-16 relative overflow-hidden">
+          {/* Subtle background decoration */}
+          <div className="absolute top-0 right-0 w-40 h-40 bg-[#4CAF50]/5 rounded-full blur-3xl"></div>
           
           <div className="text-center mb-12 relative z-10">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">My Development Process</h3>
@@ -117,31 +105,30 @@ const ExperienceSection = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
             {[
-              { step: "01", title: "Discovery", desc: "Understanding your goals and requirements", icon: "🔍" },
-              { step: "02", title: "Design", desc: "Creating wireframes and visual designs", icon: "🎨" },
-              { step: "03", title: "Development", desc: "Building with modern, scalable technologies", icon: "⚡" },
-              { step: "04", title: "Launch", desc: "Testing, deployment, and ongoing support", icon: "🎯" }
+              { step: "01", title: "Discovery", desc: "Understanding your goals and requirements" },
+              { step: "02", title: "Design", desc: "Creating wireframes and visual designs" },
+              { step: "03", title: "Development", desc: "Building with modern, scalable technologies" },
+              { step: "04", title: "Launch", desc: "Testing, deployment, and ongoing support" }
             ].map((phase, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#4CAF50] to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg relative">
+                <div className="w-20 h-20 bg-[#4CAF50] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
                   {phase.step}
-                  <div className="absolute -top-2 -right-2 text-2xl">
-                    {phase.icon}
-                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{phase.title}</h4>
-                <p className="text-sm text-gray-600">{phase.desc}</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-lg">{phase.title}</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">{phase.desc}</p>
                 {index < 3 && (
-                  <ArrowRight className="h-5 w-5 text-gray-400 mx-auto mt-4 hidden md:block" />
+                  <div className="hidden md:flex justify-center mt-6">
+                    <ArrowRight className="h-5 w-5 text-gray-300" />
+                  </div>
                 )}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Technologies */}
+        {/* Technologies - Clean Badge Design */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -152,7 +139,7 @@ const ExperienceSection = () => {
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="bg-white text-gray-700 hover:bg-[#4CAF50] hover:text-white transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md border border-gray-200"
+                className="bg-white text-gray-700 hover:bg-[#4CAF50] hover:text-white transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md border border-gray-200 rounded-full"
               >
                 {tech}
               </Badge>
