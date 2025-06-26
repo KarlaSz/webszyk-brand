@@ -10,7 +10,7 @@ const projects = [
     title: "dobrymiodek.pl",
     description: "Professional website showcasing quality honey products and beekeeping services. Features modern design with product catalog and business information.",
     image: "https://dobrymiodek.pl/",
-    tech: [],
+    tech: ["WordPress"],
     category: "Business Website",
     icon: Globe,
     status: "Live",
@@ -59,19 +59,20 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className={`group relative overflow-hidden backdrop-blur-md bg-white/30 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${project.isPlaceholder ? 'border-dashed border-[#4CAF50]/50 bg-[#4CAF50]/5' : ''}`}>
-              {/* Glassmorphism Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-transparent"></div>
-              <div className={`absolute inset-0 bg-gradient-to-tr ${project.isPlaceholder ? 'from-[#4CAF50]/10 via-transparent to-emerald-400/10' : 'from-[#4CAF50]/5 via-transparent to-emerald-400/5'}`}></div>
+            <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/20 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              {/* Glassmorphism Background - Consistent for all cards */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-white/10"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-transparent to-emerald-400/10"></div>
+              <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/10 via-[#4CAF50]/5 to-slate-600/10"></div>
               
               {/* Project Image/Icon */}
-              <div className={`relative h-48 ${project.isPlaceholder ? 'bg-gradient-to-br from-[#4CAF50]/10 to-emerald-100/20' : 'bg-gradient-to-br from-gray-50/60 to-gray-100/60'} backdrop-blur-sm flex items-center justify-center border-b border-white/20`}>
-                <project.icon className={`h-16 w-16 ${project.isPlaceholder ? 'text-[#4CAF50]' : 'text-[#4CAF50]'} opacity-80`} />
+              <div className="relative h-48 bg-gradient-to-br from-gray-50/40 to-gray-100/40 backdrop-blur-sm flex items-center justify-center border-b border-white/30">
+                <project.icon className="h-16 w-16 text-[#4CAF50] opacity-80" />
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className={`backdrop-blur-md ${
-                    project.status === 'Live' ? 'bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/40' : 
-                    project.status === 'Available' ? 'bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/40' :
-                    'bg-orange-200/30 text-orange-700 border-orange-300/40'
+                    project.status === 'Live' ? 'bg-[#4CAF50]/30 text-[#4CAF50] border-[#4CAF50]/50' : 
+                    project.status === 'Available' ? 'bg-[#4CAF50]/30 text-[#4CAF50] border-[#4CAF50]/50' :
+                    'bg-orange-200/40 text-orange-700 border-orange-300/50'
                   }`}>
                     {project.status}
                   </Badge>
@@ -80,7 +81,7 @@ const ProjectsSection = () => {
               
               <CardHeader className={`pb-4 relative z-10 ${project.isPlaceholder ? 'text-center' : ''}`}>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs border-white/30 text-gray-700 bg-white/20 backdrop-blur-sm">
+                  <Badge variant="outline" className="text-xs border-white/40 text-gray-700 bg-white/30 backdrop-blur-sm">
                     {project.category}
                   </Badge>
                 </div>
@@ -98,7 +99,7 @@ const ProjectsSection = () => {
                     {project.tech.map((tech, techIndex) => (
                       <HoverCard key={techIndex}>
                         <HoverCardTrigger asChild>
-                          <Badge variant="secondary" className="bg-[#4CAF50]/80 text-white text-sm font-semibold border-none backdrop-blur-sm cursor-pointer hover:bg-[#4CAF50] transition-colors px-3 py-1 shadow-md">
+                          <Badge variant="secondary" className="bg-[#4CAF50]/90 text-white text-sm font-semibold border-none backdrop-blur-sm cursor-pointer hover:bg-[#4CAF50] transition-colors px-3 py-1 shadow-lg">
                             {tech}
                           </Badge>
                         </HoverCardTrigger>
@@ -117,12 +118,12 @@ const ProjectsSection = () => {
                     </Button>
                   ) : (
                     <>
-                      <Button variant="outline" size="lg" className="flex-1 border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all bg-white flex items-center space-x-2">
+                      <Button variant="outline" size="lg" className="flex-1 border-white/40 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-gray-700 hover:text-white transition-all bg-white/30 backdrop-blur-sm flex items-center space-x-2">
                         <ExternalLink className="h-4 w-4" />
                         <span>{project.isReal ? 'Visit Site' : 'Live Demo'}</span>
                       </Button>
                       {!project.isReal && (
-                        <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all bg-white">
+                        <Button variant="outline" size="lg" className="border-white/40 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-gray-700 hover:text-white transition-all bg-white/30 backdrop-blur-sm">
                           <Code className="h-4 w-4" />
                         </Button>
                       )}
