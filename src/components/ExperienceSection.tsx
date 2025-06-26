@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Smartphone, Globe, Zap, Users, CheckCircle, Lightbulb, Palette, Shield } from "lucide-react";
@@ -183,13 +182,15 @@ const ExperienceSection = () => {
           </Card>
         </div>
 
-        {/* Technologies - Compact Badge Design */}
+        {/* Technologies - Updated with new technologies */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
             {[
               "React", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB", 
-              "AWS", "Docker", "Figma", "Tailwind CSS", "Next.js", "Express.js"
+              "AWS", "Docker", "Figma", "Tailwind CSS", "Next.js", "Express.js",
+              "Bootstrap", "HTML5", "CSS3", "WordPress", "Webflow", "JavaScript",
+              "Swagger", "Postman", "GitHub", "SEO", "UX"
             ].map((tech, index) => (
               <Badge 
                 key={index} 
