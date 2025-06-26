@@ -36,7 +36,7 @@ const HeroSection = () => {
             </h1>
             
             <h2 className="text-2xl lg:text-4xl font-bold text-white mb-8 leading-tight">
-              Build & Design Amazing Digital Solutions
+              your technical support which you need
             </h2>
             
             <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-10">
