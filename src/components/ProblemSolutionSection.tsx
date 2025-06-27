@@ -6,38 +6,38 @@ import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartp
 const challenges = [
   {
     icon: Clock,
-    title: "Slow Performance",
-    description: "Users abandon after 3 seconds",
+    title: "Strona wolno działa",
+    description: "użytkownicy odchodzą po 3 sekundach",
     color: "text-orange-500"
   },
   {
     icon: DollarSign,
-    title: "High Maintenance Costs", 
-    description: "Expensive legacy systems",
+    title: "Utrzymanie systemu kosztuje fortunę", 
+    description: "Wysokie koszty utrzymania",
     color: "text-orange-600"
   },
   {
     icon: AlertCircle,
-    title: "Outdated Technology",
-    description: "Security vulnerabilities",
+    title: "Przestarzała technologia",
+    description: "dziurawa jak ser",
     color: "text-orange-500"
   },
   {
     icon: Users,
-    title: "Poor User Experience",
-    description: "Confusing interfaces",
+    title: "Strona trudna w obsłudze",
+    description: "użytkownik się gubi",
     color: "text-orange-600"
   },
   {
     icon: TrendingDown,
-    title: "Low Conversions",
-    description: "Missing opportunities",
+    title: "Niskie konwersje",
+    description: "Tracone okazje biznesowe",
     color: "text-orange-500"
   },
   {
     icon: Smartphone,
-    title: "Mobile Issues",
-    description: "Lost mobile traffic",
+    title: "Strona nie działa dobrze na telefonach",
+    description: "Utracony ruch mobilny",
     color: "text-orange-600"
   }
 ];
@@ -45,33 +45,33 @@ const challenges = [
 const solutions = [
   {
     icon: Zap,
-    title: "Lightning Fast",
-    description: "Sub-2 second loading times"
+    title: "Błyskawiczne ładowanie",
+    description: "mniej niż 2 sekundy"
   },
   {
     icon: Shield,
-    title: "Cost-Effective",
-    description: "Smart, efficient development"
+    title: "Rozsądnie i efektywnie",
+    description: "bez marnowania czasu i pieniędzy"
   },
   {
     icon: Rocket,
-    title: "Modern Architecture",
-    description: "Future-proof technology stack"
+    title: "Nowoczesna technologia",
+    description: "gotowa na przyszłość"
   },
   {
     icon: Target,
-    title: "Intuitive Design",
-    description: "Clear, engaging user experience"
+    title: "Intuicyjny design",
+    description: "Przejrzyste, angażujące doświadczenie użytkownika"
   },
   {
     icon: CheckCircle,
-    title: "Conversion Focused",
-    description: "Results-driven optimization"
+    title: "Skupienie na efektach",
+    description: "projektuję tak, żeby strona działała na Ciebie"
   },
   {
     icon: MessageCircle,
     title: "Mobile-First",
-    description: "Perfect across all devices"
+    description: "Idealnie na wszystkich urządzeniach"
   }
 ];
 
@@ -83,7 +83,7 @@ const ProblemSolutionSection = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-            <span className="text-[#4CAF50] font-semibold">From Challenge to Innovation</span>
+            <span className="text-[#4CAF50] font-semibold">Od wyzwania do rozwiązania</span>
             <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
           </div>
           
@@ -109,7 +109,7 @@ const ProblemSolutionSection = () => {
           {/* Problems Column */}
           <div className="lg:col-span-5">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              Common Problems
+              Częste problemy
             </h3>
             <div className="space-y-6">
               {challenges.map((challenge, index) => (
@@ -144,7 +144,7 @@ const ProblemSolutionSection = () => {
           {/* Solutions Column */}
           <div className="lg:col-span-5">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              WebSzyk Solutions
+              Co robię z tym w WebSzyk
             </h3>
             <div className="space-y-6">
               {solutions.map((solution, index) => (

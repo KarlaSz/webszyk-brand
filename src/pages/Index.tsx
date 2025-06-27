@@ -63,7 +63,7 @@ const Index = () => {
               {/* Right - CTA Button */}
               <div className="hidden md:flex items-center">
                 <Button>
-                  Zajrzyj niżej
+                  Potrzebuje wsparcia
                 </Button>
               </div>
               

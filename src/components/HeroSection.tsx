@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ArrowBigDown } from "lucide-react";
 
@@ -22,23 +23,22 @@ const HeroSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center space-x-3 mb-8">
               <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
                 <Zap className="h-6 w-6 text-[#4CAF50]" />
               </div>
               <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Web</span>
-              <span className="text-[#4CAF50]">Szyk</span>
+            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight tracking-tight">
+              <span className="text-white block mb-4 lg:mb-6">Twoje</span>
+              <span className="text-white block mb-4 lg:mb-6">techniczne</span>
+              <span className="text-[#4CAF50] block">wsparcie</span>
+              <span className="text-white block mt-4 lg:mt-6">którego</span>
+              <span className="text-white block">potrzebujesz</span>
             </h1>
             
-            <h2 className="text-2xl lg:text-4xl font-bold text-white mb-8 leading-tight">
-              Twoje techniczne wsparcie którego potrzebujesz
-            </h2>
-            
-            <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-10">
+            <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-12 mt-8">
               Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
@@ -129,8 +129,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Slow Loading</h4>
-                      <p className="text-white/90 text-xs">Users leave after 3 seconds</p>
+                      <h4 className="text-white font-semibold text-sm">Zły Layout</h4>
+                      <p className="text-white/90 text-xs">user wychodzi za szybko z mojej strony</p>
                     </div>
                   </div>
                 </div>
@@ -141,8 +141,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <Users className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Poor UX</h4>
-                      <p className="text-white/90 text-xs">Confusing navigation</p>
+                      <h4 className="text-white font-semibold text-sm">Słaby UX</h4>
+                      <p className="text-white/90 text-xs">skomplikowana nawigacja i układ strony</p>
                     </div>
                   </div>
                 </div>
@@ -153,8 +153,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <TrendingDown className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Low Conversions</h4>
-                      <p className="text-white/90 text-xs">Missing sales opportunities</p>
+                      <h4 className="text-white font-semibold text-sm">Niskie zainteresowanie</h4>
+                      <p className="text-white/90 text-xs">gdzie umieścić formularz kontakty na stronie i jak skonfigutować</p>
                     </div>
                   </div>
                 </div>
@@ -165,8 +165,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <DollarSign className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">High Costs</h4>
-                      <p className="text-white/90 text-xs">Expensive maintenance</p>
+                      <h4 className="text-white font-semibold text-sm">Wysokie koszta</h4>
+                      <p className="text-white/90 text-xs">Nie wiem jak zarządzać swoją stroną i jak nie przepłacać za narzędzia</p>
                     </div>
                   </div>
                 </div>
@@ -177,8 +177,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <Clock className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Outdated Tech</h4>
-                      <p className="text-white/90 text-xs">Legacy systems holding you back</p>
+                      <h4 className="text-white font-semibold text-sm">Serwis IT</h4>
+                      <p className="text-white/90 text-xs">jak wykonać backup strony</p>
                     </div>
                   </div>
                 </div>
@@ -189,8 +189,8 @@ const HeroSection = () => {
                   <div className="flex items-start space-x-2">
                     <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">No Mobile</h4>
-                      <p className="text-white/90 text-xs">Lost mobile traffic</p>
+                      <h4 className="text-white font-semibold text-sm">Nieetyczny mobile</h4>
+                      <p className="text-white/90 text-xs">strone i aplikacja wyglądają źle na mobile i tabletach</p>
                     </div>
                   </div>
                 </div>
