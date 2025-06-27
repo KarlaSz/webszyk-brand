@@ -39,9 +39,9 @@ const Index = () => {
             <div className="flex justify-between items-center h-20">
               {/* Left - Grouped Navigation Links */}
               <div className="hidden md:flex items-center space-x-1">
-                <a href="#about" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">About</a>
-                <a href="#projects" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Projects</a>
-                <a href="#contact" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Contact</a>
+                <a href="#about" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">O mnie</a>
+                <a href="#projects" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Wsparcie</a>
+                <a href="#contact" className="text-white/80 hover:text-[#4CAF50] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Kontakt</a>
               </div>
               
               {/* Centered Logo */}
@@ -56,14 +56,14 @@ const Index = () => {
                   <div className="text-2xl font-bold">
                     <span className="text-[#4CAF50]">Web</span><span className="text-white">Szyk</span>
                   </div>
-                  <div className="text-xs text-white/70 font-medium">Full-Stack Developer</div>
+                  <div className="text-xs text-white/70 font-medium">studio</div>
                 </div>
               </div>
               
               {/* Right - CTA Button */}
               <div className="hidden md:flex items-center">
                 <Button>
-                  Get Started
+                  Zajrzyj niżej
                 </Button>
               </div>
               

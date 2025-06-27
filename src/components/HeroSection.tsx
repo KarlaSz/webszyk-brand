@@ -26,7 +26,7 @@ const HeroSection = () => {
               <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
                 <Zap className="h-6 w-6 text-[#4CAF50]" />
               </div>
-              <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Full-Stack Technology Partner</span>
+              <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -35,27 +35,25 @@ const HeroSection = () => {
             </h1>
             
             <h2 className="text-2xl lg:text-4xl font-bold text-white mb-8 leading-tight">
-              your technical support which you need
+              Twoje techniczne wsparcie którego potrzebujesz
             </h2>
             
             <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-10">
-              Transform your ideas into powerful digital experiences. I help companies and entrepreneurs 
-              build stunning websites, mobile apps, and provide comprehensive technology support with 
-              business-focused solutions.
+              Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
             <div className="flex items-center space-x-8 text-sm">
               <div className="flex items-center space-x-2">
                 <Zap className="h-4 w-4 text-[#4CAF50]" />
-                <span className="text-white/90 font-medium">Fast Delivery</span>
+                <span className="text-white/90 font-medium">szybka komunikacja</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-[#4CAF50] rounded-full"></div>
-                <span className="text-white/90 font-medium">Clean Code</span>
+                <span className="text-white/90 font-medium">dobre praktyki</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                <span className="text-white/90 font-medium">24/7 Support</span>
+                <span className="text-white/90 font-medium">IT wsparcie</span>
               </div>
             </div>
           </div>
@@ -112,7 +110,7 @@ const HeroSection = () => {
                   {/* CTA Button */}
                   <div className="flex justify-center">
                     <div className="w-32 h-10 bg-[#4CAF50]/90 rounded-lg shadow-lg flex items-center justify-center">
-                      <span className="text-white text-xs font-semibold">Get Started</span>
+                      <span className="text-white text-xs font-semibold">Zajrzyj niżej</span>
                     </div>
                   </div>
                   
@@ -123,6 +121,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
+              
               
               {/* Floating Problem Bubbles - Orange Gradient */}
               <div className="absolute -top-8 -left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
