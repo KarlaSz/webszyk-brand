@@ -59,20 +59,41 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group relative overflow-hidden backdrop-blur-md bg-white/20 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              {/* Glassmorphism Background - Consistent for all cards */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-white/10"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-transparent to-emerald-400/10"></div>
-              <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/10 via-[#4CAF50]/5 to-slate-600/10"></div>
+            <Card key={index} className={`group relative overflow-hidden backdrop-blur-md border shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
+              project.isPlaceholder 
+                ? 'bg-white/20 border-white/30' 
+                : 'bg-gray-50/80 border-gray-200/50'
+            }`}>
+              {/* Background gradients - different for placeholder vs regular cards */}
+              {project.isPlaceholder ? (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-white/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/10 via-transparent to-emerald-400/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/10 via-[#4CAF50]/5 to-slate-600/10"></div>
+                </>
+              ) : (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100/40 via-gray-50/30 to-white/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-gray-200/20 via-transparent to-gray-300/15"></div>
+                </>
+              )}
               
               {/* Project Image/Icon */}
-              <div className="relative h-48 bg-gradient-to-br from-gray-50/40 to-gray-100/40 backdrop-blur-sm flex items-center justify-center border-b border-white/30">
-                <project.icon className="h-16 w-16 text-[#4CAF50] opacity-80" />
+              <div className={`relative h-48 backdrop-blur-sm flex items-center justify-center border-b ${
+                project.isPlaceholder 
+                  ? 'bg-gradient-to-br from-gray-50/40 to-gray-100/40 border-white/30' 
+                  : 'bg-gradient-to-br from-gray-100/60 to-gray-200/40 border-gray-300/30'
+              }`}>
+                <project.icon className={`h-16 w-16 opacity-80 ${
+                  project.isPlaceholder ? 'text-[#4CAF50]' : 'text-gray-500'
+                }`} />
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className={`backdrop-blur-md ${
-                    project.status === 'Live' ? 'bg-[#4CAF50]/30 text-[#4CAF50] border-[#4CAF50]/50' : 
-                    project.status === 'Available' ? 'bg-[#4CAF50]/30 text-[#4CAF50] border-[#4CAF50]/50' :
-                    'bg-orange-200/40 text-orange-700 border-orange-300/50'
+                    project.isPlaceholder 
+                      ? 'bg-[#4CAF50]/30 text-[#4CAF50] border-[#4CAF50]/50'
+                      : project.status === 'Live' 
+                        ? 'bg-gray-300/40 text-gray-600 border-gray-400/50' 
+                        : 'bg-gray-200/40 text-gray-500 border-gray-300/50'
                   }`}>
                     {project.status}
                   </Badge>
@@ -81,14 +102,22 @@ const ProjectsSection = () => {
               
               <CardHeader className={`pb-4 relative z-10 ${project.isPlaceholder ? 'text-center' : ''}`}>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs border-white/40 text-gray-700 bg-white/30 backdrop-blur-sm">
+                  <Badge variant="outline" className={`text-xs backdrop-blur-sm ${
+                    project.isPlaceholder 
+                      ? 'border-white/40 text-gray-700 bg-white/30'
+                      : 'border-gray-300/40 text-gray-600 bg-gray-100/30'
+                  }`}>
                     {project.category}
                   </Badge>
                 </div>
-                <CardTitle className={`text-xl font-bold text-gray-900 group-hover:text-[#4CAF50] transition-colors ${project.isPlaceholder ? 'text-[#4CAF50]' : ''}`}>
+                <CardTitle className={`text-xl font-bold group-hover:transition-colors ${
+                  project.isPlaceholder 
+                    ? 'text-[#4CAF50] group-hover:text-[#45a049]' 
+                    : 'text-gray-700 group-hover:text-gray-900'
+                }`}>
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-gray-700 leading-relaxed">
+                <CardDescription className={project.isPlaceholder ? 'text-gray-700' : 'text-gray-600'}>
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -99,7 +128,7 @@ const ProjectsSection = () => {
                     {project.tech.map((tech, techIndex) => (
                       <HoverCard key={techIndex}>
                         <HoverCardTrigger asChild>
-                          <Badge variant="secondary" className="bg-[#4CAF50]/90 text-white text-sm font-semibold border-none backdrop-blur-sm cursor-pointer hover:bg-[#4CAF50] transition-colors px-3 py-1 shadow-lg">
+                          <Badge variant="secondary" className="bg-gray-400/90 text-white text-sm font-semibold border-none backdrop-blur-sm cursor-pointer hover:bg-gray-500 transition-colors px-3 py-1 shadow-lg">
                             {tech}
                           </Badge>
                         </HoverCardTrigger>
@@ -113,17 +142,17 @@ const ProjectsSection = () => {
                 
                 <div className="flex space-x-2">
                   {project.isPlaceholder ? (
-                    <Button variant="solid" size="lg" className="flex-1 flex items-center justify-center space-x-2">
+                    <Button variant="solid" size="lg" className="flex-1 flex items-center justify-center space-x-2 bg-[#4CAF50] hover:bg-[#45a049]">
                       <span>Let's Work Together</span>
                     </Button>
                   ) : (
                     <>
-                      <Button variant="outline" size="lg" className="flex-1 border-white/40 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-gray-700 hover:text-white transition-all bg-white/30 backdrop-blur-sm flex items-center space-x-2">
+                      <Button variant="outline" size="lg" className="flex-1 border-gray-400/40 hover:bg-gray-500 hover:border-gray-500 text-gray-600 hover:text-white transition-all bg-gray-100/30 backdrop-blur-sm flex items-center space-x-2">
                         <ExternalLink className="h-4 w-4" />
                         <span>{project.isReal ? 'Visit Site' : 'Live Demo'}</span>
                       </Button>
                       {!project.isReal && (
-                        <Button variant="outline" size="lg" className="border-white/40 hover:bg-[#4CAF50] hover:border-[#4CAF50] text-gray-700 hover:text-white transition-all bg-white/30 backdrop-blur-sm">
+                        <Button variant="outline" size="lg" className="border-gray-400/40 hover:bg-gray-500 hover:border-gray-500 text-gray-600 hover:text-white transition-all bg-gray-100/30 backdrop-blur-sm">
                           <Code className="h-4 w-4" />
                         </Button>
                       )}
