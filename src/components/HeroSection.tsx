@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ArrowBigDown } from "lucide-react";
 
@@ -75,7 +74,7 @@ const HeroSection = () => {
                   </div>
                   <div className="flex-1 mx-4">
                     <div className="bg-white/15 rounded-lg px-4 py-2 text-center text-white/90 text-sm border border-white/30">
-                      www.yourwebsite.com
+                      www.twojastrona.pl
                     </div>
                   </div>
                   <div className="w-12"></div>
@@ -84,8 +83,8 @@ const HeroSection = () => {
                 {/* Browser Content */}
                 <div className="p-8 h-80 bg-gradient-to-br from-white/10 to-white/5">
                   <div className="text-center mb-6">
-                    <h3 className="text-3xl font-bold text-white mb-3">Your Business Online</h3>
-                    <p className="text-white/80 text-sm mb-6">Professional website that converts visitors</p>
+                    <h3 className="text-3xl font-bold text-white mb-3">Twoja strona</h3>
+                    <p className="text-white/80 text-sm mb-6">profesjonalna i responsywna strona</p>
                   </div>
                   
                   {/* Navigation Menu */}
@@ -120,7 +119,7 @@ const HeroSection = () => {
                   {/* Trust Indicators */}
                   <div className="flex justify-center space-x-4 mt-6">
                     <div className="w-3 h-3 bg-[#4CAF50] rounded-full"></div>
-                    <div className="text-white/70 text-xs">Trusted by 500+ businesses</div>
+                    <div className="text-white/70 text-xs">wspierana przez webszyk studio</div>
                   </div>
                 </div>
               </div>
