@@ -30,11 +30,11 @@ const HeroSection = () => {
               <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight tracking-tight">
-              <span className="text-white block mb-4 lg:mb-6">Twoje</span>
-              <span className="text-white block mb-4 lg:mb-6">techniczne</span>
+            <h1 className="text-3xl lg:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
+              <span className="text-white block mb-3 lg:mb-4">Twoje</span>
+              <span className="text-white block mb-3 lg:mb-4">techniczne</span>
               <span className="text-[#4CAF50] block">wsparcie</span>
-              <span className="text-white block mt-4 lg:mt-6">którego</span>
+              <span className="text-white block mt-3 lg:mt-4">którego</span>
               <span className="text-white block">potrzebujesz</span>
             </h1>
             

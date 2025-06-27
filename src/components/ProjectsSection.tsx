@@ -142,17 +142,17 @@ const ProjectsSection = () => {
                 
                 <div className="flex space-x-2">
                   {project.isPlaceholder ? (
-                    <Button variant="solid" size="lg" className="flex-1 flex items-center justify-center space-x-2 bg-[#4CAF50] hover:bg-[#45a049]">
+                    <Button className="flex-1 flex items-center justify-center space-x-2 bg-[#4CAF50] hover:bg-orange-500 text-white transition-colors duration-300">
                       <span>Let's Work Together</span>
                     </Button>
                   ) : (
                     <>
-                      <Button variant="outline" size="lg" className="flex-1 border-gray-400/40 hover:bg-gray-500 hover:border-gray-500 text-gray-600 hover:text-white transition-all bg-gray-100/30 backdrop-blur-sm flex items-center space-x-2">
+                      <Button variant="outline" size="lg" className="flex-1 border-gray-400/40 hover:bg-gray-100 hover:border-gray-300 text-gray-600 hover:text-gray-700 transition-all bg-gray-50/30 backdrop-blur-sm flex items-center space-x-2">
                         <ExternalLink className="h-4 w-4" />
                         <span>{project.isReal ? 'Visit Site' : 'Live Demo'}</span>
                       </Button>
                       {!project.isReal && (
-                        <Button variant="outline" size="lg" className="border-gray-400/40 hover:bg-gray-500 hover:border-gray-500 text-gray-600 hover:text-white transition-all bg-gray-100/30 backdrop-blur-sm">
+                        <Button variant="outline" size="lg" className="border-gray-400/40 hover:bg-gray-100 hover:border-gray-300 text-gray-600 hover:text-gray-700 transition-all bg-gray-50/30 backdrop-blur-sm">
                           <Code className="h-4 w-4" />
                         </Button>
                       )}

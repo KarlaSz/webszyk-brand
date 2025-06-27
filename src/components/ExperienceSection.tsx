@@ -182,13 +182,12 @@ const ExperienceSection = () => {
           </Card>
         </div>
 
-        {/* Technologies - Updated with new technologies */}
+        {/* Technologies - Updated with removed technologies */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
             {[
-              "React", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB", 
-              "AWS", "Docker", "Figma", "Tailwind CSS", "Next.js", "Express.js",
+              "Python", "PostgreSQL", "AWS", "Figma", "Tailwind CSS", 
               "Bootstrap", "HTML5", "CSS3", "WordPress", "Webflow", "JavaScript",
               "Swagger", "Postman", "GitHub", "SEO", "UX"
             ].map((tech, index) => (

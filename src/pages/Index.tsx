@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,7 +63,7 @@ const Index = () => {
               
               {/* Right - CTA Button */}
               <div className="hidden md:flex items-center">
-                <Button>
+                <Button className="bg-[#4CAF50] hover:bg-orange-500 text-white transition-colors duration-300">
                   Potrzebuje wsparcia
                 </Button>
               </div>
