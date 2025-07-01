@@ -10,8 +10,8 @@ const ImageSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-            <span className="text-[#4CAF50] font-semibold">My Story</span>
+            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold">My Story</span>
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">

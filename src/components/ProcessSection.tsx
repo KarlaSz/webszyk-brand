@@ -31,8 +31,8 @@ const ProcessSection = () => {
           {/* Content Section */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-              <span className="text-[#4CAF50] font-semibold">My Development Process</span>
+              <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+              <span className="text-[#04e6a5] font-semibold">My Development Process</span>
             </div>
             
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -60,9 +60,9 @@ const ProcessSection = () => {
                   <div className="flex items-start space-x-4">
                     {/* Step Number and Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-[#4CAF50]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-[#4CAF50]/30 transition-all duration-300 relative border border-[#4CAF50]/20">
-                        <step.icon className="h-7 w-7 text-[#4CAF50]" />
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#4CAF50] rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm border border-white/20">
+                      <div className="w-16 h-16 bg-[#04e6a5]/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2 group-hover:bg-[#04e6a5]/30 transition-all duration-300 relative border border-[#04e6a5]/20">
+                        <step.icon className="h-7 w-7 text-[#04e6a5]" />
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#04e6a5] rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm border border-white/20">
                           <span className="text-white text-xs font-bold">{step.step}</span>
                         </div>
                       </div>

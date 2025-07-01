@@ -7,8 +7,8 @@ const CTASection = () => {
     <section className="relative py-16 overflow-hidden">
       {/* Background with gradient layers like other sections */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
       
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Glassmorphism card */}
@@ -33,11 +33,11 @@ const CTASection = () => {
             
             <div className="flex items-center space-x-6 text-white/80">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
                 <span className="font-medium">Free Consultation</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse delay-500"></div>
+                <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse delay-500"></div>
                 <span className="font-medium">Quick Response</span>
               </div>
             </div>

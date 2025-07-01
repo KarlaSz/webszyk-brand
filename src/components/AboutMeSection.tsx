@@ -12,18 +12,18 @@ const AboutMeSection = () => {
           <div className="relative">
             <div className="relative bg-gray-100 rounded-2xl shadow-xl overflow-hidden group cursor-pointer border border-gray-200">
               {/* Video Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-[#4CAF50]/20 to-purple-500/20 flex items-center justify-center relative">
+              <div className="aspect-video bg-gradient-to-br from-[#04e6a5]/20 to-purple-500/20 flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative z-10 text-center">
                   <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg border border-gray-200">
-                    <Play className="h-8 w-8 text-[#4CAF50] ml-1" />
+                    <Play className="h-8 w-8 text-[#04e6a5] ml-1" />
                   </div>
                   <h3 className="text-gray-900 font-semibold text-lg mb-2">Meet WebSzyk</h3>
                   <p className="text-gray-600 text-sm">Watch my story & approach</p>
                 </div>
                 
                 {/* Animated elements */}
-                <div className="absolute top-4 right-4 w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                <div className="absolute top-4 right-4 w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
                 <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500"></div>
                 <div className="absolute top-1/3 left-8 w-4 h-4 bg-gray-300 rounded-full animate-bounce delay-1000"></div>
               </div>
@@ -31,8 +31,8 @@ const AboutMeSection = () => {
               {/* Video info overlay */}
               <div className="p-6 bg-gray-50 border-t border-gray-200">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-full flex items-center justify-center border border-[#4CAF50]/20">
-                    <User className="h-6 w-6 text-[#4CAF50]" />
+                  <div className="w-12 h-12 bg-[#04e6a5]/10 rounded-full flex items-center justify-center border border-[#04e6a5]/20">
+                    <User className="h-6 w-6 text-[#04e6a5]" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Introduction Video</h4>
@@ -46,19 +46,19 @@ const AboutMeSection = () => {
           {/* Content Section */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-              <span className="text-[#4CAF50] font-semibold">About Me</span>
+              <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+              <span className="text-[#04e6a5] font-semibold">About Me</span>
             </div>
             
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Hi, I'm the person behind <span className="text-[#4CAF50]">Web</span><span className="text-gray-900">Szyk</span>
+              Hi, I'm the person behind <span className="text-[#04e6a5]">Web</span><span className="text-gray-900">Szyk</span>
             </h2>
             
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
               <p>
                 With over 8 years of experience in full-stack development, I've transformed from 
                 a curious developer into a trusted technology partner for businesses worldwide. 
-                My journey began with a simple belief: <span className="text-[#4CAF50] font-semibold">technology should solve real business problems</span>.
+                My journey began with a simple belief: <span className="text-[#04e6a5] font-semibold">technology should solve real business problems</span>.
               </p>
               
               <p>

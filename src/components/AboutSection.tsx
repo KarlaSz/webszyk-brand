@@ -10,9 +10,9 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
-            <span className="text-green-600 font-semibold text-lg">My Philosophy</span>
-            <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold text-lg">My Philosophy</span>
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -88,8 +88,8 @@ const AboutSection = () => {
         {/* Philosophy Content Section */}
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-            <span className="text-green-600 font-semibold">A proven approach that delivers results</span>
+            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold">A proven approach that delivers results</span>
           </div>
           
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
