@@ -10,31 +10,31 @@ const HeroSection = () => {
 
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Enhanced Gradient Background - Same as Contact Section */}
+      {/* Enhanced Gradient Background - Updated with new green */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#4CAF50]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#4CAF50]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* Animated Background Elements - Updated with new green */}
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <div className="flex items-center space-x-3 mb-8">
               <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
-                <Zap className="h-6 w-6 text-[#4CAF50]" />
+                <Zap className="h-6 w-6 text-[#04e6a5]" />
               </div>
               <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
             </div>
             
-            <h1 className="text-3xl lg:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
-              <span className="text-white block mb-3 lg:mb-4">Twoje</span>
-              <span className="text-white block mb-3 lg:mb-4">techniczne</span>
-              <span className="text-[#4CAF50] block">wsparcie</span>
-              <span className="text-white block mt-3 lg:mt-4">którego</span>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 leading-tight tracking-tight">
+              <span className="text-white block mb-2 lg:mb-3">Twoje</span>
+              <span className="text-[#04e6a5] block mb-2 lg:mb-3">techniczne</span>
+              <span className="text-[#04e6a5] block">wsparcie</span>
+              <span className="text-white block mt-2 lg:mt-3">którego</span>
               <span className="text-white block">potrzebujesz</span>
             </h1>
             
@@ -44,15 +44,15 @@ const HeroSection = () => {
             
             <div className="flex items-center space-x-8 text-sm">
               <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-[#4CAF50]" />
+                <Zap className="h-4 w-4 text-[#04e6a5]" />
                 <span className="text-white/90 font-medium">szybka komunikacja</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-[#4CAF50] rounded-full"></div>
+                <div className="w-4 h-4 bg-[#04e6a5] rounded-full"></div>
                 <span className="text-white/90 font-medium">dobre praktyki</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                <div className="w-4 h-4 bg-[#04e6a5] rounded-full animate-pulse"></div>
                 <span className="text-white/90 font-medium">IT wsparcie</span>
               </div>
             </div>
@@ -109,14 +109,14 @@ const HeroSection = () => {
                   
                   {/* CTA Button */}
                   <div className="flex justify-center">
-                    <div className="w-32 h-10 bg-[#4CAF50]/90 rounded-lg shadow-lg flex items-center justify-center">
+                    <div className="w-32 h-10 bg-[#04e6a5]/90 rounded-lg shadow-lg flex items-center justify-center">
                       <span className="text-white text-xs font-semibold">Zajrzyj niżej</span>
                     </div>
                   </div>
                   
                   {/* Trust Indicators */}
                   <div className="flex justify-center space-x-4 mt-6">
-                    <div className="w-3 h-3 bg-[#4CAF50] rounded-full"></div>
+                    <div className="w-3 h-3 bg-[#04e6a5] rounded-full"></div>
                     <div className="text-white/70 text-xs">wspierana przez webszyk studio</div>
                   </div>
                 </div>
@@ -199,14 +199,14 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Centered Animated Arrow Button - Moved Below Everything */}
+        {/* Centered Animated Arrow Button - Updated with new green */}
         <div className="flex justify-center mt-16">
           <button 
             onClick={scrollToNext}
             className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
           >
             <ArrowBigDown 
-              className="h-10 w-10 text-[#4CAF50] transition-all duration-300 group-hover:scale-110" 
+              className="h-10 w-10 text-[#04e6a5] transition-all duration-300 group-hover:scale-110" 
               style={{ 
                 animation: 'bounce 3s infinite ease-in-out',
                 animationDirection: 'alternate'
@@ -214,7 +214,7 @@ const HeroSection = () => {
             />
             
             {/* Glassmorphic ring effect */}
-            <div className="absolute inset-0 rounded-full border-2 border-[#4CAF50]/30 animate-pulse"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-[#04e6a5]/30 animate-pulse"></div>
             <div className="absolute inset-2 rounded-full border border-white/30"></div>
           </button>
         </div>

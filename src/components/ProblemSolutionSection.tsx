@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartphone, CheckCircle, Zap, Target, Shield, Rocket, MessageCircle, ArrowDown } from "lucide-react";
@@ -82,9 +81,9 @@ const ProblemSolutionSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
-            <span className="text-[#4CAF50] font-semibold">Od wyzwania do rozwiązania</span>
-            <div className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold">Od wyzwania do rozwiązania</span>
+            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -99,7 +98,7 @@ const ProblemSolutionSection = () => {
           <div className="flex justify-center">
             <div className="group flex items-center space-x-3 bg-gray-50 border border-gray-200 rounded-full px-6 py-3 hover:bg-gray-100 transition-all duration-300 cursor-pointer">
               <span className="text-gray-700 font-semibold">Find Your Solution Below</span>
-              <ArrowDown className="h-5 w-5 text-[#4CAF50] group-hover:translate-y-1 transition-transform animate-bounce" />
+              <ArrowDown className="h-5 w-5 text-[#04e6a5] group-hover:translate-y-1 transition-transform animate-bounce" />
             </div>
           </div>
         </div>
@@ -137,7 +136,7 @@ const ProblemSolutionSection = () => {
                 <span className="text-gray-700 font-bold text-lg">VS</span>
               </div>
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-gray-200 rounded-full opacity-80"></div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#4CAF50] rounded-full opacity-80"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#04e6a5] rounded-full opacity-80"></div>
             </div>
           </div>
 
@@ -151,8 +150,8 @@ const ProblemSolutionSection = () => {
                 <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-green-50/80 hover:backdrop-blur-md hover:border-green-200">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#4CAF50]/20">
-                        <solution.icon className="h-6 w-6 text-[#4CAF50]" />
+                      <div className="w-12 h-12 bg-[#04e6a5]/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#04e6a5]/20">
+                        <solution.icon className="h-6 w-6 text-[#04e6a5]" />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-gray-900 text-lg mb-2">{solution.title}</h4>
@@ -169,9 +168,9 @@ const ProblemSolutionSection = () => {
         {/* Animated Arrow Below */}
         <div className="flex justify-center">
           <div className="flex flex-col items-center space-y-4">
-            <div className="w-1 h-16 bg-gradient-to-b from-[#4CAF50] to-transparent rounded-full"></div>
-            <ArrowDown className="h-8 w-8 text-[#4CAF50] animate-bounce" />
-            <div className="w-1 h-16 bg-gradient-to-t from-[#4CAF50] to-transparent rounded-full"></div>
+            <div className="w-1 h-16 bg-gradient-to-b from-[#04e6a5] to-transparent rounded-full"></div>
+            <ArrowDown className="h-8 w-8 text-[#04e6a5] animate-bounce" />
+            <div className="w-1 h-16 bg-gradient-to-t from-[#04e6a5] to-transparent rounded-full"></div>
           </div>
         </div>
       </div>
