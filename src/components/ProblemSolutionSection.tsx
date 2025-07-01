@@ -6,38 +6,38 @@ import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartp
 const challenges = [
   {
     icon: Clock,
-    title: "Strona wolno działa",
-    description: "użytkownicy odchodzą po 3 sekundach",
+    title: "Strona działa wolno",
+    description: "po kilku sekundach nikt nie czeka",
     color: "text-orange-500"
   },
   {
     icon: DollarSign,
-    title: "Utrzymanie systemu kosztuje fortunę", 
+    title: "Utrzymanie systemu pochłania zbyt dużo pieniędzy", 
     description: "Wysokie koszty utrzymania",
     color: "text-orange-600"
   },
   {
     icon: AlertCircle,
     title: "Przestarzała technologia",
-    description: "dziurawa jak ser",
+    description: "łatwo o błędy i problemy z bezpieczeństwem",
     color: "text-orange-500"
   },
   {
     icon: Users,
-    title: "Strona trudna w obsłudze",
-    description: "użytkownik się gubi",
+    title: "Interfejs nieczytelny",
+    description: "trudno się połapać",
     color: "text-orange-600"
   },
   {
     icon: TrendingDown,
-    title: "Niskie konwersje",
-    description: "Tracone okazje biznesowe",
+    title: "Zbyt mało konwersji",
+    description: "potencjał nie jest wykorzystany",
     color: "text-orange-500"
   },
   {
     icon: Smartphone,
-    title: "Strona nie działa dobrze na telefonach",
-    description: "Utracony ruch mobilny",
+    title: "Na telefonie wszystko się rozjeżdża",
+    description: "użytkownicy uciekają",
     color: "text-orange-600"
   }
 ];
@@ -45,33 +45,33 @@ const challenges = [
 const solutions = [
   {
     icon: Zap,
-    title: "Błyskawiczne ładowanie",
-    description: "mniej niż 2 sekundy"
+    title: "Strona ładuje się w mniej niż 2 sekundy",
+    description: "błyskawiczne działanie"
   },
   {
     icon: Shield,
-    title: "Rozsądnie i efektywnie",
-    description: "bez marnowania czasu i pieniędzy"
+    title: "Rozsądne koszty",
+    description: "dzięki nowoczesnym metodom tworzenia"
   },
   {
     icon: Rocket,
-    title: "Nowoczesna technologia",
+    title: "Technologie, które będą działać przez lata",
     description: "gotowa na przyszłość"
   },
   {
     icon: Target,
-    title: "Intuicyjny design",
-    description: "Przejrzyste, angażujące doświadczenie użytkownika"
+    title: "Intuicyjny projekt",
+    description: "bez frustracji"
   },
   {
     icon: CheckCircle,
     title: "Skupienie na efektach",
-    description: "projektuję tak, żeby strona działała na Ciebie"
+    description: "i zwiększeniu konwersji"
   },
   {
     icon: MessageCircle,
-    title: "Mobile-First",
-    description: "Idealnie na wszystkich urządzeniach"
+    title: "Działanie perfekcyjnie",
+    description: "na każdym urządzeniu"
   }
 ];
 
@@ -144,7 +144,7 @@ const ProblemSolutionSection = () => {
           {/* Solutions Column */}
           <div className="lg:col-span-5">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              Co robię z tym w WebSzyk
+              Co robi WebSzyk:
             </h3>
             <div className="space-y-6">
               {solutions.map((solution, index) => (

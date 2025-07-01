@@ -61,9 +61,9 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Right - CTA Button */}
+              {/* Right - CTA Button with Orange Gradient Hover */}
               <div className="hidden md:flex items-center">
-                <Button className="bg-[#4CAF50] hover:bg-orange-500 text-white transition-colors duration-300">
+                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] hover:from-orange-500 hover:to-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
                   Potrzebuje wsparcia
                 </Button>
               </div>
