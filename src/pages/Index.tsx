@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -60,9 +61,9 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Right - CTA Button with Orange Gradient Hover - Updated with new green */}
+              {/* Right - CTA Button with Orange Gradient Hover and Silver Background */}
               <div className="hidden md:flex items-center">
-                <Button className="bg-gradient-to-r from-[#04e6a5] to-[#03d194] hover:from-orange-500 hover:to-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
+                <Button className="bg-gradient-to-r from-gray-300/20 via-gray-200/15 to-gray-300/20 backdrop-blur-sm border border-white/30 text-[#04e6a5] font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:border-orange-500">
                   Potrzebuje wsparcia
                 </Button>
               </div>

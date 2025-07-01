@@ -30,10 +30,10 @@ const HeroSection = () => {
               <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
             </div>
             
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 leading-tight tracking-tight">
+            <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-8 leading-tight tracking-tight">
               <span className="text-white block mb-2 lg:mb-3">Twoje</span>
               <span className="text-[#04e6a5] block mb-2 lg:mb-3">techniczne</span>
-              <span className="text-[#04e6a5] block">wsparcie</span>
+              <span className="text-white block">wsparcie</span>
               <span className="text-white block mt-2 lg:mt-3">którego</span>
               <span className="text-white block">potrzebujesz</span>
             </h1>
@@ -110,7 +110,7 @@ const HeroSection = () => {
                   {/* CTA Button */}
                   <div className="flex justify-center">
                     <div className="w-32 h-10 bg-[#04e6a5]/90 rounded-lg shadow-lg flex items-center justify-center">
-                      <span className="text-white text-xs font-semibold">Zajrzyj niżej</span>
+                      <span className="text-[#0D1B2A] text-sm font-semibold">Zajrzyj niżej</span>
                     </div>
                   </div>
                   
