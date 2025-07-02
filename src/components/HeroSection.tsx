@@ -21,24 +21,29 @@ const HeroSection = () => {
       <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-fade-in">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
-                <Zap className="h-6 w-6 text-[#04e6a5]" />
-              </div>
-              <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
+        {/* Centered Main Title */}
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="flex items-center justify-center space-x-3 mb-8">
+            <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
+              <Zap className="h-6 w-6 text-[#04e6a5]" />
             </div>
-            
-            <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-8 leading-tight tracking-tight">
-              <span className="text-white block mb-2 lg:mb-3">Twoje</span>
-              <span className="text-[#04e6a5] block mb-2 lg:mb-3">techniczne</span>
-              <span className="text-white block">wsparcie</span>
-              <span className="text-white block mt-2 lg:mt-3">którego</span>
-              <span className="text-white block">potrzebujesz</span>
-            </h1>
-            
-            <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-12 mt-8">
+            <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
+          </div>
+          
+          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
+            <span className="text-white block mb-2 lg:mb-3">Twoje</span>
+            <span className="text-[#04e6a5] block mb-2 lg:mb-3">techniczne</span>
+            <span className="text-white block mb-2 lg:mb-3">wsparcie</span>
+            <span className="text-white block mb-2 lg:mb-3">którego</span>
+            <span className="text-white block">potrzebujesz</span>
+          </h1>
+        </div>
+
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+          {/* Left Column - Description and Features */}
+          <div className="animate-fade-in">
+            <p className="text-xl text-white/90 leading-relaxed mb-12">
               Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
@@ -58,7 +63,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Browser Mockup with Floating Problems */}
+          {/* Right Column - Browser Mockup with Floating Problems */}
           <div className="relative lg:pl-8 animate-fade-in">
             <div className="relative w-full max-w-2xl mx-auto">
               {/* Browser Window */}
@@ -121,7 +126,6 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              
               
               {/* Floating Problem Bubbles - Orange Gradient */}
               <div className="absolute -top-8 -left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
@@ -200,7 +204,7 @@ const HeroSection = () => {
         </div>
         
         {/* Centered Animated Arrow Button - Updated with new green and ArrowDown icon */}
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center">
           <button 
             onClick={scrollToNext}
             className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
