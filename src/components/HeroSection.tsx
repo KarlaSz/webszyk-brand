@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap, ArrowBigDown } from "lucide-react";
+import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToNext = () => {
@@ -199,13 +199,13 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Centered Animated Arrow Button - Updated with new green */}
+        {/* Centered Animated Arrow Button - Updated with new green and ArrowDown icon */}
         <div className="flex justify-center mt-16">
           <button 
             onClick={scrollToNext}
             className="group relative w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/15 transition-all duration-500 hover:scale-110 transform shadow-xl flex items-center justify-center"
           >
-            <ArrowBigDown 
+            <ArrowDown 
               className="h-10 w-10 text-[#04e6a5] transition-all duration-300 group-hover:scale-110" 
               style={{ 
                 animation: 'bounce 3s infinite ease-in-out',
