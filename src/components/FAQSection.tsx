@@ -52,7 +52,7 @@ const FAQSection = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <Card key={index} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+            <Card key={index} className="border border-gray-200 shadow-sm hover:shadow-md hover:border-[#04e6a5] transition-all duration-300">
               <CardHeader 
                 className="cursor-pointer"
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}

@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -68,13 +69,13 @@ const ContactSection = () => {
     <section id="contact" className="relative overflow-hidden">
       {/* Enhanced Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
       
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#4CAF50]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#4CAF50]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative z-10 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +108,7 @@ const ContactSection = () => {
                         placeholder="John Doe" 
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] h-12 text-base" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#04e6a5] focus:ring-[#04e6a5] h-12 text-base" 
                       />
                     </div>
                     
@@ -119,7 +120,7 @@ const ContactSection = () => {
                         placeholder="john@example.com" 
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] h-12 text-base" 
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#04e6a5] focus:ring-[#04e6a5] h-12 text-base" 
                       />
                     </div>
                     
@@ -131,13 +132,13 @@ const ContactSection = () => {
                         rows={5}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#4CAF50] focus:ring-[#4CAF50] text-base"
+                        className="border-white/40 bg-black/20 backdrop-blur-sm text-white placeholder:text-white/70 focus:border-[#04e6a5] focus:ring-[#04e6a5] text-base"
                       />
                     </div>
                     
                     <div className="space-y-2">
                       <Label className="text-white font-medium text-base">Attach Files</Label>
-                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-[#4CAF50] transition-colors cursor-pointer">
+                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-[#04e6a5] transition-colors cursor-pointer">
                         <div className="text-center">
                           <Paperclip className="h-8 w-8 text-white/70 mx-auto mb-3" />
                           <p className="text-white/70 text-base">Click to attach files or drag & drop</p>
@@ -167,8 +168,8 @@ const ContactSection = () => {
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose WebSzyk?</h3>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Zap className="h-6 w-6 text-[#4CAF50]" />
+                      <div className="w-12 h-12 bg-[#04e6a5]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="h-6 w-6 text-[#04e6a5]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2 text-lg">8+ Years Experience</h4>
@@ -177,8 +178,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Clock className="h-6 w-6 text-[#4CAF50]" />
+                      <div className="w-12 h-12 bg-[#04e6a5]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-6 w-6 text-[#04e6a5]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2 text-lg">Fast Response</h4>
@@ -187,8 +188,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Shield className="h-6 w-6 text-[#4CAF50]" />
+                      <div className="w-12 h-12 bg-[#04e6a5]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-6 w-6 text-[#04e6a5]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2 text-lg">Ongoing Support</h4>
@@ -197,8 +198,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#4CAF50]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="h-6 w-6 text-[#4CAF50]" />
+                      <div className="w-12 h-12 bg-[#04e6a5]/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-6 w-6 text-[#04e6a5]" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2 text-lg">Quality Guarantee</h4>
@@ -207,28 +208,28 @@ const ContactSection = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-8 p-4 bg-[#4CAF50]/10 backdrop-blur-sm rounded-lg border border-[#4CAF50]/30">
+                  <div className="mt-8 p-4 bg-[#04e6a5]/10 backdrop-blur-sm rounded-lg border border-[#04e6a5]/30">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
-                      <span className="text-[#4CAF50] font-semibold text-base">Available for new projects</span>
+                      <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
+                      <span className="text-[#04e6a5] font-semibold text-base">Available for new projects</span>
                     </div>
                     <p className="text-white/90 text-base mb-4">Response time: 2-4 hours</p>
                     
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
-                        <Mail className="h-4 w-4 text-[#4CAF50]" />
+                        <Mail className="h-4 w-4 text-[#04e6a5]" />
                         <span className="text-white/90 text-base">hello@webszyk.com</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Phone className="h-4 w-4 text-[#4CAF50]" />
+                        <Phone className="h-4 w-4 text-[#04e6a5]" />
                         <span className="text-white/90 text-base">+1 (555) 123-4567</span>
                       </div>
                       <div className="flex items-center space-x-4 pt-2">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#4CAF50] transition-colors">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#04e6a5] transition-colors">
                           <Github className="h-4 w-4" />
                           <span className="text-base">GitHub</span>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#4CAF50] transition-colors">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/90 hover:text-[#04e6a5] transition-colors">
                           <Linkedin className="h-4 w-4" />
                           <span className="text-base">LinkedIn</span>
                         </a>
@@ -245,7 +246,7 @@ const ContactSection = () => {
             <div className="text-center max-w-2xl">
               <div className="relative bg-black/30 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden group cursor-pointer border border-white/30 mb-6">
                 {/* Video Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[#4CAF50]/20 to-purple-500/20 flex items-center justify-center relative">
+                <div className="aspect-video bg-gradient-to-br from-[#04e6a5]/20 to-purple-500/20 flex items-center justify-center relative">
                   <div className="absolute inset-0 bg-black/20"></div>
                   <div className="relative z-10 text-center">
                     <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg border border-white/30">
@@ -256,7 +257,7 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Animated elements */}
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
                   <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500"></div>
                 </div>
               </div>
