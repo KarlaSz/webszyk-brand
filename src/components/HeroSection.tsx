@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 
@@ -21,21 +20,11 @@ const HeroSection = () => {
       <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Centered Main Title */}
+        {/* Centered Main Title as Hook */}
         <div className="text-center mb-16 animate-fade-in">
-          <div className="flex items-center justify-center space-x-3 mb-8">
-            <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
-              <Zap className="h-6 w-6 text-[#04e6a5]" />
-            </div>
-            <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
-          </div>
-          
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
-            <span className="text-white block mb-2 lg:mb-3">Twoje</span>
-            <span className="text-[#04e6a5] block mb-2 lg:mb-3">techniczne</span>
-            <span className="text-white block mb-2 lg:mb-3">wsparcie</span>
-            <span className="text-white block mb-2 lg:mb-3">którego</span>
-            <span className="text-white block">potrzebujesz</span>
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight max-w-4xl mx-auto">
+            <span className="text-white block mb-2 lg:mb-3">Twoje najlepsze</span>
+            <span className="text-[#04e6a5] bg-gradient-to-r from-[#04e6a5] to-emerald-400 bg-clip-text text-transparent block text-5xl lg:text-6xl xl:text-7xl">techniczne wsparcie</span>
           </h1>
         </div>
 
@@ -43,6 +32,14 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Left Column - Description and Features */}
           <div className="animate-fade-in">
+            {/* Moved Technologiczne wsparcie badge here */}
+            <div className="flex items-center space-x-3 mb-8">
+              <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
+                <Zap className="h-6 w-6 text-[#04e6a5]" />
+              </div>
+              <span className="text-white font-semibold bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-sm">Technologiczne wsparcie</span>
+            </div>
+            
             <p className="text-xl text-white/90 leading-relaxed mb-12">
               Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
