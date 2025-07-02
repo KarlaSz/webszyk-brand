@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Smartphone, Globe, Zap, Users, CheckCircle, Lightbulb, Palette, Shield } from "lucide-react";
@@ -9,9 +10,9 @@ const ExperienceSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
-            <span className="text-[#4CAF50] font-semibold text-lg">Comprehensive Technology Solutions</span>
-            <div className="w-3 h-3 bg-[#4CAF50] rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold text-lg">Comprehensive Technology Solutions</span>
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -26,25 +27,25 @@ const ExperienceSection = () => {
         {/* Main Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Web Development */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Code className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Code className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
               <p className="text-gray-600 mb-6">Full-stack solutions from concept to deployment</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">React & TypeScript</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Backend APIs</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Database Integration</span>
                 </div>
               </div>
@@ -52,25 +53,25 @@ const ExperienceSection = () => {
           </Card>
 
           {/* Mobile Solutions */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Smartphone className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Smartphone className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile Solutions</h3>
               <p className="text-gray-600 mb-6">Responsive design and mobile optimization</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Mobile-First Design</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Cross-Platform</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Performance Optimized</span>
                 </div>
               </div>
@@ -78,25 +79,25 @@ const ExperienceSection = () => {
           </Card>
 
           {/* UI/UX Design */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Palette className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Palette className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
               <p className="text-gray-600 mb-6">Beautiful interfaces that users love</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">User Research</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Wireframing</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Prototyping</span>
                 </div>
               </div>
@@ -104,25 +105,25 @@ const ExperienceSection = () => {
           </Card>
 
           {/* Performance Optimization */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Zap className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Zap className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Performance</h3>
               <p className="text-gray-600 mb-6">Speed optimization and SEO enhancement</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Speed Optimization</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">SEO Enhancement</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Core Web Vitals</span>
                 </div>
               </div>
@@ -130,25 +131,25 @@ const ExperienceSection = () => {
           </Card>
 
           {/* Security & Support */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Shield className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Shield className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Security & Support</h3>
               <p className="text-gray-600 mb-6">Ongoing maintenance and security updates</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Security Updates</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">24/7 Monitoring</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Regular Backups</span>
                 </div>
               </div>
@@ -156,25 +157,25 @@ const ExperienceSection = () => {
           </Card>
 
           {/* Consulting */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#4CAF50]/10 transition-colors duration-300">
-                <Lightbulb className="h-8 w-8 text-gray-600 group-hover:text-[#4CAF50] transition-colors duration-300" />
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                <Lightbulb className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Consulting</h3>
               <p className="text-gray-600 mb-6">Strategic technology guidance and planning</p>
               
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Tech Strategy</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Platform Selection</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600" />
+                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
                   <span className="text-sm text-gray-700">Process Automation</span>
                 </div>
               </div>
@@ -182,7 +183,7 @@ const ExperienceSection = () => {
           </Card>
         </div>
 
-        {/* Technologies - Updated with removed technologies */}
+        {/* Technologies - Updated with correct green colors */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -194,7 +195,7 @@ const ExperienceSection = () => {
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="bg-gray-100 text-gray-700 hover:bg-[#4CAF50]/10 hover:text-[#4CAF50] hover:border-[#4CAF50]/40 transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md rounded-full border border-gray-200"
+                className="bg-gray-100 text-gray-700 hover:bg-[#04e6a5]/10 hover:text-[#04e6a5] hover:border-[#04e6a5]/40 transition-all duration-300 cursor-default px-4 py-2 text-sm font-medium shadow-sm hover:shadow-md rounded-full border border-gray-200"
               >
                 {tech}
               </Badge>

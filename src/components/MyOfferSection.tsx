@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,17 +9,17 @@ const MyOfferSection = () => {
     <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Same background as hero section */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#4CAF50]/15 via-emerald-400/10 to-[#4CAF50]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#4CAF50]/12 to-slate-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
       
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#4CAF50]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#4CAF50]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#4CAF50]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/30 backdrop-blur-sm mb-4">
+          <Badge variant="secondary" className="bg-[#04e6a5]/20 text-[#04e6a5] border-[#04e6a5]/30 backdrop-blur-sm mb-4">
             My Services
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -34,8 +35,8 @@ const MyOfferSection = () => {
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-gray-300" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                  <Globe className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1">
@@ -57,29 +58,29 @@ const MyOfferSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Increase online presence</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Convert visitors to customers</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Build trust & credibility</span>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Improve SEO rankings</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Scale with modern tech</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Mobile-first design</span>
                   </div>
                 </div>
@@ -92,7 +93,7 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-white/20 hover:border-white/50 text-white backdrop-blur-md transition-all duration-300">
+              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
                 Get Started Today
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -103,8 +104,8 @@ const MyOfferSection = () => {
           <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                  <Wrench className="h-6 w-6 text-gray-300" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                  <Wrench className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
                 </div>
                 <div className="flex-1">
                   <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
@@ -121,7 +122,7 @@ const MyOfferSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <Shield className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <Shield className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Secure your systems</span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -129,7 +130,7 @@ const MyOfferSection = () => {
                     <span className="text-white/90 text-sm">Cloud migration</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Zap className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <Zap className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Performance optimization</span>
                   </div>
                 </div>
@@ -139,7 +140,7 @@ const MyOfferSection = () => {
                     <span className="text-white/90 text-sm">24/7 support</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Code className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <Code className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
                     <span className="text-white/90 text-sm">Custom development</span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -156,7 +157,7 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-white/20 hover:border-white/50 text-white backdrop-blur-md transition-all duration-300">
+              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -187,11 +188,11 @@ const MyOfferSection = () => {
               
               <div className="flex items-center space-x-4 text-white/80">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
                   <span className="font-medium text-sm">Free Consultation</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse delay-500"></div>
+                  <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse delay-500"></div>
                   <span className="font-medium text-sm">Quick Response</span>
                 </div>
               </div>

@@ -76,11 +76,11 @@ const AboutMeSection = () => {
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all flex items-center space-x-2">
+              <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 hover:border-[#04e6a5] hover:text-[#04e6a5] transition-all flex items-center space-x-2">
                 <Linkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
               </Button>
-              <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all flex items-center space-x-2">
+              <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 hover:border-[#04e6a5] hover:text-[#04e6a5] transition-all flex items-center space-x-2">
                 <Github className="h-5 w-5" />
                 <span>GitHub</span>
               </Button>
