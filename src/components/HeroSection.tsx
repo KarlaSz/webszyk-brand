@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 
@@ -221,19 +222,18 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Smooth Wave Divider */}
+      {/* Sharp Arrow Divider */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
         <svg 
-          className="relative block w-full h-24" 
-          data-name="Layer 1" 
+          className="relative block w-full h-16" 
           xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1200 120" 
+          viewBox="0 0 1200 60" 
           preserveAspectRatio="none"
         >
-          <path 
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.83C1132.19,118.92,1055.71,111.31,985.66,92.83Z" 
+          <polygon 
+            points="0,0 600,60 1200,0 1200,60 0,60" 
             className="fill-white"
-          ></path>
+          />
         </svg>
       </div>
     </section>
