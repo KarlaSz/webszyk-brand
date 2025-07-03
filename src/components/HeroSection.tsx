@@ -229,16 +229,9 @@ const HeroSection = () => {
           viewBox="0 0 1200 80" 
           preserveAspectRatio="none"
         >
-          <defs>
-            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopOpacity="0.8" className="stop-color-white" />
-              <stop offset="50%" stopOpacity="0.9" className="stop-color-white" />
-              <stop offset="100%" stopOpacity="1" className="stop-color-white" />
-            </linearGradient>
-          </defs>
           <path 
             d="M0,0 Q300,20 600,40 Q900,20 1200,0 L1200,80 Q900,60 600,80 Q300,60 0,80 Z" 
-            fill="url(#arrowGradient)"
+            fill="rgba(255, 255, 255, 0.1)"
           />
         </svg>
       </div>
