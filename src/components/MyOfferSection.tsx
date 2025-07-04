@@ -2,8 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight, MessageCircle, Fan } from "lucide-react";
+import { useState } from "react";
+import ServiceModal from "./ServiceModal";
 
 const MyOfferSection = () => {
+  const [isWebsiteModalOpen, setIsWebsiteModalOpen] = useState(false);
+  const [isITModalOpen, setIsITModalOpen] = useState(false);
+
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Same background as hero section */}
@@ -92,7 +97,10 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+              <Button 
+                onClick={() => setIsWebsiteModalOpen(true)}
+                className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300"
+              >
                 Get Started Today
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -156,7 +164,10 @@ const MyOfferSection = () => {
                 <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
               </div>
               
-              <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+              <Button 
+                onClick={() => setIsITModalOpen(true)}
+                className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300"
+              >
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -199,6 +210,18 @@ const MyOfferSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Modals */}
+      <ServiceModal 
+        isOpen={isWebsiteModalOpen} 
+        onClose={() => setIsWebsiteModalOpen(false)} 
+        serviceType="website" 
+      />
+      <ServiceModal 
+        isOpen={isITModalOpen} 
+        onClose={() => setIsITModalOpen(false)} 
+        serviceType="it-services" 
+      />
     </section>
   );
 };
