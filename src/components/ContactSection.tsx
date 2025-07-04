@@ -80,7 +80,7 @@ const ContactSection = () => {
       {/* Triangle Shape Divider - Inside Section */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="relative">
-          {/* Triangle */}
+          {/* Triangle pointing downward */}
           <div 
             className="w-0 h-0 border-l-[40px] border-r-[40px] border-t-[60px] border-l-transparent border-r-transparent border-t-white/20"
             style={{
