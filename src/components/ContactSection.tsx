@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone, Github, Linkedin } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone, Github, Linkedin, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -76,6 +76,23 @@ const ContactSection = () => {
       <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+
+      {/* Triangle Shape Divider - Inside Section */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="relative">
+          {/* Triangle */}
+          <div 
+            className="w-0 h-0 border-l-[40px] border-r-[40px] border-t-[60px] border-l-transparent border-r-transparent border-t-white/20"
+            style={{
+              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))'
+            }}
+          ></div>
+          {/* Down Arrow Inside Triangle */}
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+            <ArrowDown className="h-6 w-6 text-white/80 animate-bounce" />
+          </div>
+        </div>
+      </div>
 
       <div className="relative z-10 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
