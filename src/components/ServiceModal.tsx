@@ -28,6 +28,7 @@ const ServiceModal = ({ isOpen, onClose, serviceType }: ServiceModalProps) => {
     ],
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     timeline: "2-4 weeks",
+    timelineLabel: "Delivery Timeline",
     included: [
       "Custom design consultation",
       "Up to 5 pages",
@@ -55,7 +56,8 @@ const ServiceModal = ({ isOpen, onClose, serviceType }: ServiceModalProps) => {
       { title: "User Training", description: "Training sessions for your team on new technologies" }
     ],
     technologies: ["AWS", "Azure", "Microsoft 365", "Security Tools", "Monitoring Systems"],
-    response: "Within 2 hours",
+    timeline: "Within 2 hours",
+    timelineLabel: "Response Time",
     included: [
       "Initial system assessment",
       "Monthly security reports",
@@ -140,12 +142,8 @@ const ServiceModal = ({ isOpen, onClose, serviceType }: ServiceModalProps) => {
             {/* Timeline/Response */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
               <div className="flex items-center justify-between">
-                <span className="text-white/80">
-                  {serviceType === 'website' ? 'Delivery Timeline' : 'Response Time'}
-                </span>
-                <span className="font-semibold text-[#04e6a5]">
-                  {serviceType === 'website' ? currentService.timeline : currentService.response}
-                </span>
+                <span className="text-white/80">{currentService.timelineLabel}</span>
+                <span className="font-semibold text-[#04e6a5]">{currentService.timeline}</span>
               </div>
             </div>
           </div>
