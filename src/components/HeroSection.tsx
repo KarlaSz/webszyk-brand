@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 const HeroSection = () => {
   const scrollToNext = () => {
@@ -45,7 +45,7 @@ const HeroSection = () => {
               Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
-            <div className="flex flex-wrap items-center gap-4 lg:gap-8 text-sm">
+            <div className="flex flex-wrap items-center gap-4 lg:gap-8 text-sm mb-8">
               <div className="flex items-center space-x-2">
                 <Zap className="h-4 w-4 text-[#04e6a5]" />
                 <span className="text-white/90 font-medium">szybka komunikacja</span>
@@ -58,6 +58,18 @@ const HeroSection = () => {
                 <div className="w-4 h-4 bg-[#04e6a5] rounded-full animate-pulse"></div>
                 <span className="text-white/90 font-medium">IT wsparcie</span>
               </div>
+            </div>
+
+            {/* Add CTA button with ContactModal */}
+            <div className="flex justify-center lg:justify-start">
+              <ContactModal
+                trigger={
+                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 border-0 text-lg">
+                    Rozpocznij projekt
+                  </Button>
+                }
+                title="Rozpocznij swój projekt"
+              />
             </div>
           </div>
           

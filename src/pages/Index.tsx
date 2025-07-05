@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +14,7 @@ import FAQSection from "@/components/FAQSection";
 import ProcessSection from "@/components/ProcessSection";
 import ImageSection from "@/components/ImageSection";
 import MobileMenu from "@/components/MobileMenu";
+import ContactModal from "@/components/ContactModal";
 
 const Index = () => {
   return (
@@ -62,11 +62,16 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Right - CTA Button with white text and transparent silver background */}
+              {/* Right - CTA Button with ContactModal */}
               <div className="hidden md:flex items-center">
-                <Button className="bg-white/15 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:border-orange-500">
-                  Potrzebuje wsparcia
-                </Button>
+                <ContactModal
+                  trigger={
+                    <Button className="bg-white/15 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:border-orange-500">
+                      Potrzebuje wsparcia
+                    </Button>
+                  }
+                  title="Potrzebuję wsparcia"
+                />
               </div>
               
               {/* Mobile Menu */}

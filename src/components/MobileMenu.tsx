@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, Code } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,12 +79,16 @@ const MobileMenu = () => {
             </button>
             
             <div className="pt-6">
-              <Button 
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 border-0"
-                onClick={() => scrollToSection('#contact')}
-              >
-                Potrzebuję wsparcia
-              </Button>
+              <ContactModal
+                trigger={
+                  <Button 
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 border-0"
+                  >
+                    Potrzebuję wsparcia
+                  </Button>
+                }
+                title="Potrzebuję wsparcia"
+              />
             </div>
           </nav>
         </div>
