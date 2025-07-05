@@ -25,12 +25,22 @@ const MobileMenu = () => {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-80 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800 border-white/20">
-        {/* Background overlay similar to hero section */}
+        {/* Background overlay matching hero section */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
         <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
         
+        {/* Close button with bigger X icon */}
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 right-4 z-20 text-white hover:bg-white/10 w-10 h-10"
+        >
+          <X className="h-8 w-8" />
+        </Button>
+        
         <div className="relative z-10">
-          <SheetHeader className="mb-8">
+          <SheetHeader className="mb-8 mt-4">
             <SheetTitle className="flex items-center space-x-3 text-white">
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-br from-[#04e6a5]/80 to-emerald-600/80 rounded-full flex items-center justify-center shadow-lg border-2 border-[#04e6a5]/30 backdrop-blur-sm">

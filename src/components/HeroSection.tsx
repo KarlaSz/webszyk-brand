@@ -125,9 +125,9 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Floating Problem Bubbles - Mobile responsive positioning and sizing */}
+              {/* Floating Problem Bubbles - Fixed to proper orange colors */}
               <div className="absolute -top-4 lg:-top-8 -left-4 lg:-left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <AlertCircle className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -139,7 +139,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -top-2 lg:-top-4 -right-6 lg:-right-12 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <Users className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -151,7 +151,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute top-1/3 lg:top-1/2 -left-8 lg:-left-16 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <TrendingDown className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -163,7 +163,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute top-1/3 lg:top-1/2 -right-8 lg:-right-16 animate-bounce" style={{ animationDelay: '3s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <DollarSign className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -175,7 +175,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-4 lg:-bottom-8 left-4 lg:left-8 animate-bounce" style={{ animationDelay: '4s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <Clock className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
@@ -187,7 +187,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-4 lg:-bottom-8 -right-4 lg:-right-8 animate-bounce" style={{ animationDelay: '5s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
                   <div className="flex items-start space-x-1 lg:space-x-2">
                     <AlertCircle className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
