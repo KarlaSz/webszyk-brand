@@ -1,10 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone, Github, Linkedin } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, CheckCircle, Clock, Shield, Zap, Paperclip, Play, Mail, Phone, Github, Linkedin, X } from "lucide-react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -14,6 +15,8 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [attachedFiles, setAttachedFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -22,6 +25,44 @@ const ContactSection = () => {
       ...prev,
       [id]: value
     }));
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    const validFiles = files.filter(file => {
+      const maxSize = 10 * 1024 * 1024; // 10MB
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/jpg', 'image/png'];
+      
+      if (file.size > maxSize) {
+        toast({
+          title: "File too large",
+          description: `${file.name} is larger than 10MB`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      
+      if (!allowedTypes.includes(file.type)) {
+        toast({
+          title: "Invalid file type",
+          description: `${file.name} is not a supported file type`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      
+      return true;
+    });
+    
+    setAttachedFiles(prev => [...prev, ...validFiles]);
+  };
+
+  const removeFile = (index: number) => {
+    setAttachedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handleFileAreaClick = () => {
+    fileInputRef.current?.click();
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -53,6 +94,7 @@ const ContactSection = () => {
         email: '',
         message: ''
       });
+      setAttachedFiles([]);
     } catch (error) {
       toast({
         title: "Error",
@@ -147,14 +189,46 @@ const ContactSection = () => {
                     
                     <div className="space-y-2">
                       <Label className="text-white font-medium text-base">Attach Files</Label>
-                      <div className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-[#04e6a5] transition-colors cursor-pointer">
+                      <div 
+                        onClick={handleFileAreaClick}
+                        className="flex items-center justify-center border-2 border-dashed border-white/40 rounded-lg p-6 bg-black/10 backdrop-blur-sm hover:border-[#04e6a5] transition-colors cursor-pointer"
+                      >
                         <div className="text-center">
                           <Paperclip className="h-8 w-8 text-white/70 mx-auto mb-3" />
                           <p className="text-white/70 text-base">Click to attach files or drag & drop</p>
                           <p className="text-white/50 text-sm mt-2">PDF, DOC, Images up to 10MB</p>
                         </div>
-                        <input type="file" multiple className="hidden" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
+                        <input 
+                          ref={fileInputRef}
+                          type="file" 
+                          multiple 
+                          className="hidden" 
+                          accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                          onChange={handleFileSelect}
+                        />
                       </div>
+                      
+                      {/* File List */}
+                      {attachedFiles.length > 0 && (
+                        <div className="space-y-2 mt-4">
+                          {attachedFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg p-3">
+                              <div className="flex items-center space-x-2">
+                                <Paperclip className="h-4 w-4 text-[#04e6a5]" />
+                                <span className="text-white/90 text-sm truncate">{file.name}</span>
+                                <span className="text-white/60 text-xs">({(file.size / 1024 / 1024).toFixed(1)}MB)</span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => removeFile(index)}
+                                className="text-white/60 hover:text-red-400 transition-colors"
+                              >
+                                <X className="h-4 w-4" />
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     
                     <Button 
