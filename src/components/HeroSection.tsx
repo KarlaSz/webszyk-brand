@@ -30,9 +30,9 @@ const HeroSection = () => {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
           {/* Left Column - Description and Features */}
-          <div className="animate-fade-in">
+          <div className="animate-fade-in order-2 lg:order-1">
             {/* Moved Technologiczne wsparcie badge here */}
             <div className="flex items-center space-x-3 mb-8">
               <div className="bg-white/15 backdrop-blur-sm p-2 rounded-lg border border-white/20">
@@ -45,7 +45,7 @@ const HeroSection = () => {
               Webszyk studio to miejsce w którym pomogę Ci przekształć Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
-            <div className="flex items-center space-x-8 text-sm">
+            <div className="flex flex-wrap items-center gap-4 lg:gap-8 text-sm">
               <div className="flex items-center space-x-2">
                 <Zap className="h-4 w-4 text-[#04e6a5]" />
                 <span className="text-white/90 font-medium">szybka komunikacja</span>
@@ -62,137 +62,137 @@ const HeroSection = () => {
           </div>
           
           {/* Right Column - Browser Mockup with Floating Problems */}
-          <div className="relative lg:pl-8 animate-fade-in">
-            <div className="relative w-full max-w-2xl mx-auto">
-              {/* Browser Window */}
+          <div className="relative animate-fade-in order-1 lg:order-2">
+            <div className="relative w-full max-w-md lg:max-w-2xl mx-auto">
+              {/* Browser Window - Responsive sizing */}
               <div className="relative bg-white/15 backdrop-blur-md rounded-2xl shadow-2xl border border-white/30 overflow-hidden">
                 {/* Browser Header */}
-                <div className="flex items-center justify-between px-6 py-4 bg-white/10 border-b border-white/20">
+                <div className="flex items-center justify-between px-3 lg:px-6 py-2 lg:py-4 bg-white/10 border-b border-white/20">
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 lg:w-3 lg:h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 lg:w-3 lg:h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-2 h-2 lg:w-3 lg:h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="flex-1 mx-4">
-                    <div className="bg-white/15 rounded-lg px-4 py-2 text-center text-white/90 text-sm border border-white/30">
+                  <div className="flex-1 mx-2 lg:mx-4">
+                    <div className="bg-white/15 rounded-lg px-2 lg:px-4 py-1 lg:py-2 text-center text-white/90 text-xs lg:text-sm border border-white/30">
                       www.twojastrona.pl
                     </div>
                   </div>
-                  <div className="w-12"></div>
+                  <div className="w-6 lg:w-12"></div>
                 </div>
                 
-                {/* Browser Content */}
-                <div className="p-8 h-80 bg-gradient-to-br from-white/10 to-white/5">
-                  <div className="text-center mb-6">
-                    <h3 className="text-3xl font-bold text-white mb-3">Twoja strona</h3>
-                    <p className="text-white/80 text-sm mb-6">profesjonalna i responsywna strona</p>
+                {/* Browser Content - Responsive sizing */}
+                <div className="p-4 lg:p-8 h-48 lg:h-80 bg-gradient-to-br from-white/10 to-white/5">
+                  <div className="text-center mb-4 lg:mb-6">
+                    <h3 className="text-xl lg:text-3xl font-bold text-white mb-2 lg:mb-3">Twoja strona</h3>
+                    <p className="text-white/80 text-xs lg:text-sm mb-4 lg:mb-6">profesjonalna i responsywna strona</p>
                   </div>
                   
                   {/* Navigation Menu */}
-                  <div className="flex justify-center space-x-6 mb-8">
-                    <div className="w-16 h-2 bg-white/40 rounded"></div>
-                    <div className="w-20 h-2 bg-white/40 rounded"></div>
-                    <div className="w-18 h-2 bg-white/40 rounded"></div>
-                    <div className="w-14 h-2 bg-white/40 rounded"></div>
+                  <div className="flex justify-center space-x-2 lg:space-x-6 mb-4 lg:mb-8">
+                    <div className="w-8 lg:w-16 h-1 lg:h-2 bg-white/40 rounded"></div>
+                    <div className="w-10 lg:w-20 h-1 lg:h-2 bg-white/40 rounded"></div>
+                    <div className="w-9 lg:w-18 h-1 lg:h-2 bg-white/40 rounded"></div>
+                    <div className="w-7 lg:w-14 h-1 lg:h-2 bg-white/40 rounded"></div>
                   </div>
                   
                   {/* Content Blocks */}
-                  <div className="space-y-4 mb-8">
-                    <div className="flex space-x-3">
-                      <div className="w-20 h-3 bg-white/30 rounded"></div>
-                      <div className="w-32 h-3 bg-white/30 rounded"></div>
-                      <div className="w-24 h-3 bg-white/30 rounded"></div>
+                  <div className="space-y-2 lg:space-y-4 mb-4 lg:mb-8">
+                    <div className="flex space-x-2 lg:space-x-3">
+                      <div className="w-10 lg:w-20 h-2 lg:h-3 bg-white/30 rounded"></div>
+                      <div className="w-16 lg:w-32 h-2 lg:h-3 bg-white/30 rounded"></div>
+                      <div className="w-12 lg:w-24 h-2 lg:h-3 bg-white/30 rounded"></div>
                     </div>
-                    <div className="flex space-x-3">
-                      <div className="w-28 h-3 bg-white/30 rounded"></div>
-                      <div className="w-20 h-3 bg-white/30 rounded"></div>
-                      <div className="w-36 h-3 bg-white/30 rounded"></div>
+                    <div className="flex space-x-2 lg:space-x-3">
+                      <div className="w-14 lg:w-28 h-2 lg:h-3 bg-white/30 rounded"></div>
+                      <div className="w-10 lg:w-20 h-2 lg:h-3 bg-white/30 rounded"></div>
+                      <div className="w-18 lg:w-36 h-2 lg:h-3 bg-white/30 rounded"></div>
                     </div>
                   </div>
                   
                   {/* CTA Button */}
                   <div className="flex justify-center">
-                    <div className="w-32 h-10 bg-[#04e6a5]/90 rounded-lg shadow-lg flex items-center justify-center">
-                      <span className="text-[#0D1B2A] text-sm font-semibold">Zajrzyj niżej</span>
+                    <div className="w-24 lg:w-32 h-8 lg:h-10 bg-[#04e6a5]/90 rounded-lg shadow-lg flex items-center justify-center">
+                      <span className="text-[#0D1B2A] text-xs lg:text-sm font-semibold">Zajrzyj niżej</span>
                     </div>
                   </div>
                   
                   {/* Trust Indicators */}
-                  <div className="flex justify-center space-x-4 mt-6">
-                    <div className="w-3 h-3 bg-[#04e6a5] rounded-full"></div>
+                  <div className="flex justify-center space-x-2 lg:space-x-4 mt-4 lg:mt-6">
+                    <div className="w-2 lg:w-3 h-2 lg:h-3 bg-[#04e6a5] rounded-full"></div>
                     <div className="text-white/70 text-xs">wspierana przez webszyk studio</div>
                   </div>
                 </div>
               </div>
               
-              {/* Floating Problem Bubbles - Orange Gradient */}
-              <div className="absolute -top-8 -left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              {/* Floating Problem Bubbles - Mobile responsive positioning and sizing */}
+              <div className="absolute -top-4 lg:-top-8 -left-4 lg:-left-8 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <AlertCircle className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Zły Layout</h4>
-                      <p className="text-white/90 text-xs">user wychodzi za szybko z mojej strony</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Zły Layout</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">user wychodzi za szybko z mojej strony</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -top-4 -right-12 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <Users className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div className="absolute -top-2 lg:-top-4 -right-6 lg:-right-12 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <Users className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Słaby UX</h4>
-                      <p className="text-white/90 text-xs">skomplikowana nawigacja i układ strony</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Słaby UX</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">skomplikowana nawigacja i układ strony</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -left-16 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <TrendingDown className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div className="absolute top-1/3 lg:top-1/2 -left-8 lg:-left-16 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <TrendingDown className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Niskie zainteresowanie</h4>
-                      <p className="text-white/90 text-xs">gdzie umieścić formularz kontakty na stronie i jak skonfigutować</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Niskie zainteresowanie</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">gdzie umieścić formularz kontakty na stronie i jak skonfigutować</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -right-16 animate-bounce" style={{ animationDelay: '3s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <DollarSign className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div className="absolute top-1/3 lg:top-1/2 -right-8 lg:-right-16 animate-bounce" style={{ animationDelay: '3s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <DollarSign className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Wysokie koszta</h4>
-                      <p className="text-white/90 text-xs">Nie wiem jak zarządzać swoją stroną i jak nie przepłacać za narzędzia</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Wysokie koszta</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">Nie wiem jak zarządzać swoją stroną i jak nie przepłacać za narzędzia</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-8 left-8 animate-bounce" style={{ animationDelay: '4s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <Clock className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div className="absolute -bottom-4 lg:-bottom-8 left-4 lg:left-8 animate-bounce" style={{ animationDelay: '4s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <Clock className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Serwis IT</h4>
-                      <p className="text-white/90 text-xs">jak wykonać backup strony</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Serwis IT</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">jak wykonać backup strony</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-8 -right-8 animate-bounce" style={{ animationDelay: '5s', animationDuration: '3s' }}>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-48">
-                  <div className="flex items-start space-x-2">
-                    <AlertCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div className="absolute -bottom-4 lg:-bottom-8 -right-4 lg:-right-8 animate-bounce" style={{ animationDelay: '5s', animationDuration: '3s' }}>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 backdrop-blur-sm rounded-2xl p-2 lg:p-4 shadow-xl max-w-32 lg:max-w-48">
+                  <div className="flex items-start space-x-1 lg:space-x-2">
+                    <AlertCircle className="h-3 w-3 lg:h-5 lg:w-5 text-white flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">Nieetyczny mobile</h4>
-                      <p className="text-white/90 text-xs">strone i aplikacja wyglądają źle na mobile i tabletach</p>
+                      <h4 className="text-white font-semibold text-xs lg:text-sm">Nieetyczny mobile</h4>
+                      <p className="text-white/90 text-xs hidden lg:block">strona i aplikacja wyglądają źle na mobile i tabletach</p>
                     </div>
                   </div>
                 </div>

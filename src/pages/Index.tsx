@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Smartphone, Globe, Zap, Users, CheckCircle, ArrowRight, Mail, Phone, MapPin, Menu } from "lucide-react";
+import { Code, Smartphone, Globe, Zap, Users, CheckCircle, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import AboutMeSection from "@/components/AboutMeSection";
@@ -14,6 +14,7 @@ import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import ProcessSection from "@/components/ProcessSection";
 import ImageSection from "@/components/ImageSection";
+import MobileMenu from "@/components/MobileMenu";
 
 const Index = () => {
   return (
@@ -68,12 +69,8 @@ const Index = () => {
                 </Button>
               </div>
               
-              {/* Mobile Menu Button */}
-              <div className="md:hidden">
-                <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </div>
+              {/* Mobile Menu */}
+              <MobileMenu />
             </div>
           </div>
         </nav>
