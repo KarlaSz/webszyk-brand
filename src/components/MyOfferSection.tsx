@@ -1,13 +1,14 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight, MessageCircle, Fan } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight, MessageCircle, ChevronDown, ExternalLink } from "lucide-react";
 import { useState } from "react";
-import ServiceModal from "./ServiceModal";
 
 const MyOfferSection = () => {
-  const [isWebsiteModalOpen, setIsWebsiteModalOpen] = useState(false);
-  const [isITModalOpen, setIsITModalOpen] = useState(false);
+  const [isWebsiteOpen, setIsWebsiteOpen] = useState(false);
+  const [isITOpen, setIsITOpen] = useState(false);
 
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -36,143 +37,207 @@ const MyOfferSection = () => {
 
         <div className="space-y-6 mb-16">
           {/* Website & Landing Pages */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
-            <CardHeader className="pb-4">
-              <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
-                  <Globe className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-1">
-                    <CardTitle className="text-white text-xl">Websites & Landing Pages</CardTitle>
-                    <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold text-xs">
-                      Most Popular
-                    </Badge>
+          <Collapsible open={isWebsiteOpen} onOpenChange={setIsWebsiteOpen}>
+            <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                    <Globe className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
                   </div>
-                  <p className="text-white/80 text-sm">Modern, responsive web solutions</p>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-white">$999+</div>
-                  <p className="text-white/70 text-xs">Complete solution</p>
-                </div>
-              </div>
-            </CardHeader>
-            
-            <CardContent className="pt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Increase online presence</span>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-1">
+                      <CardTitle className="text-white text-xl">Websites & Landing Pages</CardTitle>
+                      <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold text-xs">
+                        Most Popular
+                      </Badge>
+                    </div>
+                    <p className="text-white/80 text-sm">Modern, responsive web solutions</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Convert visitors to customers</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Build trust & credibility</span>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">$999+</div>
+                    <p className="text-white/70 text-xs">Complete solution</p>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Improve SEO rankings</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Scale with modern tech</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Mobile-first design</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">React</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Next.js</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">TypeScript</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
-              </div>
+              </CardHeader>
               
-              <Button 
-                onClick={() => setIsWebsiteModalOpen(true)}
-                className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300"
-              >
-                Get Started Today
-                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
-          </Card>
+              <CardContent className="pt-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Increase online presence</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Convert visitors to customers</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Build trust & credibility</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Improve SEO rankings</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Scale with modern tech</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Mobile-first design</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">React</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Next.js</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">TypeScript</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
+                </div>
+                
+                <CollapsibleTrigger asChild>
+                  <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+                    More Info
+                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${isWebsiteOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                </CollapsibleTrigger>
+              </CardContent>
+
+              <CollapsibleContent className="px-6 pb-6">
+                <div className="border-t border-white/20 pt-6">
+                  <h4 className="text-white font-semibold text-lg mb-4">Order Details</h4>
+                  <div className="space-y-4">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">What's Included:</h5>
+                      <ul className="text-white/80 text-sm space-y-1">
+                        <li>• Custom design & development</li>
+                        <li>• Mobile responsive layout</li>
+                        <li>• SEO optimization</li>
+                        <li>• Contact forms & integrations</li>
+                        <li>• 3 months free support</li>
+                        <li>• Domain & hosting setup</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">Timeline:</h5>
+                      <p className="text-white/80 text-sm">2-4 weeks from project start to completion</p>
+                    </div>
+                    <Button 
+                      className="w-full py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.open('https://calendly.com/webszyk', '_blank')}
+                    >
+                      <MessageCircle className="h-5 w-5 mr-2" />
+                      Book Free Consultation
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
 
           {/* IT Services */}
-          <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
-            <CardHeader className="pb-4">
-              <div className="flex items-center space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
-                  <Wrench className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
-                </div>
-                <div className="flex-1">
-                  <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
-                  <p className="text-white/80 text-sm">Comprehensive tech solutions</p>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-white">$149+</div>
-                  <p className="text-white/70 text-xs">Per month</p>
-                </div>
-              </div>
-            </CardHeader>
-            
-            <CardContent className="pt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <Shield className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Secure your systems</span>
+          <Collapsible open={isITOpen} onOpenChange={setIsITOpen}>
+            <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                    <Wrench className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Cloud className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Cloud migration</span>
+                  <div className="flex-1">
+                    <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
+                    <p className="text-white/80 text-sm">Comprehensive tech solutions</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Zap className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Performance optimization</span>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">$149+</div>
+                    <p className="text-white/70 text-xs">Per month</p>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <HeadphonesIcon className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                    <span className="text-white/90 text-sm">24/7 support</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Code className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Custom development</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Users className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                    <span className="text-white/90 text-sm">Team collaboration</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">24/7 Support</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Cloud Migration</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Security</Badge>
-                <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
-              </div>
+              </CardHeader>
               
-              <Button 
-                onClick={() => setIsITModalOpen(true)}
-                className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300"
-              >
-                Learn More
-                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
-          </Card>
+              <CardContent className="pt-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Shield className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Secure your systems</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Cloud className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Cloud migration</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Zap className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Performance optimization</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <HeadphonesIcon className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">24/7 support</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Code className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Custom development</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Users className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Team collaboration</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">24/7 Support</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Cloud Migration</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Security</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
+                </div>
+                
+                <CollapsibleTrigger asChild>
+                  <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+                    More Info
+                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${isITOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                </CollapsibleTrigger>
+              </CardContent>
+
+              <CollapsibleContent className="px-6 pb-6">
+                <div className="border-t border-white/20 pt-6">
+                  <h4 className="text-white font-semibold text-lg mb-4">Order Details</h4>
+                  <div className="space-y-4">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">What's Included:</h5>
+                      <ul className="text-white/80 text-sm space-y-1">
+                        <li>• 24/7 system monitoring</li>
+                        <li>• Security updates & patches</li>
+                        <li>• Performance optimization</li>
+                        <li>• Cloud migration assistance</li>
+                        <li>• Technical consultation</li>
+                        <li>• Emergency support</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">Service Plans:</h5>
+                      <p className="text-white/80 text-sm">Monthly or yearly contracts available</p>
+                    </div>
+                    <Button 
+                      className="w-full py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.open('https://calendly.com/webszyk-it', '_blank')}
+                    >
+                      <Shield className="h-5 w-5 mr-2" />
+                      Get IT Support Quote
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
         </div>
 
         {/* Ready to Transform Section */}
@@ -210,18 +275,6 @@ const MyOfferSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Modals */}
-      <ServiceModal 
-        isOpen={isWebsiteModalOpen} 
-        onClose={() => setIsWebsiteModalOpen(false)} 
-        serviceType="website" 
-      />
-      <ServiceModal 
-        isOpen={isITModalOpen} 
-        onClose={() => setIsITModalOpen(false)} 
-        serviceType="it-services" 
-      />
     </section>
   );
 };
