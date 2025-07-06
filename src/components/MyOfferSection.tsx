@@ -1,143 +1,275 @@
 
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Smartphone, Globe, Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Headphones } from "lucide-react";
-import ContactModal from "@/components/ContactModal";
+import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Globe, Code, Smartphone, Zap, Users, CheckCircle, Wrench, Shield, Cloud, HeadphonesIcon, ArrowRight, MessageCircle, ChevronDown, ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 const MyOfferSection = () => {
-  const services = [
-    {
-      icon: Code,
-      title: "Full-Stack Development",
-      description: "Complete web applications with modern frameworks like React, Node.js, and databases.",
-      features: ["React & Next.js", "Node.js & Express", "Database Design", "API Development"],
-      price: "From $2,500",
-      popular: true
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps that work seamlessly across devices.",
-      features: ["React Native", "iOS & Android", "App Store Deployment", "Push Notifications"],
-      price: "From $3,500",
-      popular: false
-    },
-    {
-      icon: Globe,
-      title: "Web Design & UX",
-      description: "Beautiful, user-friendly designs that convert visitors into customers.",
-      features: ["UI/UX Design", "Responsive Layout", "Brand Integration", "Performance Optimization"],
-      price: "From $1,500",
-      popular: false
-    },
-    {
-      icon: Headphones,
-      title: "IT Support & Consulting",
-      description: "Ongoing technical support and strategic consulting for your technology needs.",
-      features: ["24/7 Support", "System Maintenance", "Tech Consulting", "Performance Monitoring"],
-      price: "From $500/month",
-      popular: false
-    }
-  ];
+  const [isWebsiteOpen, setIsWebsiteOpen] = useState(false);
+  const [isITOpen, setIsITOpen] = useState(false);
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
-      {/* Background with gradient layers */}
+    <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Same background as hero section */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Badge variant="secondary" className="bg-[#04e6a5]/20 text-[#04e6a5] border-[#04e6a5]/30 backdrop-blur-sm px-4 py-2">
-              Services
-            </Badge>
-          </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+      {/* Animated Background Elements */}
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <Badge variant="secondary" className="bg-[#04e6a5]/20 text-[#04e6a5] border-[#04e6a5]/30 backdrop-blur-sm mb-4">
+            My Services
+          </Badge>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             What I Can Do For You
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            From concept to deployment, I provide comprehensive technology solutions 
-            that help your business grow and succeed in the digital world.
+          <p className="text-white/90 text-xl max-w-3xl mx-auto leading-relaxed">
+            Professional web development and IT services tailored to your business needs
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className={`relative bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all duration-300 group ${service.popular ? 'ring-2 ring-[#04e6a5]/50' : ''}`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-[#04e6a5] text-white px-4 py-1">Most Popular</Badge>
+        <div className="space-y-6 mb-16">
+          {/* Website & Landing Pages */}
+          <Collapsible open={isWebsiteOpen} onOpenChange={setIsWebsiteOpen}>
+            <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                    <Globe className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
                   </div>
-                )}
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-16 h-16 bg-[#04e6a5]/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <IconComponent className="h-8 w-8 text-[#04e6a5]" />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-1">
+                      <CardTitle className="text-white text-xl">Websites & Landing Pages</CardTitle>
+                      <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold text-xs">
+                        Most Popular
+                      </Badge>
                     </div>
-                    <div>
-                      <CardTitle className="text-white text-xl">{service.title}</CardTitle>
-                      <div className="text-[#04e6a5] font-bold text-lg">{service.price}</div>
+                    <p className="text-white/80 text-sm">Modern, responsive web solutions</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">$999+</div>
+                    <p className="text-white/70 text-xs">Complete solution</p>
+                  </div>
+                </div>
+              </CardHeader>
+              
+              <CardContent className="pt-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Increase online presence</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Convert visitors to customers</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Build trust & credibility</span>
                     </div>
                   </div>
-                  <CardDescription className="text-white/80 text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-[#04e6a5] flex-shrink-0" />
-                        <span className="text-white/90">{feature}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Improve SEO rankings</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Scale with modern tech</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Mobile-first design</span>
+                    </div>
                   </div>
-                  <ContactModal
-                    trigger={
-                      <Button className="w-full bg-white/20 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white font-semibold transition-all duration-300 group">
-                        Get Started
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    }
-                    title={`Get Started - ${service.title}`}
-                  />
-                </CardContent>
-              </Card>
-            );
-          })}
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">React</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Next.js</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">TypeScript</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Tailwind</Badge>
+                </div>
+                
+                <CollapsibleTrigger asChild>
+                  <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+                    More Info
+                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${isWebsiteOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                </CollapsibleTrigger>
+              </CardContent>
+
+              <CollapsibleContent className="px-6 pb-6">
+                <div className="border-t border-white/20 pt-6">
+                  <h4 className="text-white font-semibold text-lg mb-4">Order Details</h4>
+                  <div className="space-y-4">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">What's Included:</h5>
+                      <ul className="text-white/80 text-sm space-y-1">
+                        <li>• Custom design & development</li>
+                        <li>• Mobile responsive layout</li>
+                        <li>• SEO optimization</li>
+                        <li>• Contact forms & integrations</li>
+                        <li>• 3 months free support</li>
+                        <li>• Domain & hosting setup</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">Timeline:</h5>
+                      <p className="text-white/80 text-sm">2-4 weeks from project start to completion</p>
+                    </div>
+                    <Button 
+                      className="w-full py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.open('https://calendly.com/webszyk', '_blank')}
+                    >
+                      <MessageCircle className="h-5 w-5 mr-2" />
+                      Book Free Consultation
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
+
+          {/* IT Services */}
+          <Collapsible open={isITOpen} onOpenChange={setIsITOpen}>
+            <Card className="relative border border-white/30 backdrop-blur-md bg-black/30 shadow-2xl rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-400/20 to-gray-600/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#04e6a5]/20 transition-colors duration-300">
+                    <Wrench className="h-6 w-6 text-gray-300 group-hover:text-[#04e6a5] transition-colors duration-300" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-white text-xl mb-1">IT Services & Support</CardTitle>
+                    <p className="text-white/80 text-sm">Comprehensive tech solutions</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">$149+</div>
+                    <p className="text-white/70 text-xs">Per month</p>
+                  </div>
+                </div>
+              </CardHeader>
+              
+              <CardContent className="pt-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Shield className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Secure your systems</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Cloud className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Cloud migration</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Zap className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Performance optimization</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <HeadphonesIcon className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">24/7 support</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Code className="h-4 w-4 text-[#04e6a5] flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Custom development</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Users className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <span className="text-white/90 text-sm">Team collaboration</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">24/7 Support</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Cloud Migration</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Security</Badge>
+                  <Badge variant="secondary" className="bg-white/15 text-white/90 backdrop-blur-sm">Consulting</Badge>
+                </div>
+                
+                <CollapsibleTrigger asChild>
+                  <Button className="w-1/2 py-3 text-lg group bg-white/10 border border-white/30 hover:bg-[#04e6a5] hover:border-[#04e6a5] text-white backdrop-blur-md transition-all duration-300">
+                    More Info
+                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${isITOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                </CollapsibleTrigger>
+              </CardContent>
+
+              <CollapsibleContent className="px-6 pb-6">
+                <div className="border-t border-white/20 pt-6">
+                  <h4 className="text-white font-semibold text-lg mb-4">Order Details</h4>
+                  <div className="space-y-4">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">What's Included:</h5>
+                      <ul className="text-white/80 text-sm space-y-1">
+                        <li>• 24/7 system monitoring</li>
+                        <li>• Security updates & patches</li>
+                        <li>• Performance optimization</li>
+                        <li>• Cloud migration assistance</li>
+                        <li>• Technical consultation</li>
+                        <li>• Emergency support</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <h5 className="text-white font-medium mb-2">Service Plans:</h5>
+                      <p className="text-white/80 text-sm">Monthly or yearly contracts available</p>
+                    </div>
+                    <Button 
+                      className="w-full py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.open('https://calendly.com/webszyk-it', '_blank')}
+                    >
+                      <Shield className="h-5 w-5 mr-2" />
+                      Get IT Support Quote
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-12">
-          <h3 className="text-3xl font-bold text-white mb-4">Need IT Support?</h3>
-          <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto">
-            Get reliable technical support and consulting services to keep your business running smoothly.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <ContactModal
-              trigger={
-                <Button size="lg" className="px-12 py-4 text-lg group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  Get IT Support
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              }
-              title="Get IT Support"
-            />
-            <div className="flex items-center space-x-6 text-white/80">
-              <div className="flex items-center space-x-2">
-                <Clock className="h-5 w-5 text-[#04e6a5]" />
-                <span>24/7 Available</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-[#04e6a5]" />
-                <span>Secure & Reliable</span>
+        {/* Ready to Transform Section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 text-center shadow-2xl">
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <span className="text-white font-semibold text-lg">Ready to Transform?</span>
+            </div>
+            
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              Let's Build Something Amazing Together
+            </h3>
+            
+            <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+              Stop struggling with tech problems. Let's discuss your specific challenges and create a tailored solution that drives real results for your business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="px-8 py-3 text-lg group bg-gradient-to-br from-orange-400 to-orange-600 border-0 hover:from-orange-500 hover:to-orange-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+                <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
+                Start Your Project Today
+              </Button>
+              
+              <div className="flex items-center space-x-4 text-white/80">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+                  <span className="font-medium text-sm">Free Consultation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse delay-500"></div>
+                  <span className="font-medium text-sm">Quick Response</span>
+                </div>
               </div>
             </div>
           </div>
