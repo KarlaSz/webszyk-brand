@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, AlertCircle, Clock, DollarSign, Users, TrendingDown, Zap } from "lucide-react";
 import ContactModal from "@/components/ContactModal";
@@ -11,15 +10,15 @@ const HeroSection = () => {
 
   return (
     <section className="relative py-8 sm:py-12 lg:py-32 overflow-hidden">
-      {/* Enhanced Gradient Background - Updated with new green */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
+      {/* Updated Gradient Background - Hero uses #04e6a5 and #0d1b2a */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1b2a] via-slate-800 to-[#0d1b2a]"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/20 via-[#04e6a5]/10 to-[#04e6a5]/25"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-[#0d1b2a]/80 via-[#04e6a5]/15 to-[#0d1b2a]/90"></div>
       
-      {/* Animated Background Elements - Updated with new green */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* Animated Background Elements - Updated with specified colors */}
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/25 to-[#04e6a5]/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/20 to-[#0d1b2a]/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-[#0d1b2a]/40 to-[#04e6a5]/30 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Main Title as Hook */}
@@ -43,7 +42,7 @@ const HeroSection = () => {
             </div>
             
             <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 sm:mb-8 lg:mb-12">
-              Webszyk studio to miejsce w którym pomogę Ci przekształić Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
+              Webszyk studio to miejsce w którym pomogę Ci przekształcić Twoje pomysły w cyfrowe doświadczenia. Pomagam firmom i przedsiębiorcom tworzyć wspaniałe strony internetowe, aplikacje mobilne i zapewniam kompleksowe wsparcie technologiczne z rozwiązaniami biznesowymi.
             </p>
             
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-8 text-xs sm:text-sm mb-6 lg:mb-8">

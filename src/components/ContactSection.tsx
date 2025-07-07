@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -108,15 +107,15 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="relative overflow-hidden">
-      {/* Enhanced Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
+      {/* Updated Gradient Background - Contact uses inverted colors */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#04e6a5] via-emerald-600 to-[#04e6a5]"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#0d1b2a]/80 via-[#0d1b2a]/60 to-[#0d1b2a]/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-[#04e6a5]/30 via-[#0d1b2a]/70 to-[#04e6a5]/20"></div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#04e6a5]/20 to-emerald-400/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/15 to-green-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-emerald-300/10 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* Animated Background Elements - Updated with specified colors */}
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#0d1b2a]/40 to-[#04e6a5]/25 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-20 w-80 h-80 bg-gradient-to-bl from-[#04e6a5]/30 to-[#0d1b2a]/50 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-[#0d1b2a]/60 to-[#04e6a5]/35 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       {/* Triangle Shape Divider at Top */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full z-20">
