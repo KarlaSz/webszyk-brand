@@ -1,9 +1,9 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { ExternalLink, Code, Smartphone, Globe, Music } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 const projects = [
   {
@@ -142,9 +142,14 @@ const ProjectsSection = () => {
                 
                 <div className="flex space-x-2">
                   {project.isPlaceholder ? (
-                    <Button className="flex-1 flex items-center justify-center space-x-2 bg-[#04e6a5] hover:bg-orange-500 text-white transition-colors duration-300">
-                      <span>Let's Work Together</span>
-                    </Button>
+                    <ContactModal
+                      trigger={
+                        <Button className="flex-1 flex items-center justify-center space-x-2 bg-[#04e6a5] hover:bg-orange-500 text-white transition-colors duration-300">
+                          <span>Let's Work Together</span>
+                        </Button>
+                      }
+                      title="Let's Work Together"
+                    />
                   ) : (
                     <>
                       <Button variant="outline" size="lg" className="flex-1 border-gray-400/40 hover:bg-gray-100 hover:border-[#04e6a5] text-gray-600 hover:text-[#04e6a5] transition-all bg-gray-50/30 backdrop-blur-sm flex items-center space-x-2">
