@@ -1,9 +1,49 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Code, Smartphone, Globe, Zap, Users, CheckCircle, Lightbulb, Palette, Shield } from "lucide-react";
 
 const ExperienceSection = () => {
+  const services = [
+    {
+      icon: Code,
+      title: "Web Development",
+      description: "Full-stack solutions from concept to deployment",
+      features: ["React & TypeScript", "Backend APIs", "Database Integration"]
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Solutions",
+      description: "Responsive design and mobile optimization",
+      features: ["Mobile-First Design", "Cross-Platform", "Performance Optimized"]
+    },
+    {
+      icon: Palette,
+      title: "UI/UX Design",
+      description: "Beautiful interfaces that users love",
+      features: ["User Research", "Wireframing", "Prototyping"]
+    },
+    {
+      icon: Zap,
+      title: "Performance",
+      description: "Speed optimization and SEO enhancement",
+      features: ["Speed Optimization", "SEO Enhancement", "Core Web Vitals"]
+    },
+    {
+      icon: Shield,
+      title: "Security & Support",
+      description: "Ongoing maintenance and security updates",
+      features: ["Security Updates", "24/7 Monitoring", "Regular Backups"]
+    },
+    {
+      icon: Lightbulb,
+      title: "Consulting",
+      description: "Strategic technology guidance and planning",
+      features: ["Tech Strategy", "Platform Selection", "Process Automation"]
+    }
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,166 +64,63 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        {/* Main Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* Web Development */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Code className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
-              <p className="text-gray-600 mb-6">Full-stack solutions from concept to deployment</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">React & TypeScript</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Backend APIs</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Database Integration</span>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Mobile Solutions */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Smartphone className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile Solutions</h3>
-              <p className="text-gray-600 mb-6">Responsive design and mobile optimization</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Mobile-First Design</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Cross-Platform</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Performance Optimized</span>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* UI/UX Design */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Palette className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
-              <p className="text-gray-600 mb-6">Beautiful interfaces that users love</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">User Research</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Wireframing</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Prototyping</span>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Performance Optimization */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Zap className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Performance</h3>
-              <p className="text-gray-600 mb-6">Speed optimization and SEO enhancement</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Speed Optimization</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">SEO Enhancement</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Core Web Vitals</span>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Security & Support */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Shield className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Security & Support</h3>
-              <p className="text-gray-600 mb-6">Ongoing maintenance and security updates</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Security Updates</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">24/7 Monitoring</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Regular Backups</span>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Consulting */}
-          <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                <Lightbulb className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Consulting</h3>
-              <p className="text-gray-600 mb-6">Strategic technology guidance and planning</p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Tech Strategy</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Platform Selection</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                  <span className="text-sm text-gray-700">Process Automation</span>
-                </div>
-              </div>
-            </div>
-          </Card>
+        {/* Mobile Carousel */}
+        <div className="md:hidden mb-16">
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {services.map((service, index) => (
+                <CarouselItem key={index}>
+                  <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                        <service.icon className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                      <p className="text-gray-600 mb-6">{service.description}</p>
+                      
+                      <div className="space-y-3">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center justify-center space-x-2">
+                            <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
+                            <span className="text-sm text-gray-700">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
-        {/* Technologies - Updated with correct green colors */}
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <Card key={index} className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                  <service.icon className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center justify-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Technologies */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
