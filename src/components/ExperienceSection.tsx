@@ -64,36 +64,28 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden mb-16">
-          <Carousel className="w-full max-w-sm mx-auto">
-            <CarouselContent>
-              {services.map((service, index) => (
-                <CarouselItem key={index}>
-                  <Card className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                        <service.icon className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                      <p className="text-gray-600 mb-6">{service.description}</p>
-                      
-                      <div className="space-y-3">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center justify-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                            <span className="text-sm text-gray-700">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+        {/* Mobile 2-Column Grid */}
+        <div className="grid grid-cols-2 gap-4 mb-16 md:hidden">
+          {services.map((service, index) => (
+            <Card key={index} className="relative p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
+                  <service.icon className="h-6 w-6 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">{service.title}</h3>
+                <p className="text-xs text-gray-600 mb-3 leading-tight">{service.description}</p>
+                
+                <div className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center justify-center space-x-1">
+                      <CheckCircle className="h-3 w-3 text-gray-600 group-hover:text-[#04e6a5] transition-colors flex-shrink-0" />
+                      <span className="text-xs text-gray-700 leading-tight">{feature}</span>
                     </div>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
 
         {/* Desktop Grid */}

@@ -44,35 +44,31 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden mb-16">
-          <Carousel className="w-full max-w-sm mx-auto">
-            <CarouselContent>
-              {philosophyCards.map((card, index) => (
-                <CarouselItem key={index}>
-                  <Card className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
-                    <CardContent className="p-6 text-center">
-                      <div className="mb-6">
-                        <div className="w-36 h-36 mx-auto rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
-                          <img 
-                            src={card.image} 
-                            alt={card.title} 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-3">{card.title}</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        {card.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+        {/* Mobile 2-Column Grid */}
+        <div className="grid grid-cols-1 gap-6 mb-16 md:hidden px-2">
+          {philosophyCards.map((card, index) => (
+            <Card key={index} className="bg-white/70 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:bg-white/80">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 rounded-xl overflow-hidden border border-gray-200/40 group-hover:border-gray-300/60 transition-all duration-300">
+                      <img 
+                        src={card.image} 
+                        alt={card.title} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">{card.title}</h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Desktop 3 Column Layout */}
