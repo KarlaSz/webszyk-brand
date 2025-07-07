@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertCircle, DollarSign, Clock, Users, TrendingDown, Smartphone, CheckCircle, Zap, Target, Shield, Rocket, MessageCircle, ArrowDown } from "lucide-react";
@@ -41,136 +42,59 @@ const challenges = [
   }
 ];
 
-const solutions = [
-  {
-    icon: Zap,
-    title: "Strona ładuje się w mniej niż 2 sekundy",
-    description: "błyskawiczne działanie"
-  },
-  {
-    icon: Shield,
-    title: "Rozsądne koszty",
-    description: "dzięki nowoczesnym metodom tworzenia"
-  },
-  {
-    icon: Rocket,
-    title: "Technologie, które będą działać przez lata",
-    description: "gotowa na przyszłość"
-  },
-  {
-    icon: Target,
-    title: "Intuicyjny projekt",
-    description: "bez frustracji"
-  },
-  {
-    icon: CheckCircle,
-    title: "Skupienie na efektach",
-    description: "i zwiększeniu konwersji"
-  },
-  {
-    icon: MessageCircle,
-    title: "Działanie perfekcyjnie",
-    description: "na każdym urządzeniu"
-  }
-];
-
 const ProblemSolutionSection = () => {
   return (
-    <section className="relative py-16 bg-white">
+    <section className="relative py-20 bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
-            <span className="text-[#04e6a5] font-semibold">Od wyzwania do rozwiązania</span>
-            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center space-x-2 mb-6">
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold text-lg">Najczęstsze wyzwania technologiczne</span>
+            <div className="w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
           </div>
           
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Transforming Tech Challenges
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Częste problemy
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            Every challenge is an opportunity for innovation. Here's how I turn common tech problems into powerful digital solutions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Każdy z tych problemów może znacząco wpłynąć na sukces Twojego biznesu. 
+            Sprawdź, czy któryś z nich brzmi znajomo.
           </p>
-
-          {/* Engaging Arrow */}
-          <div className="flex justify-center">
-            <div className="group flex items-center space-x-3 bg-gray-50 border border-gray-200 rounded-full px-6 py-3 hover:bg-gray-100 transition-all duration-300 cursor-pointer">
-              <span className="text-gray-700 font-semibold">Find Your Solution Below</span>
-              <ArrowDown className="h-5 w-5 text-[#04e6a5] group-hover:translate-y-1 transition-transform animate-bounce" />
-            </div>
-          </div>
         </div>
 
-        {/* VS Comparison Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
-          {/* Problems Column */}
-          <div className="lg:col-span-5">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              Częste problemy
-            </h3>
-            <div className="space-y-6">
-              {challenges.map((challenge, index) => (
-                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-red-50/80 hover:backdrop-blur-md hover:border-red-200">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 border border-gray-200">
-                        <challenge.icon className="h-6 w-6 text-gray-600" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">{challenge.title}</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">{challenge.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* VS Section */}
-          <div className="lg:col-span-2 flex justify-center items-center">
-            <div className="relative">
-              <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center shadow-lg border border-gray-200">
-                <span className="text-gray-700 font-bold text-lg">VS</span>
-              </div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gray-200 rounded-full opacity-80"></div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#04e6a5] rounded-full opacity-80"></div>
-            </div>
-          </div>
-
-          {/* Solutions Column */}
-          <div className="lg:col-span-5">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              Co robi WebSzyk:
-            </h3>
-            <div className="space-y-6">
-              {solutions.map((solution, index) => (
-                <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-green-50/80 hover:backdrop-blur-md hover:border-green-200">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-[#04e6a5]/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#04e6a5]/20">
-                        <solution.icon className="h-6 w-6 text-[#04e6a5]" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">{solution.title}</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+        {/* Problems Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {challenges.map((challenge, index) => (
+            <Card key={index} className="group relative overflow-hidden bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:bg-red-50/80 hover:backdrop-blur-md hover:border-red-200">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-100 transition-colors duration-300">
+                    <challenge.icon className="h-8 w-8 text-gray-600 group-hover:text-red-500 transition-colors duration-300" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-xl mb-4">{challenge.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{challenge.description}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        {/* Animated Arrow Below */}
-        <div className="flex justify-center">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="w-1 h-16 bg-gradient-to-b from-[#04e6a5] to-transparent rounded-full"></div>
-            <ArrowDown className="h-8 w-8 text-[#04e6a5] animate-bounce" />
-            <div className="w-1 h-16 bg-gradient-to-t from-[#04e6a5] to-transparent rounded-full"></div>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-[#04e6a5]/10 to-emerald-400/10 rounded-3xl p-8 border border-[#04e6a5]/20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Rozpoznajesz któryś z tych problemów?
+            </h3>
+            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+              Nie musisz z nimi żyć. Każdy z tych problemów ma rozwiązanie, 
+              a ja pomogę Ci je wdrożyć.
+            </p>
+            <Button className="bg-[#04e6a5] hover:bg-[#04e6a5]/90 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Porozmawiajmy o rozwiązaniach
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
