@@ -1,13 +1,29 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, User, Award, Coffee, Linkedin, Github } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Play, User, Award, Coffee, Linkedin, Github, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const AboutMeSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="about-me" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center space-x-2 mb-6">
+            <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
+            <span className="text-[#04e6a5] font-semibold">About Me</span>
+          </div>
+          
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Hi, I'm the person behind <span className="text-[#04e6a5]">Web</span><span className="text-gray-900">Szyk</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Video Section */}
           <div className="relative">
             <div className="relative bg-gray-100 rounded-2xl shadow-xl overflow-hidden group cursor-pointer border border-gray-200">
@@ -41,19 +57,58 @@ const AboutMeSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile CTA and Collapsible Text */}
+            <div className="lg:hidden mt-8">
+              <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+                <CollapsibleTrigger asChild>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 hover:border-[#04e6a5] hover:text-[#04e6a5] transition-all flex items-center justify-center space-x-2"
+                  >
+                    <span>See more about me</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-6">
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>
+                      With over 8 years of experience in full-stack development, I've transformed from 
+                      a curious developer into a trusted technology partner for businesses worldwide. 
+                      My journey began with a simple belief: <span className="text-[#04e6a5] font-semibold">technology should solve real business problems</span>.
+                    </p>
+                    
+                    <p>
+                      I don't just write code – I partner with you to understand your vision, analyze your market, 
+                      and build solutions that drive real results. Every project is an opportunity to create 
+                      something that makes a difference, whether it's streamlining operations, reaching new customers, 
+                      or bringing innovative ideas to life.
+                    </p>
+                    
+                    <p>
+                      When I'm not coding, you'll find me exploring new technologies, mentoring upcoming developers, 
+                      or enjoying a good coffee while sketching out the next big idea.
+                    </p>
+
+                    {/* Social Links */}
+                    <div className="flex items-center space-x-4 pt-4">
+                      <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 hover:border-[#04e6a5] hover:text-[#04e6a5] transition-all flex items-center space-x-2">
+                        <Linkedin className="h-5 w-5" />
+                        <span>LinkedIn</span>
+                      </Button>
+                      <Button variant="outline" size="lg" className="border-gray-300 hover:bg-gray-50 text-gray-700 hover:text-gray-900 hover:border-[#04e6a5] hover:text-[#04e6a5] transition-all flex items-center space-x-2">
+                        <Github className="h-5 w-5" />
+                        <span>GitHub</span>
+                      </Button>
+                    </div>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </div>
           </div>
           
-          {/* Content Section */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-2 h-2 bg-[#04e6a5] rounded-full animate-pulse"></div>
-              <span className="text-[#04e6a5] font-semibold">About Me</span>
-            </div>
-            
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Hi, I'm the person behind <span className="text-[#04e6a5]">Web</span><span className="text-gray-900">Szyk</span>
-            </h2>
-            
+          {/* Desktop Content Section */}
+          <div className="hidden lg:block">
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
               <p>
                 With over 8 years of experience in full-stack development, I've transformed from 
