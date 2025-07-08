@@ -31,15 +31,22 @@ const Index = () => {
       <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#04e6a5]/10 to-gray-200/12 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative z-10">
-        {/* Floating Navigation */}
-        <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4">
-          <div className="bg-white/95 backdrop-blur-md border border-gray-200/50 rounded-2xl shadow-xl">
-            <div className="flex justify-between items-center h-16 px-6">
+        {/* Floating Navigation - Updated with new background and proper width */}
+        <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4">
+          <div 
+            className="backdrop-blur-md border border-white/15 rounded-2xl shadow-2xl relative overflow-hidden"
+            style={{ backgroundColor: '#121a26' }}
+          >
+            {/* Same glassmorphic overlay as hero section */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/5 via-emerald-400/3 to-[#04e6a5]/8"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/3 via-[#04e6a5]/5 to-slate-600/8"></div>
+            
+            <div className="relative flex justify-between items-center h-16 px-6">
               {/* Left - Grouped Navigation Links */}
               <div className="hidden md:flex items-center space-x-1">
-                <a href="#about" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">O mnie</a>
-                <a href="#projects" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Wsparcie</a>
-                <a href="#contact" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Kontakt</a>
+                <a href="#about" className="text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10">O mnie</a>
+                <a href="#projects" className="text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10">Wsparcie</a>
+                <a href="#contact" className="text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10">Kontakt</a>
               </div>
               
               {/* Centered Logo */}
@@ -52,9 +59,9 @@ const Index = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-xl font-bold">
-                    <span className="text-[#04e6a5]">Web</span><span className="text-gray-800">Szyk</span>
+                    <span className="text-[#04e6a5]">Web</span><span className="text-white">Szyk</span>
                   </div>
-                  <div className="text-xs text-gray-600 font-medium">studio</div>
+                  <div className="text-xs text-white/70 font-medium">studio</div>
                 </div>
               </div>
               

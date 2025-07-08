@@ -21,25 +21,25 @@ const MobileMenu = () => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="sm" className="text-gray-700 hover:bg-gray-100 md:hidden">
+        <Button variant="ghost" size="sm" className="text-white/90 hover:bg-white/10 md:hidden">
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-80 bg-white border-gray-200">
+      <SheetContent side="right" className="w-80" style={{ backgroundColor: '#121a26', borderColor: 'rgba(255,255,255,0.15)' }}>
         
         {/* Close button */}
         <Button
           variant="ghost"
           size="sm"
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 z-20 text-gray-700 hover:bg-gray-100 w-10 h-10"
+          className="absolute top-4 right-4 z-20 text-white/90 hover:bg-white/10 w-10 h-10"
         >
           <X className="h-8 w-8" />
         </Button>
         
         <div className="relative z-10">
           <SheetHeader className="mb-8 mt-4">
-            <SheetTitle className="flex items-center space-x-3 text-gray-800">
+            <SheetTitle className="flex items-center space-x-3 text-white">
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-br from-[#04e6a5] to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
                   <Code className="h-5 w-5 text-white" />
@@ -48,9 +48,9 @@ const MobileMenu = () => {
               </div>
               <div>
                 <div className="text-xl font-bold">
-                  <span className="text-[#04e6a5]">Web</span><span className="text-gray-800">Szyk</span>
+                  <span className="text-[#04e6a5]">Web</span><span className="text-white">Szyk</span>
                 </div>
-                <div className="text-xs text-gray-600 font-medium">studio</div>
+                <div className="text-xs text-white/70 font-medium">studio</div>
               </div>
             </SheetTitle>
           </SheetHeader>
@@ -58,19 +58,19 @@ const MobileMenu = () => {
           <nav className="space-y-4">
             <button
               onClick={() => scrollToSection('#about-me')}
-              className="w-full text-left text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-gray-100 border border-gray-200"
+              className="w-full text-left text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-white/10 border border-white/20"
             >
               O mnie
             </button>
             <button
               onClick={() => scrollToSection('#projects')}
-              className="w-full text-left text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-gray-100 border border-gray-200"
+              className="w-full text-left text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-white/10 border border-white/20"
             >
               Wsparcie
             </button>
             <button
               onClick={() => scrollToSection('#contact')}
-              className="w-full text-left text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-gray-100 border border-gray-200"
+              className="w-full text-left text-white/90 hover:text-[#04e6a5] transition-colors font-medium px-4 py-3 rounded-lg hover:bg-white/10 border border-white/20"
             >
               Kontakt
             </button>
