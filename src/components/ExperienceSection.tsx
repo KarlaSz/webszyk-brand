@@ -10,39 +10,93 @@ const ExperienceSection = () => {
       icon: Code,
       title: "Web Development",
       description: "Full-stack solutions from concept to deployment",
-      features: ["React & TypeScript", "Backend APIs", "Database Integration"]
+      features: ["React & TypeScript", "Backend APIs", "Database Integration"],
+      size: "large" // First card is large
     },
     {
       icon: Smartphone,
       title: "Mobile Solutions",
       description: "Responsive design and mobile optimization",
-      features: ["Mobile-First Design", "Cross-Platform", "Performance Optimized"]
+      features: ["Mobile-First Design", "Cross-Platform", "Performance Optimized"],
+      size: "small"
     },
     {
       icon: Palette,
       title: "UI/UX Design",
       description: "Beautiful interfaces that users love",
-      features: ["User Research", "Wireframing", "Prototyping"]
+      features: ["User Research", "Wireframing", "Prototyping"],
+      size: "medium"
     },
     {
       icon: Zap,
       title: "Performance",
       description: "Speed optimization and SEO enhancement",
-      features: ["Speed Optimization", "SEO Enhancement", "Core Web Vitals"]
+      features: ["Speed Optimization", "SEO Enhancement", "Core Web Vitals"],
+      size: "small"
     },
     {
       icon: Shield,
       title: "Security & Support",
       description: "Ongoing maintenance and security updates",
-      features: ["Security Updates", "24/7 Monitoring", "Regular Backups"]
+      features: ["Security Updates", "24/7 Monitoring", "Regular Backups"],
+      size: "medium"
     },
     {
       icon: Lightbulb,
       title: "Consulting",
       description: "Strategic technology guidance and planning",
-      features: ["Tech Strategy", "Platform Selection", "Process Automation"]
+      features: ["Tech Strategy", "Platform Selection", "Process Automation"],
+      size: "large"
     }
   ];
+
+  const getCardClasses = (size: string) => {
+    switch (size) {
+      case "large":
+        return "md:col-span-2 md:row-span-2";
+      case "medium":
+        return "md:col-span-1 md:row-span-2";
+      case "small":
+      default:
+        return "md:col-span-1 md:row-span-1";
+    }
+  };
+
+  const getContentClasses = (size: string) => {
+    switch (size) {
+      case "large":
+        return "p-8 md:p-12";
+      case "medium":
+        return "p-6 md:p-8";
+      case "small":
+      default:
+        return "p-6";
+    }
+  };
+
+  const getIconSize = (size: string) => {
+    switch (size) {
+      case "large":
+        return "w-20 h-20 md:w-24 md:h-24";
+      case "medium":
+        return "w-16 h-16 md:w-20 md:h-20";
+      case "small":
+      default:
+        return "w-14 h-14 md:w-16 md:h-16";
+    }
+  };
+
+  const getIconInnerSize = (size: string) => {
+    switch (size) {
+      case "large":
+        return "h-10 w-10 md:h-12 md:w-12";
+      case "medium":
+        return "h-8 w-8 md:h-10 md:w-10";
+      case "small":
+      default:
+        return "h-6 w-6 md:h-8 md:w-8";
+    }
+  };
 
   return (
     <section className="py-20 bg-white">
@@ -67,7 +121,7 @@ const ExperienceSection = () => {
         {/* Mobile 2-Column Grid */}
         <div className="grid grid-cols-2 gap-4 mb-16 md:hidden">
           {services.map((service, index) => (
-            <Card key={index} className="relative p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
+            <Card key={index} className="relative p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50 rounded-3xl">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
                   <service.icon className="h-6 w-6 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
@@ -88,22 +142,31 @@ const ExperienceSection = () => {
           ))}
         </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Desktop Masonry Grid */}
+        <div className="hidden md:grid grid-cols-3 grid-rows-4 gap-6 mb-16 h-[800px]">
           {services.map((service, index) => (
-            <Card key={index} className="relative p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300" />
+            <Card 
+              key={index} 
+              className={`relative border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group hover:border-[#04e6a5]/50 rounded-3xl ${getCardClasses(service.size)}`}
+            >
+              <div className={`text-center h-full flex flex-col justify-center ${getContentClasses(service.size)}`}>
+                <div className={`${getIconSize(service.size)} bg-gray-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#04e6a5]/10 transition-colors duration-300`}>
+                  <service.icon className={`${getIconInnerSize(service.size)} text-gray-600 group-hover:text-[#04e6a5] transition-colors duration-300`} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <h3 className={`font-bold text-gray-900 mb-4 ${service.size === 'large' ? 'text-2xl' : service.size === 'medium' ? 'text-xl' : 'text-lg'}`}>
+                  {service.title}
+                </h3>
+                <p className={`text-gray-600 mb-6 ${service.size === 'large' ? 'text-lg' : 'text-base'}`}>
+                  {service.description}
+                </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-3 flex-grow flex flex-col justify-center">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center justify-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-gray-600 group-hover:text-[#04e6a5] transition-colors" />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <span className={`text-gray-700 ${service.size === 'large' ? 'text-base' : 'text-sm'}`}>
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
