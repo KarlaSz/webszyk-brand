@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -30,35 +31,30 @@ const Index = () => {
       <div className="fixed bottom-10 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#04e6a5]/10 to-gray-200/12 rounded-full blur-3xl animate-pulse delay-2000"></div>
 
       <div className="relative z-10">
-        {/* Navigation */}
-        <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-white/15 relative overflow-hidden">
-          {/* Same gradient as hero/contact sections - Updated with new green */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#04e6a5]/15 via-emerald-400/10 to-[#04e6a5]/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-bl from-gray-300/8 via-[#04e6a5]/12 to-slate-600/20"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
+        {/* Floating Navigation */}
+        <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4">
+          <div className="bg-white/95 backdrop-blur-md border border-gray-200/50 rounded-2xl shadow-xl">
+            <div className="flex justify-between items-center h-16 px-6">
               {/* Left - Grouped Navigation Links */}
               <div className="hidden md:flex items-center space-x-1">
-                <a href="#about" className="text-white/80 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">O mnie</a>
-                <a href="#projects" className="text-white/80 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Wsparcie</a>
-                <a href="#contact" className="text-white/80 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">Kontakt</a>
+                <a href="#about" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">O mnie</a>
+                <a href="#projects" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Wsparcie</a>
+                <a href="#contact" className="text-gray-700 hover:text-[#04e6a5] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Kontakt</a>
               </div>
               
-              {/* Centered Logo - Updated with new green */}
+              {/* Centered Logo */}
               <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-3">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#04e6a5]/80 to-emerald-600/80 rounded-full flex items-center justify-center shadow-lg border-2 border-[#04e6a5]/30 backdrop-blur-sm">
-                    <Code className="h-6 w-6 text-white" />
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#04e6a5] to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
+                    <Code className="h-5 w-5 text-white" />
                   </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#04e6a5] rounded-full animate-pulse"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#04e6a5] rounded-full animate-pulse"></div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">
-                    <span className="text-[#04e6a5]">Web</span><span className="text-white">Szyk</span>
+                  <div className="text-xl font-bold">
+                    <span className="text-[#04e6a5]">Web</span><span className="text-gray-800">Szyk</span>
                   </div>
-                  <div className="text-xs text-white/70 font-medium">studio</div>
+                  <div className="text-xs text-gray-600 font-medium">studio</div>
                 </div>
               </div>
               
@@ -66,7 +62,7 @@ const Index = () => {
               <div className="hidden md:flex items-center">
                 <ContactModal
                   trigger={
-                    <Button className="bg-white/15 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:border-orange-500">
+                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 hover:from-orange-600 hover:to-orange-700 border-0">
                       Potrzebuje wsparcia
                     </Button>
                   }
@@ -80,18 +76,20 @@ const Index = () => {
           </div>
         </nav>
 
-        {/* Main Content */}
-        <HeroSection />
-        <ProblemSolutionSection />
-        <AboutMeSection />
-        <ExperienceSection />
-        <AboutSection />
-        <MyOfferSection />
-        <ProjectsSection />
-        <ProcessSection />
-        <ImageSection />
-        <FAQSection />
-        <ContactSection />
+        {/* Main Content - Add top padding to account for floating nav */}
+        <div className="pt-24">
+          <HeroSection />
+          <ProblemSolutionSection />
+          <AboutMeSection />
+          <ExperienceSection />
+          <AboutSection />
+          <MyOfferSection />
+          <ProjectsSection />
+          <ProcessSection />
+          <ImageSection />
+          <FAQSection />
+          <ContactSection />
+        </div>
 
         {/* Footer */}
         <footer className="backdrop-blur-md border-t border-white/15 relative overflow-hidden">
