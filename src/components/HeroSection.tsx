@@ -295,17 +295,18 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Sharp Arrow Divider */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+      {/* Fixed Shape Divider */}
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
         <svg 
           className="relative block w-full h-8 sm:h-12 lg:h-16" 
           xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1200 60" 
+          viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
         >
-          <polygon 
-            points="0,0 600,60 1200,0 1200,60 0,60" 
-            className="fill-white"
+          <path 
+            d="M0,0 L600,120 L1200,0 L1200,120 L0,120 Z" 
+            fill="white"
+            fillRule="evenodd"
           />
         </svg>
       </div>
