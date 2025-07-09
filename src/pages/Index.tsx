@@ -1,11 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Smartphone, Globe, Zap, Users, CheckCircle, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
-import AboutMeSection from "@/components/AboutMeSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import AboutSection from "@/components/AboutSection";
 import MyOfferSection from "@/components/MyOfferSection";
@@ -37,7 +35,6 @@ const Index = () => {
         {/* Main Content */}
         <div>
           <ProblemSolutionSection />
-          <AboutMeSection />
           <ExperienceSection />
           <AboutSection />
           <MyOfferSection />
